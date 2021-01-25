@@ -1,15 +1,4 @@
-# Intermediate Agile Software Development Textbook Resources
-
-This textbook is intended for an intermediate-level software
-development course at the undergraduate level that teaches software
-engineering principles and practice following the Agile philosophy.
-
-The textbook provides resources for both the instructor and their
-students. Course preparation materials are provided for the instructor
-and class presentation slides, assignments, and take-home exams are
-provided for students.
-
-However, instructor could email the authors (cgunay or adolocm at gmail.com) to get access to hidden materials such as quizzes.
+# Lectures for the Python Programming for Data Analysis course
 
 ## Publishing technology
 
