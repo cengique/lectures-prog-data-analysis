@@ -1,4 +1,4 @@
-baseURL = "/lectures-prog-data-analysis/"
+baseURL = "https://cengique.github.io/lectures-prog-data-analysis/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 
