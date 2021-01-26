@@ -1,6 +1,12 @@
+{{/* if first positional parameter given, then display setup column in schedule
+
+
+# TODO:
+# - add back the actual dates
+*/}}
 <div class="content">
   <table class="schedule-table">
-    <tr><th>Week#</th><th>Module</th><th>Setup</th><th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
+    <tr><th>Week#</th><th>Module</th>{{ with .Get 0 }}<th>Setup</th>{{ end }}<th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
   </table>
 </div>
 
@@ -23,8 +29,8 @@
         row.innerHTML = 
           "<td>"
 		  + ( startDay/7 + 1) + "</td><td>"
-		  + item.name + "</td><td>"
-          + item.setup + "</td><td>"
+		  + item.name + "</td>{{ with .Get 0 }}<td>"
+          + item.setup + "</td>{{ end }}<td>"
           + item.topic + "</td>" +
 		  "<td>" + item.handson + "</td>" +
 		  "<td>" + item.assignment + "</td>";
