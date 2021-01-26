@@ -1,0 +1,36 @@
+<div class="content">
+  <table class="schedule-table">
+    <tr><th>Week#</th><th>Module</th><th>Setup</th><th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
+  </table>
+</div>
+
+<script>
+  // Schedule as JSON
+  var modules = {{ .Site.Data.schedule }};
+	      
+    // Read JSON and print out schedule table
+    var moduleNum = 0;
+    var startDay = 0;
+    modules.forEach(item => {
+      var row = document.createElement("tr");
+
+      if (item.special) {
+        row.innerHTML = "<td>"
+          + (startDay/7 + 1) + "</td><td>"
+          + item.special + "</td><td></td><td></td><td></td><td></td>";
+      } else {
+        moduleNum = moduleNum + item.module;
+        row.innerHTML = 
+          "<td>"
+		  + ( startDay/7 + 1) + "</td><td>"
+		  + item.name + "</td><td>"
+          + item.setup + "</td><td>"
+          + item.topic + "</td>" +
+		  "<td>" + item.handson + "</td>" +
+		  "<td>" + item.assignment + "</td>";
+      }
+      document.getElementsByClassName("schedule-table")[0].append(row);
+      startDay = startDay + item.days;
+    });
+	      
+</script>
