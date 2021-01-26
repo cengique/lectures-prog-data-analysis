@@ -10,6 +10,4 @@ weight: 4
 
 ---
 
-## Exams
-
-There are two take-home exams during the semester, each with weight of 10 pts of the fnal grade. See next for the exam questions. 
+TBA
