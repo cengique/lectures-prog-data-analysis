@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Introduction</title>
+<title>Python data structures</title>
 <meta name="description" content="Lectures and other resources">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,65 +38,79 @@
       <div class="slides">
   
 
-    <section><h3 id="re-introduction-to-software-engineering">Introduction</h3>
+    <section><h3 id="re-introduction-to-software-engineering">Python data structures</h3>
 
 <h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
-<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-structures/" title="Python data structures">Next - Python data structures <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-intro/" title="Introduction"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Introduction</a></p>
 
 </section><section>
-<h2 id="welcome">Welcome</h2>
-</section><section>
-<h3 id="meet-your-instructor">Meet your instructor</h3>
-<p>Instructor: <a href="http://www.ggc.edu/about-ggc/directory/cengiz-gunay">Dr. Cengiz Gunay</a></p>
-<p><a href="https://soft-eng-practicum.github.io/">Soft-Eng-Practicum Github Organization</a></p>
-<p>Email: <a href="mailto:cgunay@ggc.edu">cgunay@ggc.edu</a></p>
-<p>Office: Virtual and W-2117 (by <a href="https://cgunay.youcanbook.me/">appointment</a>)</p>
-<p>Phone: 678-951-9621 (also GroupMe)</p>
-</section><section>
-<h3 id="about-the-instructor-dr-cengiz-gunay">About the instructor: Dr Cengiz Gunay</h3>
+<h3 id="time-complexity-big-o-notation">Time complexity, big-O notation</h3>
 <ul>
-<li>Went to computer science grad school on artificial intelligence neural networks</li>
-<li>Then, worked as <a href="http://www.biology.emory.edu/research/Prinz/Cengiz/">post-doctoral fellow</a> at Emory Univ. on simulating models of biological neurons and large-scale biological data mining (e.g., SQL, neural nets, genetic algos)</li>
-<li>Started teaching as visiting Faculty teaching at Emory Univ., Math &amp; CS Dept.</li>
-<li>At GGC, became IT faculty with Soft Dev focus and helped start a Data Science and Analytics major</li>
-</ul>
-</section><section>
-<h3 id="your-turn">Your turn!</h3>
-<ul>
-<li>Login/register on discussion and respond to the “Introductions” topic; <strong>create an inline resume</strong></li>
+<li>General idea: time it takes for an algorithm to run.</li>
+<li>complexity: the number of steps involved in a process or pieces that make up a system ?</li>
 </ul>
 
 
 <span class='fragment '
   >
-  <p>Also quickly introduce yourself now in class!</p>
-<ul>
-<li>Name</li>
-<li>Major/Year</li>
-<li>What do you aim to achieve by taking this course</li>
-<li>Something fun about yourself</li>
-</ul>
+  <blockquote>
+<p>It makes a difference in everyday use:</p>
+<p><strong>Fast and high quality</strong> services vs <br> those that <strong>lag, crash, and are unreliable</strong></p>
+</blockquote>
 
 </span>
 </section><section>
-<h3 id="semester-plan">Semester plan</h3>
-<p>TBA</p>
-</section><section>
-<h3 id="syllabus-and-hands-on-work">Syllabus and hands on work</h3>
+<p>set pros:</p>
 <ul>
-<li>Let&rsquo;s look through the syllabus</li>
+<li>faster lookup times</li>
+<li>ensures uniqueness of items</li>
+<li>awesome methods for determining what elements two sets do and do not share</li>
 </ul>
-
-
-<span class='fragment '
-  >
-  <p>Time to work on:</p>
-<ol>
-<li>Register for Discord and Piazza</li>
-<li>Respond to introductions post</li>
-</ol>
-
-</span>
+<p>set cons:</p>
+<ul>
+<li>uses more memory</li>
+<li>slower to build and append to than a list</li>
+</ul>
+</section><section>
+<h3 id="big-o-calculated-based-on-size">Big-O calculated based on size</h3>
+</section><section>
+<h3 id="definitions-big-o-notation">Definitions: Big-O notation</h3>
+<ul>
+<li>O(1): constant time
+(e.g. getting an item from an array with an index)</li>
+<li>O(log(n)): less than linear, exponent of n&rsquo;s growth (e.g., binary tree search; log2(4)=2, log2(16)=4)</li>
+<li>O(sqrt(n)): more than log, less than n (e.g., &hellip;?)</li>
+<li>O(n): linear time with size (e.g. summation of every element in list)</li>
+<li>O(n^2): polynomial time, in this case squared (e.g., two nested for loops, going through the whole list)</li>
+</ul>
+</section><section>
+<h3 id="popular-algorithms">Popular algorithms</h3>
+<ul>
+<li>Index lookup: O(1)</li>
+<li>Search in array: O(n)</li>
+<li>Hash lookup: O(1) (in Python: dict and sets)</li>
+</ul>
+</section><section>
+<h3 id="big-o-can-also-apply-memory-size">Big-O can also apply memory size</h3>
+<ul>
+<li>Same idea: O(1), O(n), etc</li>
+<li>Hashing usually requires additional space</li>
+</ul>
+</section><section>
+<h3 id="whats-hashing">What&rsquo;s hashing?</h3>
+<ul>
+<li>hash is a math function that can calculate a number out anything</li>
+<li>the number would be unique (or close to) for each input
+<pre><code>hash(&quot;hello&quot;) -&gt; 46487
+</code></pre></li>
+<li>hash number can be used (with some tricks) as an <strong>index</strong></li>
+</ul>
+<h4 id="other-uses">Other uses:</h4>
+<ul>
+<li>Comparing complex objects</li>
+<li>Sorting (only for values)</li>
+<li>Checksumming internet download packages</li>
+</ul>
 </section>
 
   
