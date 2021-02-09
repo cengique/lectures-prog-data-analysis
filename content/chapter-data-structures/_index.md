@@ -98,3 +98,11 @@ To find speed:
 1. Run the test a large number of times (e.g. 1000)
 1. Stop the timer and find elapsed time
 1. Report time per operation by dividing with repear multiplier (e.g., 1000)
+
+---
+
+### Example program to measure performance
+
+<iframe height="400px" width="100%" src="https://repl.it/@cengique/PerfMeasure?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+[Link to REPL.it for this program](https://repl.it/join/qfnuxlxp-cengique)
