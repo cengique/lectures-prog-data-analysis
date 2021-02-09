@@ -60,41 +60,48 @@
 
 </span>
 </section><section>
-<p>set pros:</p>
+<h3 id="big-o-calculated-based-on-size">Big-O calculated based on size</h3>
+<ul>
+<li>We are more concerned about performance of algorithms when they work large amounts of data</li>
+<li>Does this algorithm scale up when it is given a large input?</li>
+<li>Therefore, O() notation indicates <em>growth</em> of time with an input, <em>n</em></li>
+</ul>
+</section><section>
+<h3 id="definitions-big-o-notation">Definitions: Big-O notation</h3>
+<ul>
+<li>$O(1)$: constant time
+(e.g. getting an item from an array with an index)</li>
+<li>$O(\log(n))$: less than linear, exponent of n&rsquo;s growth (e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)</li>
+<li>$O(\sqrt{n})$: more than log, less than n (e.g., &hellip;?)</li>
+<li>$O(n)$: linear time with size (e.g. summation of every element in list)</li>
+<li>$O(n^2)$: polynomial time, in this case squared (e.g., two nested for loops, going through the whole list)</li>
+</ul>
+</section><section>
+<h3 id="popular-algorithms">Popular algorithms</h3>
+<ul>
+<li>Index lookup: $O(1)$</li>
+<li>Search in array: $O(n)$</li>
+<li>Hash lookup: $O(1)$ (in Python: dict and sets)</li>
+</ul>
+</section><section>
+<h3 id="about-sets">About sets</h3>
+<p>Pros:</p>
 <ul>
 <li>faster lookup times</li>
 <li>ensures uniqueness of items</li>
 <li>awesome methods for determining what elements two sets do and do not share</li>
 </ul>
-<p>set cons:</p>
+<p>Cons:</p>
 <ul>
 <li>uses more memory</li>
 <li>slower to build and append to than a list</li>
 </ul>
 </section><section>
-<h3 id="big-o-calculated-based-on-size">Big-O calculated based on size</h3>
-</section><section>
-<h3 id="definitions-big-o-notation">Definitions: Big-O notation</h3>
-<ul>
-<li>O(1): constant time
-(e.g. getting an item from an array with an index)</li>
-<li>O(log(n)): less than linear, exponent of n&rsquo;s growth (e.g., binary tree search; log2(4)=2, log2(16)=4)</li>
-<li>O(sqrt(n)): more than log, less than n (e.g., &hellip;?)</li>
-<li>O(n): linear time with size (e.g. summation of every element in list)</li>
-<li>O(n^2): polynomial time, in this case squared (e.g., two nested for loops, going through the whole list)</li>
-</ul>
-</section><section>
-<h3 id="popular-algorithms">Popular algorithms</h3>
-<ul>
-<li>Index lookup: O(1)</li>
-<li>Search in array: O(n)</li>
-<li>Hash lookup: O(1) (in Python: dict and sets)</li>
-</ul>
-</section><section>
 <h3 id="big-o-can-also-apply-memory-size">Big-O can also apply memory size</h3>
 <ul>
-<li>Same idea: O(1), O(n), etc</li>
+<li>Same idea: $O(1)$, $O(n)$, etc</li>
 <li>Hashing usually requires additional space</li>
+<li>Do not use complex data structures unnecessarily!</li>
 </ul>
 </section><section>
 <h3 id="whats-hashing">What&rsquo;s hashing?</h3>
@@ -104,6 +111,7 @@
 <pre><code>hash(&quot;hello&quot;) -&gt; 46487
 </code></pre></li>
 <li>hash number can be used (with some tricks) as an <strong>index</strong></li>
+<li>then you can use the index instead of searching with $O(1)$</li>
 </ul>
 <h4 id="other-uses">Other uses:</h4>
 <ul>
@@ -111,6 +119,20 @@
 <li>Sorting (only for values)</li>
 <li>Checksumming internet download packages</li>
 </ul>
+</section><section>
+<h3 id="exercise-time">Exercise time!</h3>
+<p>Compare speed of two functions:</p>
+<ol>
+<li>One that searches a string in a list</li>
+<li>One that finds a string in a set</li>
+</ol>
+<p>To find speed:</p>
+<ol>
+<li>Start a timer</li>
+<li>Run the test a large number of times (e.g. 1000)</li>
+<li>Stop the timer and find elapsed time</li>
+<li>Report time per operation by dividing with repear multiplier (e.g., 1000)</li>
+</ol>
 </section>
 
   
@@ -180,7 +202,22 @@
 
 
 
-    <a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
 
     
   </body>
