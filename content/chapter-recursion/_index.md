@@ -38,5 +38,11 @@ What is the advantage over loops?
 
 ---
 
+[![](https://www.smbc-comics.com/comics/1562409923-20190706.png)<br>
+(click to read more)](http://smbc-comics.com/comic/recursion)
+
+---
+
 [![](https://imgs.xkcd.com/comics/fixing_problems.png)<br>
 (click to read more)](https://xkcd.com/1739/)
+
