@@ -1,69 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/instructor/schedule/</loc>
     <lastmod>2021-01-25T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/schedule/</loc>
     <lastmod>2021-01-25T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/instructor/syllabus/</loc>
     <lastmod>2020-12-20T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/chapter-intro/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/chapter-data-structures/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/chapter-exceptions/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/instructor/exams/</loc>
     <lastmod>2020-12-20T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/chapter-recursion/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/</loc>
     <lastmod>2020-12-20T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/instructor/</loc>
     <lastmod>2020-12-20T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/about/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cengique.github.io/lectures-prog-data-analysis/tags/</loc>
   </url>
-  
 </urlset>
