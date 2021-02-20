@@ -8,6 +8,11 @@ weight = 4 # chapter number
   
 ---
 
+[![](https://www.smbc-comics.com/comics/1562409923-20190706.png)<br>
+(click to read more)](http://smbc-comics.com/comic/recursion)
+
+---
+
 ### What is recursion
 
 - Reusing a function
@@ -35,11 +40,6 @@ What is the advantage over loops?
 ### Classic example: factorial
 
 <iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
----
-
-[![](https://www.smbc-comics.com/comics/1562409923-20190706.png)<br>
-(click to read more)](http://smbc-comics.com/comic/recursion)
 
 ---
 
