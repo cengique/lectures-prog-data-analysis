@@ -6,7 +6,7 @@
 */}}
 <div class="content">
   <table class="schedule-table">
-    <tr><th>Week#</th><th>Module</th>{{ with .Get 0 }}<th>Setup</th>{{ end }}<th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
+    <tr><th>Week#</th><th>Date</th><th>Module</th>{{ with .Get 0 }}<th>Setup</th>{{ end }}<th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
   </table>
 </div>
 
@@ -17,19 +17,22 @@
     // Read JSON and print out schedule table
     var moduleNum = 0;
     var startDay = 0;
+    var startDate = new Date("2021/01/19");
     modules.forEach(item => {
       var row = document.createElement("tr");
 
       if (item.special) {
         row.innerHTML = "<td>"
           + (startDay/7 + 1) + "</td><td>"
+          + (startDate.getMonth() + 1) + "/" + startDate.getDate() + "</td><td>"
           + item.special + "</td><td></td><td></td><td></td><td></td>";
       } else {
         moduleNum = moduleNum + item.module;
         row.innerHTML = 
           "<td>"
-		  + ( startDay/7 + 1) + "</td><td>"
-		  + item.name + "</td>{{ with .Get 0 }}<td>"
+	  + ( startDay/7 + 1) + "</td><td>"
+          + (startDate.getMonth() + 1) + "/" + startDate.getDate() + "</td><td>"
+	  + item.name + "</td>{{ with .Get 0 }}<td>"
           + item.setup + "</td>{{ end }}<td>"
           + item.topic + "</td>" +
 		  "<td>" + item.handson + "</td>" +
@@ -37,6 +40,7 @@
       }
       document.getElementsByClassName("schedule-table")[0].append(row);
       startDay = startDay + item.days;
+      startDate.setDate(startDate.getDate() + item.days);
     });
 	      
 </script>
