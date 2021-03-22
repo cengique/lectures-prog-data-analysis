@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Schedule - Lectures for the Python Programming for Data Analysis course</title>
 <meta name="description" content="Schedule">
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.82.0" />
 <link href="https://cengique.github.io/lectures-prog-data-analysis//index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="https://cengique.github.io/lectures-prog-data-analysis/instructor/schedule/">
 <link rel="stylesheet" href="https://cengique.github.io/lectures-prog-data-analysis/css/theme.min.css">
@@ -48,7 +48,7 @@
 
 <div class="content">
   <table class="schedule-table">
-    <tr><th>Week#</th><th>Module</th><th>Setup</th><th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
+    <tr><th>Week#</th><th>Date</th><th>Module</th><th>Setup</th><th>Topic</th><th>Hands-on</th><th>Assignment</th></tr>
   </table>
 </div>
 
@@ -59,19 +59,22 @@
     
     var moduleNum = 0;
     var startDay = 0;
+    var startDate = new Date("2021/01/19");
     modules.forEach(item => {
       var row = document.createElement("tr");
 
       if (item.special) {
         row.innerHTML = "<td>"
           + (startDay/7 + 1) + "</td><td>"
+          + (startDate.getMonth() + 1) + "/" + startDate.getDate() + "</td><td>"
           + item.special + "</td><td></td><td></td><td></td><td></td>";
       } else {
         moduleNum = moduleNum + item.module;
         row.innerHTML = 
           "<td>"
-		  + ( startDay/7 + 1) + "</td><td>"
-		  + item.name + "</td><td>"
+	  + ( startDay/7 + 1) + "</td><td>"
+          + (startDate.getMonth() + 1) + "/" + startDate.getDate() + "</td><td>"
+	  + item.name + "</td><td>"
           + item.setup + "</td><td>"
           + item.topic + "</td>" +
 		  "<td>" + item.handson + "</td>" +
@@ -79,6 +82,7 @@
       }
       document.getElementsByClassName("schedule-table")[0].append(row);
       startDay = startDay + item.days;
+      startDate.setDate(startDate.getDate() + item.days);
     });
 	      
 </script>
