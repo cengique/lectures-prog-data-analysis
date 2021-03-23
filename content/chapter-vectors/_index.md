@@ -8,11 +8,29 @@ weight = 6 # chapter number
   
 ---
 
+{{% section %}}
+
 ### Python's Numpy module
+
+- enables working with $n$-dimensional arrays
+- math functions without needing to loop over arrays
+- reading/writing to files
+- advanced math: linear algebra, random numbers, etc
 
 ---
 
-{{% section %}} <!-- two slides together -->
+### Numpy overview
+
+- Creating and manipulating `ndarray` objects and doing math on them
+- Data types for efficient storage and use
+- Indexing and slicing; with boolean expressions and *fancy* indexing
+- Unary and binary math functions
+
+{{% /section %}}
+
+---
+
+{{% section %}}
 
 ### Linear algebra basics:
 ### Vectors and matrices
@@ -103,33 +121,30 @@ Useful transforming rows of data, image operations, 3D rotations, machine learni
 
 {{% section %}}
 
-### R: conventional looping versus vector operations
+### NumPy: conventional looping versus vector operations
 
 Loop through your data and calculate mean and standard deviation (or regression, min, max, etc.).
 
-```R
-vector <- c(1,2,3)
-sum <- 0
-    
-for (element in vector) {
-sum <- sum + element
-}
-mean <- sum / length(vector)
+```python
+vector = [1,2,3]
+sum = 0
+for element in vector
+    sum += element
+mean = sum / len(vector)
 ```
 
-Use vector operations to do it shorter and more efficiently. <!-- .element: class="fragment" data-fragment-index="1" -->
-`\[ \mu = \sum_{i=1..N} x_i / N \]`
-```R
-vector <- c(1,2,3)
-sum(vector) / length(vector)
+Use vector operations to do it shorter and more efficiently. 
+$$ \mu = \sum_{i=1..N} x_i / N $$
+```python
+import numpy as np
+vector = np.array([1,2,3])
+mean = np.sum(vector) / len(vector)
 ```
-<!-- .element: class="fragment" data-fragment-index="1" -->
-
 ---
 
-### R exercise
+### Numpy exercise
 
 Calculate standard deviation
-`\[ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } \]`
-where `$N$` is the number of elements in `$ \vec{x} $` and `$ \mu $` is its mean.
+$$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
+where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
