@@ -12,6 +12,7 @@ weight = 6 # chapter number
 
 ### Python's Numpy module
 
+From *Python for Data Analysis, 2nd Ed*, chapter 4:
 - enables working with $n$-dimensional arrays
 - math functions without needing to loop over arrays
 - reading/writing to files
@@ -148,3 +149,4 @@ Calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
+Submit [here](https://replit.com/join/iblvfxte-cengique)
