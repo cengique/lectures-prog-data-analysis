@@ -150,3 +150,14 @@ $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
 Submit [here](https://replit.com/join/iblvfxte-cengique)
+
+---
+
+### Make a Colab notebook with your solution
+
+- Work in groups as before
+- Log into [Google Colab](colab.research.google.com/) with any Google account
+- Create a new Python notebook
+- Write some text and code blocks to explain your standard deviation code
+- Compare your result to the output of `np.std(vector, ddof=1)` in your notebook
+- Share your link
