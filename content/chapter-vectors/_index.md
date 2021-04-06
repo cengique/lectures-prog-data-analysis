@@ -129,7 +129,7 @@ Loop through your data and calculate mean and standard deviation (or regression,
 ```python
 vector = [1,2,3]
 sum = 0
-for element in vector
+for element in vector:
     sum += element
 mean = sum / len(vector)
 ```
