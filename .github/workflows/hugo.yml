@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        fetch-depth: 1
         submodules: 'true'
 
     - name: create worktree
@@ -18,6 +18,13 @@ jobs:
 
     - name: Hugo
       uses: klakegg/actions-hugo@1.0.0
-    
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages-sp21
+        path: public/sp21
+        submodules: 'true'
+
     - name: Push
       run: chmod 755 ./deploy.sh && ./deploy.sh
