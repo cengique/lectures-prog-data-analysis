@@ -64,9 +64,9 @@
 </section><section>
 <h3 id="examples-with-if-statements-vs-exceptions">Examples with if statements vs exceptions</h3>
 <p>If statement:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape>value <span style="color:#f92672">=</span> count_inputs(<span style="color:#f92672">...</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape>value <span style="color:#f92672">=</span> count_inputs(<span style="color:#f92672">...</span>)
 <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
+  print(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
   exit <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 <span style="color:#75715e"># now do stuff with value</span>
 <span style="color:#f92672">...</span>
@@ -75,12 +75,12 @@
 <span class='fragment '
   >
   <p>Exception:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#66d9ef">try</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#66d9ef">try</span>:
   value <span style="color:#f92672">=</span> count_inputs(<span style="color:#f92672">...</span>)
   <span style="color:#75715e"># now do stuff with value</span>
   <span style="color:#f92672">...</span>
 <span style="color:#66d9ef">except</span>:
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
+  print(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
   <span style="color:#66d9ef">raise</span>
 </code></pre></div>
 </span>
@@ -90,18 +90,18 @@
 <li>All exceptions should be subclasses of <code>BaseException</code></li>
 <li>You can have multiple <code>except</code> clauses to catch specific exceptions:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#f92672">import</span> sys
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#f92672">import</span> sys
 
 <span style="color:#66d9ef">try</span>:
     f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;myfile.txt&#39;</span>)
     s <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>readline()
     i <span style="color:#f92672">=</span> int(s<span style="color:#f92672">.</span>strip())
 <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">OSError</span> <span style="color:#66d9ef">as</span> err:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;OS error: {0}&#34;</span><span style="color:#f92672">.</span>format(err))
+    print(<span style="color:#e6db74">&#34;OS error: </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(err))
 <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Could not convert data to an integer.&#34;</span>)
+    print(<span style="color:#e6db74">&#34;Could not convert data to an integer.&#34;</span>)
 <span style="color:#66d9ef">except</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Unexpected error:&#34;</span>, sys<span style="color:#f92672">.</span>exc_info()[<span style="color:#ae81ff">0</span>])
+    print(<span style="color:#e6db74">&#34;Unexpected error:&#34;</span>, sys<span style="color:#f92672">.</span>exc_info()[<span style="color:#ae81ff">0</span>])
     <span style="color:#66d9ef">raise</span>
 </code></pre></div></section>
 
