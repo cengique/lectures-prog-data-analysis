@@ -52,7 +52,7 @@ Also quickly introduce yourself now in class!
 
 ### Semester plan
 
-TBA
+See [Schedule](../schedule).
 
 ---
 
@@ -63,6 +63,7 @@ TBA
 {{% fragment %}}
 Time to work on:
 
+1. Skills Survey on D2L
 1. Register for Discord and Piazza
-1. Respond to introductions post
+1. Respond to introductions post on Piazza
 {{% /fragment %}}
