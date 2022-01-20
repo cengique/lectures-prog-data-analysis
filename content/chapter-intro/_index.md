@@ -67,3 +67,9 @@ Time to work on:
 1. Register for Discord and Piazza
 1. Respond to introductions post on Piazza
 {{% /fragment %}}
+
+---
+
+### Practice Python basics
+
+<iframe height="400px" width="100%" src="https://replit.com/@cengique/Python-basics?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
