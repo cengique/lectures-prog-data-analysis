@@ -1,7 +1,7 @@
 +++
 title = "Recursion"
 outputs = ["Reveal"]
-weight = 4 # chapter number
+weight = 5 # chapter number
 +++
 
 {{< reveal-titlepage >}}

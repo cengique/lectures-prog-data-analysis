@@ -1,7 +1,7 @@
 +++
 title = "Object Oriented Programming"
 outputs = ["Reveal"]
-weight = 5 # chapter number
+weight = 6 # chapter number
 +++
 
 {{< reveal-titlepage >}}

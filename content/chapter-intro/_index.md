@@ -68,10 +68,3 @@ Time to work on:
 1. Respond to introductions post on Piazza
 {{% /fragment %}}
 
----
-
-### Practice Python basics
-
-Click [here](https://replit.com/join/gooxipqgep-cengique) to join
-
-<iframe height="400px" width="100%" src="https://replit.com/@cengique/Python-basics?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

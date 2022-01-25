@@ -1,7 +1,7 @@
 +++
 title = "Errors and Exceptions"
 outputs = ["Reveal"]
-weight = 3 # chapter number
+weight = 5 # chapter number
 +++
 
 {{< reveal-titlepage >}}
