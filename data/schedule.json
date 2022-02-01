@@ -12,7 +12,7 @@
   {"name": "Advanced data structures",
    "setup": "",
    "topic": "Collections, Dictionary, Set, Tuple, Slicing",
-   "handson": "", "module": 1, 
+   "handson": "quiz", "module": 1, 
    "assignment": "JetBrains", "days": 7},
   {"name": "Exceptions",
    "setup": "",
