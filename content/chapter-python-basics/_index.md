@@ -37,7 +37,6 @@ Click [here](https://replit.com/join/gooxipqgep-cengique) to join
 - Tuples
 - Dictionaries (default, Counter)
 - Sets
-- Control flow
 
 ---
 
@@ -46,3 +45,14 @@ Click [here](https://replit.com/join/gooxipqgep-cengique) to join
 Fork it this time, work in teams
 
 <iframe height="400px" width="100%" src="https://replit.com/@cengique/Python-basics?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Misc Python Oddities
+
+- Control flow
+- Truthiness
+- Sorting
+- List comprehensions
+- Zip and argument unpacking
+- Type annotations
