@@ -1,5 +1,5 @@
 +++
-title = "Python data structures"
+title = "Data structures and performance"
 outputs = ["Reveal"]
 weight = 4 # chapter number
 +++
