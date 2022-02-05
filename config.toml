@@ -94,6 +94,17 @@ isHTML = true
         url = "/about"
         weight = 2
 
+    [[menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        weight = 3
+        
+    [[menu.main]]
+        name = "Spring 2021"
+        url = "/sp21/"
+        weight = 3
+        parent = "archives"
+
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
 [markup]
