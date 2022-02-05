@@ -36,7 +36,6 @@ Click [here](https://replit.com/join/gooxipqgep-cengique) to join
 - Lists
 - Tuples
 - Dictionaries (default, Counter)
-- Sets
 
 ---
 
@@ -50,6 +49,7 @@ Fork it this time, work in teams
 
 ### Misc Python Oddities
 
+- Sets
 - Control flow
 - Truthiness
 - Sorting
