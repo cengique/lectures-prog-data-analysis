@@ -93,6 +93,12 @@ isHTML = true
         url = "/about"
         weight = 2
 
+    [[menu.main]]
+        name = 'Go back...'
+        post = '<i class="fas fa-undo-alt"></i>'
+        url = "../"
+        weight = 3
+
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
 [markup]
