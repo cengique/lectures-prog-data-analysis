@@ -159,8 +159,8 @@ the workflow and the archive to show up.*
 
 It should look like this on the main site:
 
-![Archive sub-menu](images/Screenshot-archive-submenu.png)
+![Archive sub-menu](static/images/Screenshot-archive-submenu.png)
 
 And like this on the archive site (in this example, under `sp21/`):
 
-![Archive go back menu](images/Screenshot-archive-goback.png)
+![Archive go back menu](static/images/Screenshot-archive-goback.png)
