@@ -36,10 +36,9 @@ weight = 4 # chapter number
 
 ### Definitions: Big-O notation
 
-- $O(1)$: constant time 
-    (e.g. getting an item from an array with an index)
-- $O(\log(n))$: less than linear, exponent of n's growth (e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)
-- $O(\sqrt{n})$: more than log, less than n (e.g., process one row of matrix data)
+- $O(1)$: constant time, independent of input size, $n$ <br>(e.g. getting an item from an array with an index)
+- $O(\log(n))$: less than linear, exponent of $n$'s growth <br>(e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)
+- $O(\sqrt{n})$: more than log, less than $n$ (e.g., process one row of matrix data)
 - $O(n)$: linear time with size (e.g. summation of every element in list)
 - $O(n^k)$: polynomial time ($k$: constant) (e.g., nested loops over whole input)
 - $O(2^n)$: exponential time (worst case; e.g., finding best route between two points)
