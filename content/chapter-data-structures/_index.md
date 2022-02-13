@@ -44,6 +44,10 @@ weight = 4 # chapter number
 - $O(n^k)$: polynomial time ($k$: constant) (e.g., nested loops over whole input)
 - $O(2^n)$: exponential time (worst case; e.g., finding best route between two points)
 
+{{% note %}}
+TODO: add graph
+{{% /note %}}
+
 ---
 
 ### Constant time: The holy grail
@@ -113,8 +117,8 @@ Cons:
 ### Exercise time!
 
 Compare speed of two operations:
-1. Searching an item in list versus a set
-1. Appending an item in list versus a set
+1. Searching an item in list versus set
+1. Appending an item in list versus set
 
 {{% fragment %}}
 #### To find speed:
