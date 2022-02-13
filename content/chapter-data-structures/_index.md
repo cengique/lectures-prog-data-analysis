@@ -11,21 +11,26 @@ weight = 4 # chapter number
 ### Time complexity, big-O notation
 
 - General idea: time it takes for an algorithm to run.
-- complexity: the number of steps involved in a process or pieces that make up a system ?
+- Complexity: the number of steps involved in a process or pieces that make up a system ?
 
 {{% fragment %}}
-> It makes a difference in everyday use:
+> Complexity makes a difference in everyday use:
 >
 > **Fast and high quality** services vs <br> those that **lag, crash, and are unreliable**
 {{% /fragment %}}
 
 ---
 
-### Big-O calculated based on size
+### Big-O is calculated based on input size
 
-- We are more concerned about performance of algorithms when they work large amounts of data
-- Does this algorithm scale up when it is given a large input?
-- Therefore, O() notation indicates _growth_ of time with an input, _n_
+- In data analytics, we will often work with large amounts of data
+- Performance of algorithms matter more with large data
+
+{{% fragment %}}
+> Does this algorithm scale up when it is given a large input?
+
+- Therefore, $O()$ notation indicates _growth_ of time with an input, _n_
+{{% /fragment %}}
 
 ---
 
@@ -34,9 +39,27 @@ weight = 4 # chapter number
 - $O(1)$: constant time 
     (e.g. getting an item from an array with an index)
 - $O(\log(n))$: less than linear, exponent of n's growth (e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)
-- $O(\sqrt{n})$: more than log, less than n (e.g., ...?)
+- $O(\sqrt{n})$: more than log, less than n (e.g., process one row of matrix data)
 - $O(n)$: linear time with size (e.g. summation of every element in list)
-- $O(n^2)$: polynomial time, in this case squared (e.g., two nested for loops, going through the whole list)
+- $O(n^k)$: polynomial time ($k$: constant) (e.g., nested loops over whole input)
+- $O(2^n)$: exponential time (worst case; e.g., finding best route between two points)
+
+---
+
+### Constant time: The holy grail
+
+Why does indexing an array take constant time, $O(1)$?
+
+{{% fragment %}}
+- In homogeneous arrays, each item takes the same memory space!
+- You can multiply the index by item size to find offset of item:
+$$ \mathsf{Item~at~index~} i = \mathsf{array~starting~address} + i * \mathsf{size~of~one~item}$$
+{{% /fragment %}}
+
+{{% fragment %}}
+> Hint: In Python, `list` can contain heterogeneous items, but each item is
+> an object reference that take up equal space.
+{{% /fragment %}}
 
 ---
 
@@ -89,20 +112,26 @@ Cons:
 
 ### Exercise time!
 
-Compare speed of two functions:
-1. One that searches a string in a list
-1. One that finds a string in a set
+Compare speed of two operations:
+1. Searching an item in list versus a set
+1. Appending an item in list versus a set
 
-To find speed:
+{{% fragment %}}
+#### To find speed:
+1. Initialize a long list, then create a set from it
 1. Start a timer
-1. Run the test a large number of times (e.g. 1000)
+1. Loop a large number of times (e.g. 100,000)
+1. Put only one operation inside the loop to measure (e.g., `"hello" in my_list`)
 1. Stop the timer and find elapsed time
-1. Report time per operation by dividing with repear multiplier (e.g., 1000)
+1. Report time per operation by dividing with repeat multiplier you selected above
+
+OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun Mitchell made!
+{{% /fragment %}}
 
 ---
 
 ### Example program to measure performance
 
 Copy-paste locally because cloud runs are not consistent:
-<iframe height="400px" width="100%" src="https://repl.it/@cengique/PerfMeasure?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
