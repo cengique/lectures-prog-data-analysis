@@ -37,9 +37,37 @@ What is the advantage over loops?
 
 ---
 
+### Designing a recursive algorithm
+
+1. Do you have a Matroshka doll situation? Identify the part in your problem that repeats and when that happens. 
+1. Identify when the recursion ends. What is the condition that stops it?
+
+{{% fragment %}}
+#### Example: Factorial
+1. Repeating pattern: each time multiply with one less number $$f(n)=n\times f(n-1)$$
+1. End condition: we stop at 1 $$f(1)=1$$
+{{% /fragment %}}
+
+---
+
 ### Classic example: factorial
 
-<iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+For demo purposes only, see actual activity on next slide.
+<iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Class activity: Solve ONE of these problems
+
+1. [Inorder Traversal (HackerRank)](https://www.hackerrank.com/challenges/tree-inorder-traversal/problem?isFullScreen=true)
+1. [Preorder Traversal (HackerRank)](https://www.hackerrank.com/challenges/tree-preorder-traversal/problem?isFullScreen=true)
+1. [Postorder Traversal (HackerRank)](https://www.hackerrank.com/challenges/tree-postorder-traversal/problem?isFullScreen=true)
+
+Advanced:
+1. [Height of binary tree (HackerRank)](https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem?isFullScreen=true)
+1. [Binary search tree insertion](https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem?isFullScreen=true)
+
+Post your solution link on Piazza.
 
 ---
 
