@@ -100,7 +100,7 @@ Follow the steps:
         
         [[menu.main]]
             name = "Go back..."
-            url = "../"
+            url = "https://cengique.github.io/lectures-prog-data-analysis/" # relative doesn't work in deeper locations
             weight = 3
       ```
    1. Run these shell commands to add the archive site pages (e.g.,
