@@ -40,7 +40,7 @@ What is the advantage over loops?
 ### Designing a recursive algorithm
 
 1. Do you have a Matroshka doll situation? Identify the part in your problem that repeats and when that happens. 
-1. Identify when the recursion ends. What is the condition that stops it?
+1. {{% fragment %}} Identify when the recursion ends. What is the condition that stops it? {{% /fragment %}}
 
 {{% fragment %}}
 #### Example: Factorial
