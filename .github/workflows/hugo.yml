@@ -19,7 +19,7 @@ jobs:
     - name: Hugo
       uses: klakegg/actions-hugo@1.0.0
       with:
-        image: alpine
+        image: ubuntu
 
     - name: Checkout
       uses: actions/checkout@v2
