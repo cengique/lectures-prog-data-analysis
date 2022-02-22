@@ -12,7 +12,7 @@ metaDataFormat = "yaml"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
-enableGitInfo = true            # Creates .Gitinfo files
+#enableGitInfo = true            # Creates .Gitinfo files
 enableInlineShortcodes = true   # One-line shortcodes, good for fragment?
 
 # already done below
