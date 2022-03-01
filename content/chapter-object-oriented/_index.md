@@ -18,7 +18,7 @@ weight = 6 # chapter number
 
 ### OOP: encapsulation and data abstraction
 
-- From four fundamental pillars of OOP
+- Two of the fundamental pillars of OOP
 - Data and functions (methods) go together
 - Unimportant details of code are hidden
 
@@ -56,6 +56,10 @@ weight = 6 # chapter number
 ---
 
 ### Inheritance and Polymorphism
+
+- The last two fundamental pillars of OOP
+- Inheritance: subclasses inherit methods and attributes
+- Polymorphism: all subclasses can be used interchangably, regardless of implementation details
 
 ---
 
