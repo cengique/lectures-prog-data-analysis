@@ -8,6 +8,31 @@ weight = 6 # chapter number
   
 ---
 
+### What is object oriented programming?
+
+- Analogy to way we interact with objects in real world
+- A component-oriented approach
+- Promotes reusability
+
+---
+
+### OOP: encapsulation and data abstraction
+
+- From four fundamental pillars of OOP
+- Data and functions (methods) go together
+- Unimportant details of code are hidden
+
+---
+
+### OOP in Python
+
+- Constructors
+- Class attributes
+- Instance attributes
+- Calling methods
+
+---
+
 ### Class activity: make your own class!
 
 - Teams of 2, pick a marker
@@ -27,6 +52,10 @@ weight = 6 # chapter number
 - No teamwork; create a file with your name and put your class in your own fork following the template below:
 
 <iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-sp22?lite=true#gunay.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Inheritance and Polymorphism
 
 ---
 
