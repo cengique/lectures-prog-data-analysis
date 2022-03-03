@@ -29,7 +29,8 @@ weight = 6 # chapter number
 - Constructors
 - Class attributes
 - Instance attributes
-- Calling methods
+- Calling class methods
+- Magic methods
 
 ---
 
@@ -67,4 +68,17 @@ weight = 6 # chapter number
 
 - Follow instructions by forking it.
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Class activity: polymorphism
+
+- Teams of 2, pick a marker
+- Write code on a board that includes:
+  - A parent class and 2-3 child classes
+  - Create parent class method to be *overloaded* in the children
+  - Implement different versions of method in child classes
+  - Demonstrate calling the method in children object instances to show different outcomes
+  - Must have a meaning!
+
