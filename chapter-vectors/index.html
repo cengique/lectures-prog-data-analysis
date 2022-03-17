@@ -63,6 +63,17 @@
 <li>Indexing and slicing; with boolean expressions and <em>fancy</em> indexing</li>
 <li>Unary and binary math functions</li>
 </ul>
+</section><section>
+<h3 id="numpy-practice">Numpy practice</h3>
+<ul>
+<li>Work in groups</li>
+<li>Create numpy arrays in 1D, 2D, and 3D</li>
+<li>Index slices in 1D, 2D, and 3D</li>
+<li>Do some arithmetic</li>
+<li>Have a meaning?</li>
+<li>Fork <a href="https://replit.com/@cengique/numpy-practice" target="_blank" rel="noreferrer noopener">this</a>
+ to submit</li>
+</ul>
 
 </section>
 </section><section>
@@ -154,22 +165,22 @@ $$</p>
 <section data-shortcode-section>
 <h3 id="numpy-conventional-looping-versus-vector-operations">NumPy: conventional looping versus vector operations</h3>
 <p>Loop through your data and calculate mean and standard deviation (or regression, min, max, etc.).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape>vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
-sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-<span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> vector:
-    sum <span style="color:#f92672">+=</span> element
-mean <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> len(vector)
-</code></pre></div><p>Use vector operations to do it shorter and more efficiently.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> vector:
+</span></span><span style="display:flex;"><span>    sum <span style="color:#f92672">+=</span> element
+</span></span><span style="display:flex;"><span>mean <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> len(vector)
+</span></span></code></pre></div><p>Use vector operations to do it shorter and more efficiently.
 $$ \mu = \sum_{i=1..N} x_i / N $$</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-vector <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
-mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(vector) <span style="color:#f92672">/</span> len(vector)
-</code></pre></div></section><section>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>vector <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(vector) <span style="color:#f92672">/</span> len(vector)
+</span></span></code></pre></div></section><section>
 <h3 id="numpy-exercise">Numpy exercise</h3>
 <p>Calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.</p>
-<p>Submit <a href="https://replit.com/join/iblvfxte-cengique" target="_blank" rel="noreferrer noopener">here</a>
+<p>Submit by forking <a href="https://replit.com/@cengique/numpy-beginner-sp22#main.py" target="_blank" rel="noreferrer noopener">this</a>
 </p>
 </section><section>
 <h3 id="make-a-colab-notebook-with-your-solution">Make a Colab notebook with your solution</h3>
