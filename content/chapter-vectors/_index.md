@@ -35,6 +35,7 @@ From *Python for Data Analysis, 2nd Ed*, chapter 4:
 - Create numpy arrays in 1D, 2D, and 3D
 - Index slices in 1D, 2D, and 3D
 - Do some arithmetic
+- Use Boolean indexing
 - Have a meaning?
 - Fork [this](https://replit.com/@cengique/numpy-practice) to submit
 
