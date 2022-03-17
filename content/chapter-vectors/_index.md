@@ -161,7 +161,7 @@ Calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
-Submit by forking [this](https://replit.com/@cengique/numpy-beginner-sp22#main.py)
+Submit by following instructions on the page below.
 
 ---
 
@@ -172,4 +172,4 @@ Submit by forking [this](https://replit.com/@cengique/numpy-beginner-sp22#main.p
 - Create a new Python notebook
 - Write some text and code blocks to explain your standard deviation code
 - Compare your result to the output of `np.std(vector, ddof=1)` in your notebook
-- Share your link
+- Share your link on Piazza
