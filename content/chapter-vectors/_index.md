@@ -27,6 +27,17 @@ From *Python for Data Analysis, 2nd Ed*, chapter 4:
 - Indexing and slicing; with boolean expressions and *fancy* indexing
 - Unary and binary math functions
 
+---
+
+### Numpy practice
+
+- Work in groups
+- Create numpy arrays in 1D, 2D, and 3D
+- Index slices in 1D, 2D, and 3D
+- Do some arithmetic
+- Have a meaning?
+- Fork [this](https://replit.com/@cengique/numpy-practice) to submit
+
 {{% /section %}}
 
 ---
@@ -149,7 +160,7 @@ Calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
-Submit [here](https://replit.com/join/iblvfxte-cengique)
+Submit by forking [this](https://replit.com/@cengique/numpy-beginner-sp22#main.py)
 
 ---
 

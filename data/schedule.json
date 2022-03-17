@@ -57,7 +57,7 @@
   {"name": "Data IO and cleaning",
    "setup": "",
    "topic": "Input and output of data files and formats and basic data cleaning",
-   "handson": "", "module": 1, 
+   "handson": "quiz", "module": 1, 
    "assignment": "read PDA Ch 6-7; project - stage 2", "days": 7},
   {"name": "Plotting",
    "setup": "",
