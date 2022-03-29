@@ -173,3 +173,19 @@ Submit by following instructions on the page below.
 - Write some text and code blocks to explain your standard deviation code
 - Compare your result to the output of `np.std(vector, ddof=1)` in your notebook
 - Share your link on Piazza
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+### Pandas supports tabular data
+
+<img src="/lectures-prog-data-analysis/images/pandas_logo.svg" style="background: gray; width: 50%">
+
+- https://pandas.pydata.org/
+- Akin to spreadseets and SQL tables
+- Based on Numpy, but builds on it
+- Primary components: `Series` and `DataFrame`
+- Continue with Python for Data Analysis, chapter 5
