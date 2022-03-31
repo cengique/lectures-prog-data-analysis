@@ -189,3 +189,28 @@ Submit by following instructions on the page below.
 - Based on Numpy, but builds on it
 - Primary components: `Series` and `DataFrame`
 - Continue with Python for Data Analysis, chapter 5
+
+---
+
+### Pandas objects:
+
+- Series for 1-D data
+- DataFrame for 2-D data
+- Indexing
+- Filtering
+
+---
+
+### Hands on activity
+
+- Work in groups as before
+- Log into [Google Colab](https://colab.research.google.com/) with any Google account
+- Create a new Python notebook
+- Create a Dataframe object from any data
+- Extract a Series object from your DataFrame
+- Use slicing and fancy indexing to get subsets of your DataFrame
+- Apply one comparison operator to get a boolean matrix and use it for indexing your DataFrame
+- Share your link on Piazza
+
+
+{{% /section %}}
