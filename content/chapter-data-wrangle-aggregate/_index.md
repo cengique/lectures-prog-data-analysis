@@ -37,9 +37,9 @@ weight = 12 # chapter number
 
 #### Reshape and pivot
 
-- `stack/unstack`
+- `stack/` vs `unstack`
 - `reshape`
-- `pivot`
+- `pivot` vs `melt`
 
 {{% /section %}}
 
