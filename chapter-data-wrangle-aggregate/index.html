@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Data input/output and cleaning</title>
+<title>Data wrangling and aggregation</title>
 <meta name="description" content="Lectures and other resources">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,26 +38,48 @@
       <div class="slides">
   
 
-    <section><h3 id="re-introduction-to-software-engineering">Data input/output and cleaning</h3>
+    <section><h3 id="re-introduction-to-software-engineering">Data wrangling and aggregation</h3>
 
 <h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
-<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-vectors/" title="Working with vector data"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Working with vector data</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-wrangle-aggregate/" title="Data wrangling and aggregation">Next - Data wrangling and aggregation <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-io-cleaning/" title="Data input/output and cleaning"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data input/output and cleaning</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/instructor/" title="Instructor Materials">Next - Instructor Materials <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
 
 </section><section>
-<h3 id="data-formats">Data formats</h3>
+
+
+<section data-shortcode-section>
+<h3 id="data-wrangling">Data wrangling</h3>
 <ul>
-<li>See Python for Data Analysis, Chapter 6 and 7</li>
+<li>See Python for Data Analysis, Chapter 8</li>
 </ul>
-<p>Some topics:</p>
+</section><section>
+<h4 id="hierarchical-indexing">Hierarchical indexing:</h4>
 <ul>
-<li>Loading and saving in different data formats</li>
-<li>Common options for loading</li>
-<li>Handling exceptions in formatting</li>
-<li>Selecting index columns</li>
-<li>Reading from URLs</li>
-<li>Reading from databases</li>
-<li>Binary formats (e.g., HDF5)</li>
+<li>partial indexing</li>
+<li><code>unstack()</code> method converts to <code>DataFrame</code></li>
+<li><code>stack()</code> is the reverse</li>
+<li><code>swaplevel()</code> for reordering hierarchical indices</li>
+<li><code>sort_index()</code> for sorting by one index</li>
+<li>Summary statistics with vector operators, such as <code>sum(level=, axis=)</code></li>
 </ul>
+</section><section>
+<h4 id="combining-and-merging">Combining and merging</h4>
+<ul>
+<li><code>merge()</code> by using keys (indices) like the SQL <em>join</em> operator
+<ul>
+<li>inner, left, right, and outer joins possible</li>
+</ul>
+</li>
+<li><code>concat()</code> for stacking objects</li>
+</ul>
+</section><section>
+<h4 id="reshape-and-pivot">Reshape and pivot</h4>
+<ul>
+<li><code>stack/unstack</code></li>
+<li><code>reshape</code></li>
+<li><code>pivot</code></li>
+</ul>
+
+</section>
 </section><section>
 <h3 id="data-cleaning">Data cleaning</h3>
 <ul>
