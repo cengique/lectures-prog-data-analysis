@@ -31,8 +31,9 @@ Once you fork this repository, Github will carry over the Github
 Actions instructions needed for automatic deployment, but you would
 need to click on the "Actions" tab and enable them again in the
 fork. After this, you should see the "Hugo" action listed, which will
-be executed after each of your commits. The action will run Hugo and
-write its output to the root of the `gh-pages` branch.
+be executed after each of your commits pushed on Github. The action
+will run Hugo and write its output to the root of the `gh-pages`
+branch.
 
 To enable Github Pages render this output, you need to go to the
 Settings tab, scroll down and select to produce the pages from the
@@ -41,6 +42,8 @@ root folder of the `gh-pages` branch.
 Don't forget to edit the `config.toml` file for changing variables
 such as `baseURL`, `github_repository`, `github_doc_repository`,
 `author`, `course`, and `google_analytics_id`.
+
+Course schedule is generated using the file `data/schedule.json`
 
 ## Reveal-Hugo customizations
 
@@ -87,7 +90,7 @@ Follow the steps:
 1. Make new branches of the source on `master` and of the pre-built site
    pages on `gh-pages` that correspond to time of archive,
    respectively (e.g., `archive-sp21` and `gh-pages-sp21`).
-1. On the archive source branch, change the `config.toml`:
+1. On the source branch of the archive (e.g., `archive-sp21`), change the `config.toml`:
    1. Add a prefix path to the `baseURL` parameter to have archive in
       a subfolder. Appended `sp21/` in this example:
       ```toml 

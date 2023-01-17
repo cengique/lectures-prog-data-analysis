@@ -38,15 +38,11 @@ Phone: 678-951-9621 (also GroupMe)
 
 ### Your turn!
 
-- Login/register on discussion and respond to the “Introductions” topic; **create an inline resume**
-
-{{% fragment %}}
-Also quickly introduce yourself now in class!
+Quickly introduce yourself now in class!
 - Name
 - Major/Year
 - What do you aim to achieve by taking this course
 - Something fun about yourself
-{{% /fragment %}}
 
 ---
 
@@ -65,6 +61,7 @@ Time to work on:
 
 1. Skills Survey on D2L
 1. Register for Discord and Piazza
-1. Respond to introductions post on Piazza
+1. Respond to the “Introductions”  discussion topic; **create an inline resume**
+
 {{% /fragment %}}
 
