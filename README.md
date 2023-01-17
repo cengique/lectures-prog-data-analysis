@@ -43,9 +43,8 @@ Don't forget to edit the `config.toml` file for changing variables
 such as `baseURL`, `github_repository`, `github_doc_repository`,
 `author`, `course`, and `google_analytics_id`.
 
-Course schedule is generated using the file `data/schedule.json` and
-the `config.toml` settings such as `author`, `course`, and
-`start_date`.
+See the description of the `schedule-table` command below on how to
+update the schedule page.
 
 ## Reveal-Hugo customizations
 
@@ -79,6 +78,10 @@ that we defined:
 - `reveal-prevnext-links`: Inserts links to previous and next Reveal
   chapters, which are automatically determined by following the pages
   in the folders. It has no additional options.
+
+- `schedule-table`: Course schedule is generated using the file
+`data/schedule.json` and the `config.toml` settings such as `author`,
+`course`, and `start_date`.
 
 ## Archiving old semesters
 
