@@ -43,7 +43,9 @@ Don't forget to edit the `config.toml` file for changing variables
 such as `baseURL`, `github_repository`, `github_doc_repository`,
 `author`, `course`, and `google_analytics_id`.
 
-Course schedule is generated using the file `data/schedule.json`
+Course schedule is generated using the file `data/schedule.json` and
+the `config.toml` settings such as `author`, `course`, and
+`start_date`.
 
 ## Reveal-Hugo customizations
 
