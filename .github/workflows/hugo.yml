@@ -31,5 +31,15 @@ jobs:
     - name: Remove git
       run: rm -rf public/sp21/.git
 
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages-sp22
+        path: public/sp22
+        submodules: 'true'
+
+    - name: Remove git
+      run: rm -rf public/sp22/.git
+
     - name: Push
       run: chmod 755 ./deploy.sh && ./deploy.sh

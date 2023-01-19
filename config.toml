@@ -102,9 +102,15 @@ isHTML = true
         weight = 3
         
     [[menu.main]]
+        name = "Spring 2022"
+        url = "/sp22/"
+        weight = 999
+        parent = "archives"
+
+    [[menu.main]]
         name = "Spring 2021"
         url = "/sp21/"
-        weight = 3
+        weight = 1000
         parent = "archives"
 
 # Markup configure section
