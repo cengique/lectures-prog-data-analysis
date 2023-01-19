@@ -97,20 +97,9 @@ isHTML = true
         weight = 2
 
     [[menu.main]]
-        identifier = "archives"
-        name = "Archives"
+        name = "Go back..."
+        url = "https://cengique.github.io/lectures-prog-data-analysis/"
         weight = 3
-        
-    [[menu.main]]
-        name = "Spring 2022"
-        url = "/sp22/"
-        weight = 999
-        
-    [[menu.main]]
-        name = "Spring 2021"
-        url = "/sp21/"
-        weight = 1000
-        parent = "archives"
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
