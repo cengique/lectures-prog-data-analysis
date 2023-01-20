@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Object Oriented Programming</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Object Oriented Programming</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-recursion/" title="Recursion"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Recursion</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-vectors/" title="Working with vector data">Next - Working with vector data <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h3 id="what-is-object-oriented-programming">What is object oriented programming?</h3>
+<ul>
+<li>Analogy to way we interact with objects in real world</li>
+<li>A component-oriented approach</li>
+<li>Promotes reusability</li>
+</ul>
+</section><section>
+<h3 id="oop-encapsulation-and-data-abstraction">OOP: encapsulation and data abstraction</h3>
+<ul>
+<li>Two of the fundamental pillars of OOP</li>
+<li>Data and functions (methods) go together</li>
+<li>Unimportant details of code are hidden</li>
+</ul>
+</section><section>
+<h3 id="oop-in-python">OOP in Python</h3>
+<ul>
+<li>Constructors</li>
+<li>Class attributes</li>
+<li>Instance attributes</li>
+<li>Calling class methods</li>
+<li>Magic methods</li>
+</ul>
+</section><section>
+<h3 id="class-activity-make-your-own-class">Class activity: make your own class!</h3>
+<ul>
+<li>Teams of 2, pick a marker</li>
+<li>Write code on a board that includes:
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>A class with a constructor</li>
+<li>One or more method functions</li>
+<li>Make sure to have some class attributes that serve a purpose</li>
+<li>Also have instance attributes</li>
+<li>Create several instances of the class and call its methods to demonstrate</li>
+</ul>
+
+</span></li>
+</ul>
+</section><section>
+<h3 id="class-activity-now-make-it-on-replit">Class activity: now make it on Repl.it</h3>
+<ul>
+<li>No teamwork; create a file with your name and put your class in your own fork following the template below:</li>
+</ul>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-sp22?lite=true#gunay.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</section><section>
+<h3 id="inheritance-and-polymorphism">Inheritance and Polymorphism</h3>
+<ul>
+<li>The last two fundamental pillars of OOP</li>
+<li>Inheritance: subclasses inherit methods and attributes</li>
+<li>Polymorphism: all subclasses can be used interchangably, regardless of implementation details</li>
+</ul>
+</section><section>
+<h3 id="class-activity-inherit">Class activity: inherit!</h3>
+<ul>
+<li>Follow instructions by forking it.</li>
+</ul>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</section><section>
+<h3 id="class-activity-polymorphism">Class activity: polymorphism</h3>
+<ul>
+<li>Teams of 2, pick a marker</li>
+<li>Write code on a board that includes:
+<ul>
+<li>A parent class and 2-3 child classes</li>
+<li>Create parent class method to be <em>overloaded</em> in the children</li>
+<li>Implement different versions of method in child classes</li>
+<li>Demonstrate calling the method in children object instances to show different outcomes</li>
+<li>Must have a meaning!</li>
+</ul>
+</li>
+</ul>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>

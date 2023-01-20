@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Kanban</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Kanban</h3>
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p>
+<figure >
+<p><img src="/softdev2-resources/images/kanban/kanbanstudents.png" height="300px"  /></p>
+</figure>
+<p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-agiledevelopment/chapter-scrum/" title="Scrum"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Scrum</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/" title="Requirements in Agile">Next - Requirements in Agile <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+</section><section>
+<h2 id="kanban">Kanban</h2>
+<p><strong>Kanban is a management method helping teams to visualize their work to understand it better, which helps to identify and eliminate bottlenecks, and maximise efficiency (flow).</strong>
+<em>It is the Japanesse word for visual signal. The original author of Kanban was Taiichi Ohno and it was used by Toyota for the first time.</em></p>
+
+
+<span class='fragment '
+  >
+  <p>A <strong>Kanban Board</strong> keeps everyone in the team on the same page.</p>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <p>Teams build a Kanban board filled with <strong>Kanban cards</strong> and set up a <strong>work flow</strong> limit.</p>
+<figure>
+    <img src="/softdev2-resources/images/kanban/kanbansimpleboard.jpg" width="600"/> 
+</figure>
+
+</span>
+</section><section>
+<h3 id="kanban-cards">Kanban cards</h3>
+<p><strong>One Kanban card per user story</strong>, which means one card per work item.</p>
+
+
+<span class='fragment '
+  >
+  The size of the work item should not be either too small or too big.
+</span>
+
+
+<span class='fragment '
+  >
+  <p>Cards should have:</p>
+<ul>
+<li>title,</li>
+<li>description,</li>
+<li>owner,</li>
+<li>any other helpful information like due date</li>
+</ul>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <p>As card moves on the board from left to right on the stage of the workflow, the card gets some history (i.e., messages from the teammates).</p>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <p>Kanban cards should be small enough such that team makes progress on them in a reasonable amount of time.</p>
+
+</span>
+</section><section>
+<h3 id="kanban-work-flow">Kanban work flow</h3>
+<figure>
+    <img src="/softdev2-resources/images/kanban/kanbanworkflow.gif" width="600"/> 
+</figure>
+
+<p>Work flow: cards moving from left to right</p>
+</section><section>
+<h3 id="benefits-of-kanban-board">Benefits of Kanban board</h3>
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>reveals bottlenecks in workflow (cards not moving forward)</li>
+</ul>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>get a sense of the size of the cards team can move forward in a timely matter</li>
+</ul>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>a visual assurance that the work is done</li>
+</ul>
+
+</span>
+</section><section>
+<h3 id="measuring-workflow">Measuring workflow</h3>
+<p><strong>lead time</strong> = the time it takes a card to move from the backlog to finish on the board</p>
+<p>In agile, if values are combined with Kanban characteristics, the outcome would be Agile Kanban. This practice is gaining popularity in Software Developmement, and it means that  the Agile iteration approach and Kanban value stream focus are combined.</p>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+
+    
+  </body>
+</html>

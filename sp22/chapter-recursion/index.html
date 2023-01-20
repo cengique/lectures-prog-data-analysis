@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Recursion</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Recursion</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-exceptions/" title="Errors and Exceptions"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Errors and Exceptions</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-object-oriented/" title="Object Oriented Programming">Next - Object Oriented Programming <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<p><a href="http://smbc-comics.com/comic/recursion" target="_blank" rel="noreferrer noopener"><img src="https://www.smbc-comics.com/comics/1562409923-20190706.png" alt=""><br>
+(click to read more)</a>
+</p>
+</section><section>
+<h3 id="what-is-recursion">What is recursion</h3>
+<ul>
+<li>Reusing a function</li>
+<li>Calling itself</li>
+<li>Similar to a loop</li>
+<li>But not linear, instead it could be exponential</li>
+</ul>
+</section><section>
+<h3 id="why-recursion">Why recursion</h3>
+<p>What is the advantage over loops?</p>
+<ul>
+<li>Divide-and-conquer type problems</li>
+<li>Tree search</li>
+<li>Sorting</li>
+<li>etc.</li>
+</ul>
+</section><section>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Qk0zUZW-U_M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</section><section>
+<h3 id="designing-a-recursive-algorithm">Designing a recursive algorithm</h3>
+<ol>
+<li>Do you have a Matroshka doll situation? Identify the part in your problem that repeats and when that happens.</li>
+<li>
+
+<span class='fragment '
+  >
+  Identify when the recursion ends. What is the condition that stops it?
+</span></li>
+</ol>
+
+
+<span class='fragment '
+  >
+  <h4 id="example-factorial">Example: Factorial</h4>
+<ol>
+<li>Repeating pattern: each time multiply with one less number $$f(n)=n\times f(n-1)$$</li>
+<li>End condition: we stop at 1 $$f(1)=1$$</li>
+</ol>
+
+</span>
+</section><section>
+<h3 id="classic-example-factorial">Classic example: factorial</h3>
+<p>For demo purposes only, see actual activity on next slide.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</section><section>
+<h3 id="class-activity-solve-one-of-these-problems">Class activity: Solve ONE of these problems</h3>
+<ol>
+<li><a href="https://www.hackerrank.com/challenges/tree-inorder-traversal/problem?isFullScreen=true" target="_blank" rel="noreferrer noopener">Inorder Traversal (HackerRank)</a>
+</li>
+<li><a href="https://www.hackerrank.com/challenges/tree-preorder-traversal/problem?isFullScreen=true" target="_blank" rel="noreferrer noopener">Preorder Traversal (HackerRank)</a>
+</li>
+<li><a href="https://www.hackerrank.com/challenges/tree-postorder-traversal/problem?isFullScreen=true" target="_blank" rel="noreferrer noopener">Postorder Traversal (HackerRank)</a>
+</li>
+</ol>
+<p>Advanced:</p>
+<ol>
+<li><a href="https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem?isFullScreen=true" target="_blank" rel="noreferrer noopener">Height of binary tree (HackerRank)</a>
+</li>
+<li><a href="https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem?isFullScreen=true" target="_blank" rel="noreferrer noopener">Binary search tree insertion</a>
+</li>
+</ol>
+<p>Post your solution link on Piazza.</p>
+</section><section>
+<p><a href="https://xkcd.com/1739/" target="_blank" rel="noreferrer noopener"><img src="https://imgs.xkcd.com/comics/fixing_problems.png" alt=""><br>
+(click to read more)</a>
+</p>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>
