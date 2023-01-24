@@ -23,7 +23,7 @@ weight = 3 # chapter number
 
 ### Practice functions
 
-Click [here](https://replit.com/join/digooyflvp-cengique) to join
+Click [here](https://replit.com/join/digooyflvp-cengique) to join, or if too slow, fork it from below
 
 <iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-sp23?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
