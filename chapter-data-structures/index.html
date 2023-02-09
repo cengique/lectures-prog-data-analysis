@@ -93,6 +93,45 @@
 <aside class="notes"><p>TODO: add graph</p>
 </aside>
 </section><section>
+<h3 id="common-algorithms">Common algorithms</h3>
+<ul>
+<li>Index lookup: $O(1)$</li>
+<li>Hash lookup: $O(1)$ (in Python: dict and sets)</li>
+<li>Binary search: $O(\log_2 n)$</li>
+<li>Search in array: $O(n)$</li>
+<li>Find prime numbers: $O(\sqrt{n})$</li>
+<li>Nested loops: $O(n^k)$</li>
+<li>Find diFFeRent cAPiTAlizations of words: $O(2^n)$</li>
+</ul>
+</section><section>
+<h3 id="fork--practice">Fork &amp; practice!</h3>
+<p>Share REPL to work together with teammates. Submit team fork link once on Piazza.</p>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</section><section>
+<h3 id="bitwise-operators">Bitwise operators</h3>
+<p>Can you solve word capitalizations using binary numbers?</p>
+
+
+<span class='fragment '
+  >
+  <p>Take advantage of binary representation of computers!</p>
+<p><a href="https://wiki.python.org/moin/BitwiseOperators" target="_blank" rel="noreferrer noopener">Bitwise operators in Python</a>
+:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">4</span>  <span style="color:#75715e"># will be non-zero only if x has 3rd bit on</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|</span> <span style="color:#ae81ff">15</span> <span style="color:#75715e"># will turn on lower 4 bits</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#75715e"># shift x by 4 bits to the right (faster than dividing by 2)</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&amp;</span> <span style="color:#f92672">~</span>x <span style="color:#75715e"># will always be 0</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">^</span> x  <span style="color:#75715e"># will always be 0</span>
+</span></span></code></pre></div>
+</span>
+</section><section>
+<h3 id="big-o-can-also-apply-memory-size">Big-O can also apply memory size</h3>
+<ul>
+<li>Same idea: $O(1)$, $O(n)$, etc</li>
+<li>Hashing usually requires additional space</li>
+<li>Do not use complex data structures unnecessarily!</li>
+</ul>
+</section><section>
 <h3 id="constant-time-the-holy-grail">Constant time: The holy grail</h3>
 <p>Why does indexing an array take constant time, $O(1)$?</p>
 
@@ -117,33 +156,6 @@ an object reference that take up equal space.</p>
 
 </span>
 </section><section>
-<h3 id="popular-algorithms">Popular algorithms</h3>
-<ul>
-<li>Index lookup: $O(1)$</li>
-<li>Search in array: $O(n)$</li>
-<li>Hash lookup: $O(1)$ (in Python: dict and sets)</li>
-</ul>
-</section><section>
-<h3 id="about-sets">About sets</h3>
-<p>Pros:</p>
-<ul>
-<li>faster lookup times</li>
-<li>ensures uniqueness of items</li>
-<li>awesome methods for determining what elements two sets do and do not share</li>
-</ul>
-<p>Cons:</p>
-<ul>
-<li>uses more memory</li>
-<li>slower to build and append to than a list</li>
-</ul>
-</section><section>
-<h3 id="big-o-can-also-apply-memory-size">Big-O can also apply memory size</h3>
-<ul>
-<li>Same idea: $O(1)$, $O(n)$, etc</li>
-<li>Hashing usually requires additional space</li>
-<li>Do not use complex data structures unnecessarily!</li>
-</ul>
-</section><section>
 <h3 id="whats-hashing">What&rsquo;s hashing?</h3>
 <ul>
 <li>hash is a math function that can calculate a number out anything</li>
@@ -160,17 +172,37 @@ an object reference that take up equal space.</p>
 <li>Checksumming internet download packages</li>
 </ul>
 </section><section>
-<h3 id="exercise-time">Exercise time!</h3>
-<p>Compare speed of two operations:</p>
+<h3 id="about-sets">About sets</h3>
+<p>Pros:</p>
+<ul>
+<li>faster lookup times</li>
+<li>ensures uniqueness of items</li>
+<li>awesome methods (union, intersection, difference)</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>uses more memory</li>
+<li>slower to build and append to than a list</li>
+</ul>
+</section><section>
+<h3 id="exercise-time-choose-either-one">Exercise time! Choose either one:</h3>
+<p>Compare speed of:</p>
 <ol>
-<li>Searching an item in list versus set</li>
-<li>Appending an item in list versus set</li>
+<li>list vs set operations:
+<ol>
+<li>Searching an item</li>
+<li>Appending an item</li>
 </ol>
-
-
-<span class='fragment '
-  >
-  <h4 id="to-find-speed">To find speed:</h4>
+</li>
+<li>finding common elements between two lists by:
+<ol>
+<li>writing an $O(n^2)$ algorithm</li>
+<li>using set operations (hint: <code>intersection</code>)</li>
+</ol>
+</li>
+</ol>
+</section><section>
+<h3 id="to-find-speed">To find speed:</h3>
 <ol>
 <li>Initialize a long list, then create a set from it</li>
 <li>Start a timer</li>
@@ -181,12 +213,10 @@ an object reference that take up equal space.</p>
 </ol>
 <p>OR use <a href="https://github.com/shitchell/defbench" target="_blank" rel="noreferrer noopener">defbench</a>
  that GGC graduate Shaun Mitchell made!</p>
-
-</span>
 </section><section>
 <h3 id="example-program-to-measure-performance">Example program to measure performance</h3>
 <p>Copy-paste locally because cloud runs are not consistent:</p>
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </section>
 
   
