@@ -49,6 +49,54 @@ TODO: add graph
 
 ---
 
+### Common algorithms
+
+- Index lookup: $O(1)$
+- Hash lookup: $O(1)$ (in Python: dict and sets)
+- Binary search: $O(\log_2 n)$
+- Search in array: $O(n)$
+- Find prime numbers: $O(\sqrt{n})$
+- Nested loops: $O(n^k)$
+- Find diFFeRent cAPiTAlizations of words: $O(2^n)$
+
+---
+
+### Fork & practice!
+
+Share REPL to work together with teammates. Submit team fork link once on Piazza.
+
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Bitwise operators
+
+Can you solve word capitalizations using binary numbers?
+
+{{% fragment %}}
+Take advantage of binary representation of computers!
+
+[Bitwise operators in Python](https://wiki.python.org/moin/BitwiseOperators):
+
+```python
+x & 4  # will be non-zero only if x has 3rd bit on
+x | 15 # will turn on lower 4 bits
+x >> 4 # shift x by 4 bits to the right (faster than dividing by 2)
+x & ~x # will always be 0
+x ^ x  # will always be 0
+```
+{{% /fragment %}}
+
+---
+
+### Big-O can also apply memory size
+
+- Same idea: $O(1)$, $O(n)$, etc
+- Hashing usually requires additional space
+- Do not use complex data structures unnecessarily!
+
+---
+
 ### Constant time: The holy grail
 
 Why does indexing an array take constant time, $O(1)$?
@@ -63,35 +111,6 @@ $$ \mathsf{Item~at~index~} i = \mathsf{array~starting~address} + i * \mathsf{siz
 > Hint: In Python, `list` can contain heterogeneous items, but each item is
 > an object reference that take up equal space.
 {{% /fragment %}}
-
----
-
-### Popular algorithms
-
-- Index lookup: $O(1)$
-- Search in array: $O(n)$
-- Hash lookup: $O(1)$ (in Python: dict and sets)
-
----
-
-### About sets
-
-Pros:
- * faster lookup times
- * ensures uniqueness of items
- * awesome methods for determining what elements two sets do and do not share
-
-Cons:
- * uses more memory
- * slower to build and append to than a list
-
----
-
-### Big-O can also apply memory size
-
-- Same idea: $O(1)$, $O(n)$, etc
-- Hashing usually requires additional space
-- Do not use complex data structures unnecessarily!
 
 ---
 
@@ -113,14 +132,34 @@ Cons:
 
 ---
 
-### Exercise time!
+### About sets
 
-Compare speed of two operations:
-1. Searching an item in list versus set
-1. Appending an item in list versus set
+Pros:
+ * faster lookup times
+ * ensures uniqueness of items
+ * awesome methods (union, intersection, difference)
 
-{{% fragment %}}
-#### To find speed:
+Cons:
+ * uses more memory
+ * slower to build and append to than a list
+
+---
+
+### Exercise time! Choose either one:
+
+Compare speed of: 
+
+1. list vs set operations:
+    1. Searching an item
+    1. Appending an item
+1. finding common elements between two lists by:
+    1. writing an $O(n^2)$ algorithm
+    1. using set operations (hint: `intersection`)
+
+---
+
+### To find speed:
+
 1. Initialize a long list, then create a set from it
 1. Start a timer
 1. Loop a large number of times (e.g. 100,000)
@@ -129,12 +168,11 @@ Compare speed of two operations:
 1. Report time per operation by dividing with repeat multiplier you selected above
 
 OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun Mitchell made!
-{{% /fragment %}}
 
 ---
 
 ### Example program to measure performance
 
 Copy-paste locally because cloud runs are not consistent:
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
