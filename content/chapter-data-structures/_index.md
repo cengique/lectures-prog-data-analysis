@@ -145,10 +145,11 @@ Cons:
 
 ---
 
-### Exercise time! Choose either one:
+### Exercise time! Choose one:
 
 Compare speed of: 
 
+1. the programs you wrote in last exercise
 1. list vs set operations:
     1. Searching an item
     1. Appending an item
