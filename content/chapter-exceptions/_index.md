@@ -53,7 +53,7 @@ except:
 ### Exceptions in Python
 
 - All exceptions should be subclasses of `BaseException`
-- You can have multiple `except` clauses to catch specific exceptions:
+- Other options and examples below and in [official Python docs](https://docs.python.org/3/tutorial/errors.html)
 
 ```python
 import sys
