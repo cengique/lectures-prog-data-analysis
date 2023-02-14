@@ -69,4 +69,18 @@ except ValueError:
 except:
     print("Unexpected error:", sys.exc_info()[0])
     raise
+else:
+    print("OMG no errors!")
+finally:
+    print("Error or not, I say this.")
 ```
+
+---
+
+### Exercise time
+
+Team up and implement one of these by using exceptions:
+
+1. `defaultdict` functionality by using the regular `dict`
+1. Implement input validation (only numbers) with loops
+1. Create a file if not already exists 
