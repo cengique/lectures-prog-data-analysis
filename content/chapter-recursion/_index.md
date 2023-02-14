@@ -42,10 +42,18 @@ What is the advantage over loops?
 1. Do you have a Matroshka doll situation? Identify the part in your problem that repeats and when that happens. 
 1. {{% fragment %}} Identify when the recursion ends. What is the condition that stops it? {{% /fragment %}}
 
+---
+
+### Example: Factorial
+
+$$f(n)=n!$$
+$$f(n)=n\times{}(n-1)\times\cdots\times{}2\times{}1$$
+
+What is the **repeating part** versus the **termination condition**?
+
 {{% fragment %}}
-#### Example: Factorial
 1. Repeating pattern: each time multiply with one less number $$f(n)=n\times f(n-1)$$
-1. End condition: we stop at 1 $$f(1)=1$$
+1. Termination condition: we stop at 1 $$f(1)=1$$
 {{% /fragment %}}
 
 ---
