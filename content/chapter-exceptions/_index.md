@@ -79,7 +79,7 @@ finally:
 
 ### Exercise time
 
-Team up and implement one of these by using exceptions:
+Team up and implement ONE of these by using exceptions:
 
 1. `defaultdict` functionality by using the regular `dict`
 1. Implement input validation (only numbers) with loops

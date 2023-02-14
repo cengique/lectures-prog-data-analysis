@@ -151,10 +151,10 @@ Compare speed of:
 
 1. the programs you wrote in last exercise
 1. list vs set operations:
-    1. Searching an item
+    1. Searching an item OR
     1. Appending an item
 1. finding common elements between two lists by:
-    1. writing an $O(n^2)$ algorithm
+    1. writing an $O(n^2)$ algorithm AND
     1. using set operations (hint: `intersection`)
 
 ---
@@ -178,3 +178,4 @@ Copy-paste from [Repl](https://repl.it/@cengique/PerfMeasure-sp22#main.py) to lo
 
 <iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+{{% reveal-prevnext-links %}}
