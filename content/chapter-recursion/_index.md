@@ -4,6 +4,12 @@ outputs = ["Reveal"]
 weight = 5 # chapter number
 +++
 
+<style>
+div.goat > svg {
+    width: 200px; max-height: 200px; margin-left: auto; margin-right: auto;
+}
+</style>
+
 {{< reveal-titlepage >}}
   
 ---
@@ -29,7 +35,16 @@ What is the advantage over loops?
 - Divide-and-conquer type problems
 - Tree search
 - Sorting
-- etc.
+- Elegant solution
+
+Limitations?
+
+{{% fragment %}}
+
+- Less efficient
+- Can exhaust program stack
+
+{{% /fragment %}}
 
 ---
 
@@ -39,7 +54,7 @@ What is the advantage over loops?
 
 ### Designing a recursive algorithm
 
-1. Do you have a Matroshka doll situation? Identify the part in your problem that repeats and when that happens. 
+1. Do you have a nesting doll situation? Identify the part in your problem that repeats and when that happens. 
 1. {{% fragment %}} Identify when the recursion ends. What is the condition that stops it? {{% /fragment %}}
 
 ---
@@ -60,8 +75,86 @@ What is the **repeating part** versus the **termination condition**?
 
 ### Classic example: factorial
 
-For demo purposes only, see actual activity on next slide.
+For demo purposes only, actual activity on trees.
 <iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+### Trees
+
+A binary tree:
+
+<div style="width: 200px; height: 200px; margin-left: auto; margin-right: auto">
+
+```goat
+    o b 
+   / \
+a o   o c
+```
+</div>
+
+Always true in sorted binary trees:
+$a<b<c$
+
+Not a linear data structure, `b` is root node, `b.left=a` and `b.right=c`
+
+---
+
+### Traversing trees without recursion
+
+Write a non-recursive program to count all the nodes in tree:
+
+
+```goat
+    4 
+   / \
+   
+  3   8 
+ /   /
+ 
+2   6
+     \
+     
+      7
+```
+
+Start with `root` node object (`root.val=4`), and you can go `root.left` or `root.right` to get to the next node. If there is no node, it will be an empty object (`None`).
+
+{{% fragment %}}
+Does it work for any tree?
+{{% /fragment %}}
+
+---
+
+### With recursion
+
+```goat
+    4 
+   / \
+   
+  3   8 
+ /   /
+ 
+2   6
+     \
+     
+      7
+```
+
+```python
+def node_count(node, count):
+    if node.left:
+        count = node_count(node.left, count + 1)
+    if node.right:
+        count = node_count(node.right, count + 1)
+    return count
+
+print(node_count(root, 1))
+```
+
+{{% fragment %}}
+Does it work for any tree?
+{{% /fragment %}}
 
 ---
 
