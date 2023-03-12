@@ -65,7 +65,7 @@ TODO: add graph
 
 Share REPL to work together with teammates. Submit team fork link once on Piazza.
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
@@ -176,6 +176,6 @@ OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun
 
 Copy-paste from [Repl](https://repl.it/@cengique/PerfMeasure-sp22#main.py) to local computer because cloud runs are not consistent:
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22#main.py?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 {{% reveal-prevnext-links %}}
