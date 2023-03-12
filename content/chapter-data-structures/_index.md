@@ -149,7 +149,7 @@ Cons:
 
 Compare speed of: 
 
-1. the programs you wrote in last exercise
+1. the programs you wrote in last exercise; compare different input sizes
 1. list vs set operations:
     1. Searching an item OR
     1. Appending an item
