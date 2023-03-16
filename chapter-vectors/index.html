@@ -44,9 +44,7 @@
 <p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-object-oriented/" title="Object Oriented Programming"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Object Oriented Programming</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-io-cleaning/" title="Data input/output and cleaning">Next - Data input/output and cleaning <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
 
 </section><section>
-
-
-<section data-shortcode-section>
+<section>
 <h3 id="pythons-numpy-module">Python&rsquo;s Numpy module</h3>
 <p>From <em>Python for Data Analysis, 2nd Ed</em>, chapter 4:</p>
 <ul>
@@ -63,6 +61,33 @@
 <li>Indexing and slicing; with boolean expressions and <em>fancy</em> indexing</li>
 <li>Unary and binary math functions</li>
 </ul>
+</section><section>
+<h3 id="how-do-dimensions-work">How do dimensions work?</h3>
+<p>1 dimension: 1 bracket, 1 index</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>arr1d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>arr1d[x]
+</span></span></code></pre></div>
+
+<span class='fragment '
+  >
+  <p>2 dimensions: 2 brackets, 2 indices</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>arr2d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>                  [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]])
+</span></span><span style="display:flex;"><span>arr2d[x, y]
+</span></span></code></pre></div>
+</span>
+
+
+<span class='fragment '
+  >
+  <p>3 dimensions: &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>arr3d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[[ <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">2</span>,  <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>                   [ <span style="color:#ae81ff">4</span>,  <span style="color:#ae81ff">5</span>,  <span style="color:#ae81ff">6</span>]],
+</span></span><span style="display:flex;"><span>                  [[ <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">8</span>,  <span style="color:#ae81ff">9</span>],
+</span></span><span style="display:flex;"><span>                   [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]]])
+</span></span><span style="display:flex;"><span>arr3d[x, y, z]
+</span></span></code></pre></div>
+</span>
 </section><section>
 <h3 id="numpy-practice">Numpy practice</h3>
 <p>Work in groups and choose one of these problems (thanks math people!):</p>
@@ -85,7 +110,6 @@
 <li>Fork <a href="https://replit.com/@cengique/numpy-practice" target="_blank" rel="noreferrer noopener">this</a>
  to submit <strong>individually</strong></li>
 </ul>
-
 </section>
 </section><section>
 
