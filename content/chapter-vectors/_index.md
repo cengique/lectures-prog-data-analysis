@@ -8,7 +8,7 @@ weight = 10 # chapter number
   
 ---
 
-{{% section %}}
+<section>
 
 ### Python's Numpy module
 
@@ -29,6 +29,41 @@ From *Python for Data Analysis, 2nd Ed*, chapter 4:
 
 ---
 
+### How do dimensions work?
+
+1 dimension: 1 bracket, 1 index
+```python
+arr1d = np.array([1, 2, 3])
+arr1d[x]
+```
+
+{{% fragment %}}
+
+2 dimensions: 2 brackets, 2 indices
+```python
+arr2d = np.array([[1, 2, 3],
+                  [4, 5, 6]])
+arr2d[x, y]
+```
+
+{{% /fragment %}}
+
+{{% fragment %}}
+
+3 dimensions: ... 
+```python
+arr3d = np.array([[[ 1,  2,  3],
+                   [ 4,  5,  6]],
+                  [[ 7,  8,  9],
+                   [10, 11, 12]]])
+arr3d[x, y, z]
+```
+
+{{% /fragment %}}
+
+
+---
+
 ### Numpy practice
 
 Work in groups and choose one of these problems (thanks math people!):
@@ -44,7 +79,7 @@ Make sure to:
 - Use Boolean indexing
 - Fork [this](https://replit.com/@cengique/numpy-practice) to submit **individually**
 
-{{% /section %}}
+</section>
 
 ---
 
