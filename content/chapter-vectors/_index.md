@@ -4,6 +4,12 @@ outputs = ["Reveal"]
 weight = 10 # chapter number
 +++
 
+<style>
+.reveal pre {
+    width: 70%
+}
+</style>
+
 {{< reveal-titlepage >}}
   
 ---
@@ -83,7 +89,7 @@ Make sure to:
 
 ---
 
-{{% section %}}
+<section>
 
 ### Linear algebra basics:
 ### Vectors and matrices
@@ -102,17 +108,58 @@ Can do bulk operations using math magic:
 
 ---
 
-### Vector math
+### Vector math: dot product
 
 inner/[dot product](http://mathworld.wolfram.com/DotProduct.html): $$ \vec{x} \cdot \vec{y} = \sum x_i y_i $$
 
-- Calculates "length of projection"
+- Calculates "length of projection" in geometric sense
 - Multiply corresponding elements and sum to result in scalar
 - Useful in calculating weighted sums, scaling data elements, etc.
-                  
-[outer product](https://en.wikipedia.org/wiki/Outer_product): $$ \vec{x} \times \vec{y} = [x_i y_j]_{ij} $$ 
+
+{{% fragment %}}
+
+Example: sum of products to find total price
+
+```python
+quantity = np.array([1, 1, 5, 2])
+prices = np.array([10, 15, 1.25, 20])
+total = np.dot(prices, quantity)
+``` 
+
+Result: `71.25`
+
+{{% /fragment %}}
+
+---
+
+### Vector math: outer product
+
+[(definition)](https://en.wikipedia.org/wiki/Outer_product)
+
+$$ \vec{x} \times \vec{y} = [x_i y_j]_{ij} $$ 
+
 - element-by-element multiplication, results in $ n \times m $ size matrix
 - useful when duplicating rows or columns, or scaling them
+
+{{% fragment %}}
+
+Example:
+
+```python
+item_prices = np.full((1,5), 50) # all $50
+inflation_per_month = np.array([1.1, 1.3, 1.3, 1.4]) # monthly inflation
+new_prices_per_month = np.outer(inflation_per_month, item_prices)
+``` 
+
+Result:
+```python
+array([[55., 55., 55., 55., 55.],
+       [65., 65., 65., 65., 65.],
+       [65., 65., 65., 65., 65.],
+       [70., 70., 70., 70., 70.]])
+```
+
+{{% /fragment %}}
 
 ---
 ### Basics: Matrices
@@ -166,13 +213,26 @@ c_{m1} & \cdots & c_{mo} \newline
 \end{array} \right]
 $$
 
-Useful transforming rows of data, image operations, 3D rotations, machine learning, etc.
-
-{{% /section %}}
 
 ---
 
-{{% section %}}
+### Uses of matrix algebra
+
+- Useful transforming rows of data, image operations, 3D rotations, machine learning, etc.
+- [Google's PageRank algorithm](https://en.wikipedia.org/wiki/PageRank) is:
+    > [...] calculated using a simple iterative algorithm, and corresponds to the
+principal eigenvector of the normalized link matrix of the web.
+    (from [original paper](http://infolab.stanford.edu/pub/papers/google.pdf))
+- Inverse of a matrix can be calculated to satisfy:
+    $$ A\times A^{-1} = I$$
+- Solving linear sets of equations: $$Ax+b=y$$
+
+
+</section>
+
+---
+
+<section>
 
 ### NumPy: conventional looping versus vector operations
 
@@ -186,6 +246,8 @@ for element in vector:
 mean = sum / len(vector)
 ```
 
+{{% fragment %}}
+
 Use vector operations to do it shorter and more efficiently. 
 $$ \mu = \sum_{i=1..N} x_i / N $$
 ```python
@@ -193,6 +255,9 @@ import numpy as np
 vector = np.array([1,2,3])
 mean = np.sum(vector) / len(vector)
 ```
+
+{{% /fragment %}}
+
 ---
 
 ### Numpy exercise
@@ -214,11 +279,11 @@ Submit by following instructions on the page below.
 - Compare your result to the output of `np.std(vector, ddof=1)` in your notebook
 - Share your link on Piazza
 
-{{% /section %}}
+</section>
 
 ---
 
-{{% section %}}
+<section>
 
 ### Pandas supports tabular data
 
@@ -253,4 +318,4 @@ Submit by following instructions on the page below.
 - Share your link on Piazza
 
 
-{{% /section %}}
+</section>
