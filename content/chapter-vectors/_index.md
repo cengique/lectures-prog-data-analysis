@@ -72,18 +72,31 @@ arr3d[x, y, z]
 
 ### Numpy practice
 
-Work in groups and choose one of these problems (thanks math people!):
+Start by working in teams on the whiteboard and <br> then submit
+**individually** by
+forking [this](https://replit.com/@cengique/numpy-practice).
+
+
+#### Option 1
+
+Solve ONE of these problems (thanks math people!):
 1. [Largest product in a grid](https://projecteuler.net/problem=11)
 1. [Maximum path sum II](https://projecteuler.net/problem=67)
 1. [Non-abundant sums](https://projecteuler.net/problem=23)
 1. [Lexicographic permutations](https://projecteuler.net/problem=24)
 
 Make sure to:
+- Use numpy arrays and arithmetic operations
+
+---
+
+#### Option 2
+
+Do 3 examples of each below and briefly explain each with one sentence:
 - Create numpy arrays in 1D, 2D, and 3D
 - Index slices in 1D, 2D, and 3D
 - Do some arithmetic
 - Use Boolean indexing
-- Fork [this](https://replit.com/@cengique/numpy-practice) to submit **individually**
 
 </section>
 
