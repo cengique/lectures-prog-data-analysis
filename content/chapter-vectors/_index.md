@@ -303,7 +303,8 @@ cars_roads = [543, 433, 104, 390]
 
 ### Numpy exercise 3
 
-We expect the population to increase by 3% every year. Make a matrix of predictions for each county and each year by using:
+We expect the population to increase by 3% every year. Make a matrix
+of predictions for each county for the next three years by using:
 
 - `ga_population` is a list of population numbers (in thousands) for each county.
 
