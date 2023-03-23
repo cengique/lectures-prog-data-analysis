@@ -271,21 +271,44 @@ $$ \mu = \sum_{i=1..N} x_i / N $$</p>
 </span></span></code></pre></div>
 </span>
 </section><section>
-<h3 id="numpy-exercise">Numpy exercise</h3>
-<p>Calculate standard deviation
+<h3 id="numpy-exercise-1">Numpy exercise 1</h3>
+<p>Use vectorized numpy operations to calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.</p>
-<p>Submit by following instructions on the page below.</p>
+<p>Practice with team on whiteboard/laptop this and the two exercises below.</p>
 </section><section>
+<h3 id="numpy-exercise-2">Numpy exercise 2</h3>
+<p>Use the dot product to calculate total miles covered by all
+cars:</p>
+<ul>
+<li><code>road_miles</code> gives a list of different road segments and their
+lenght in miles.</li>
+<li><code>cars_roads</code> give the number of cars that passed on
+each of the road segments.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>road_miles <span style="color:#f92672">=</span> [<span style="color:#ae81ff">108</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">52</span>]
+</span></span><span style="display:flex;"><span>cars_roads <span style="color:#f92672">=</span> [<span style="color:#ae81ff">543</span>, <span style="color:#ae81ff">433</span>, <span style="color:#ae81ff">104</span>, <span style="color:#ae81ff">390</span>]
+</span></span></code></pre></div></section><section>
+<h3 id="numpy-exercise-3">Numpy exercise 3</h3>
+<p>We expect the population to increase by 3% every year. Make a matrix of predictions for each county and each year by using:</p>
+<ul>
+<li><code>ga_population</code> is a list of population numbers (in thousands) for each county.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span><span style="color:#75715e"># dekalb, fulton, gwinnett</span>
+</span></span><span style="display:flex;"><span>ga_population <span style="color:#f92672">=</span> [<span style="color:#ae81ff">757</span>, <span style="color:#ae81ff">1065</span>, <span style="color:#ae81ff">964</span>]
+</span></span></code></pre></div></section><section>
 <h3 id="make-a-colab-notebook-with-your-solution">Make a Colab notebook with your solution</h3>
 <ul>
-<li>Work in groups as before</li>
+<li>Do all 3 exercises <strong>individually</strong></li>
 <li>Log into <a href="https://colab.research.google.com/" target="_blank" rel="noreferrer noopener">Google Colab</a>
  with any Google account</li>
 <li>Create a new Python notebook</li>
 <li>Write some text and code blocks to explain your standard deviation code</li>
 <li>Compare your result to the output of <code>np.std(vector, ddof=1)</code> in your notebook</li>
-<li>Share your link on Piazza</li>
+<li>Put additional blocks for exercise 2 and 3</li>
+<li>Click on <em>Share</em> and paste your link on Piazza</li>
 </ul>
 </section>
 </section><section>
