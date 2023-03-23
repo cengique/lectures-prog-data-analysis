@@ -273,24 +273,57 @@ mean = np.sum(vector) / len(vector)
 
 ---
 
-### Numpy exercise
+### Numpy exercise 1
 
-Calculate standard deviation
+Use vectorized numpy operations to calculate standard deviation
 $$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
 where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.
 
-Submit by following instructions on the page below.
+Practice with team on whiteboard/laptop this and the two exercises below.
+
+---
+
+### Numpy exercise 2
+
+Use the dot product to calculate total miles covered by all
+cars:
+
+- `road_miles` gives a list of different road segments and their
+lenght in miles. 
+- `cars_roads` give the number of cars that passed on
+each of the road segments.
+
+Example:
+```python
+road_miles = [108, 5, 10, 52]
+cars_roads = [543, 433, 104, 390]
+```
+
+---
+
+### Numpy exercise 3
+
+We expect the population to increase by 3% every year. Make a matrix of predictions for each county and each year by using:
+
+- `ga_population` is a list of population numbers (in thousands) for each county.
+
+Example:
+```python
+# dekalb, fulton, gwinnett
+ga_population = [757, 1065, 964]
+```
 
 ---
 
 ### Make a Colab notebook with your solution
 
-- Work in groups as before
+- Do all 3 exercises **individually** 
 - Log into [Google Colab](https://colab.research.google.com/) with any Google account
 - Create a new Python notebook
 - Write some text and code blocks to explain your standard deviation code
 - Compare your result to the output of `np.std(vector, ddof=1)` in your notebook
-- Share your link on Piazza
+- Put additional blocks for exercise 2 and 3
+- Click on *Share* and paste your link on Piazza
 
 </section>
 
