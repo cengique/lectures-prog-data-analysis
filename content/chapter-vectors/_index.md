@@ -358,10 +358,12 @@ ga_population = [757, 1065, 964]
 - Work in groups as before
 - Log into [Google Colab](https://colab.research.google.com/) with any Google account
 - Create a new Python notebook
-- Create a Dataframe object from any data
-- Extract a Series object from your DataFrame
-- Use slicing and fancy indexing to get subsets of your DataFrame
-- Apply one comparison operator to get a boolean matrix and use it for indexing your DataFrame
+- Create a `Dataframe` object from any data
+- Extract a `Series` object from your DataFrame
+    - Add a string index and show indexing example
+    - Extract `ndarray` object and show indexing example
+- Use slicing and fancy indexing to get subsets of your `DataFrame`
+- Apply one comparison operator to use boolean indexing on your DataFrame
 - Share your link on Piazza
 
 
