@@ -1,10 +1,51 @@
 +++
-title = "Data wrangling and aggregation"
+title = "Data plotting, wrangling, and aggregation"
 outputs = ["Reveal"]
 weight = 12 # chapter number
 +++
 
 {{< reveal-titlepage >}}
+
+---
+<section>
+
+### Data plotting
+
+- See Python for Data Analysis, Chapter 9
+
+{{% fragment %}}
+
+Main library is `matplotlib`:
+- Controls how figures are laid out and decorated (axes, labels, colors, line styles, etc)
+- Can be used directly
+- Pandas uses it indirectly, but allows using `matplotlib` commands
+
+{{% /fragment %}}
+
+---
+
+### Anatomy of a plot in matplotlib
+
+<img style="width: 50%;" src="/lectures-prog-data-analysis/images/plot-simple.png" />
+
+1. **figure**: The graphical area for one figure
+1. **axis**: Labeled axis for XY, can be superimposed or tiled
+1. **plot**: Individual shapes (lines, rectangles, etc) drawn on an axis
+
+---
+
+### Types of Plots
+
+- line and scatter graphs
+- bar graphs and distributions (histogram vs density)
+- other statistics (boxplots)
+- image plots ([matplotlib commands](https://matplotlib.org/stable/tutorials/introductory/sample_plots.html#contouring-and-pseudocolor))
+- surface plots ([matplotlib commands](https://matplotlib.org/stable/tutorials/introductory/sample_plots.html#three-dimensional-plotting))
+
+(see [plotting in pandas using
+matplotlib](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html))
+
+</section>
 
 ---
 
@@ -43,18 +84,3 @@ weight = 12 # chapter number
 
 {{% /section %}}
 
----
-
-### Data cleaning
-
-- Missing data with N/A, NaN, and NULL values
-- Filtering missing data out
-- Filling in missing data values
-- Eliminating duplicates
-- Replacing values
-- Adding new calculated columns
-- Cosmetics (axis labels, etc)
-- Discretization
-- Outliers
-- Random sampling and shuffling
-- String manipulation and regular expressions
