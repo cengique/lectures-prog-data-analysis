@@ -17,11 +17,12 @@ weight = 2 # chapter number
 
 Instructor: [Dr. Cengiz Gunay](http://www.ggc.edu/about-ggc/directory/cengiz-gunay) 
 
-[Soft-Eng-Practicum Github Organization](https://soft-eng-practicum.github.io/)
+<!-- [Soft-Eng-Practicum Github Organization](https://soft-eng-practicum.github.io/) -->
 
 Email: cgunay@ggc.edu
 
-Office: Virtual and W-2117 (by [appointment](https://cgunay.youcanbook.me/)) 
+Office: Virtual and [W-2215](https://ggc-sd.github.io/ggcmaps3/#W-2215) 
+(by [appointment](https://cgunay.youcanbook.me/)) 
 
 Phone: 678-951-9621 (also GroupMe)
 
