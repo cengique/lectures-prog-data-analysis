@@ -62,7 +62,7 @@ Time to work on:
 
 1. Skills Survey on D2L
 1. Register for Discord and Piazza
-1. Respond to the “Introductions”  discussion topic; **create an inline resume**
+1. Respond to the “Introductions”  discussion topic
 
 {{% /fragment %}}
 
