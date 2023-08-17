@@ -11,6 +11,19 @@ weight = 2 # chapter number
 ## Welcome
 
 
+{{% fragment %}}
+
+**Python** course with a focus on **data analysis modules**:
+1. First half of semester, start from scratch and learn basic Python
+2. Second half, focus on modules `numpy`, `pandas`, and `matplotlib`
+{{% /fragment %}}
+
+{{% fragment %}}
+### Prereqs:
+
+Only need programming knowledge, no need to know Python in advance!
+{{% /fragment %}}
+
 ---
 
 ### Meet your instructor
