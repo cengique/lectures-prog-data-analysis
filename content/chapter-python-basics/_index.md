@@ -8,6 +8,17 @@ weight = 3 # chapter number
   
 ---
 
+### The very basics
+
+(from Hyperskill Python Intro section) 
+
+- Python history: version 2 vs 3; now popular for AI & ML
+- Whitespace, quotations, language conventions, operators
+- Control statements: blocks, if-elif-else, while
+- Modules and import
+
+---
+
 ### A crash course into Python
 
 (from Ch 2 of "Data Science from Scratch" by Joel Grus)
