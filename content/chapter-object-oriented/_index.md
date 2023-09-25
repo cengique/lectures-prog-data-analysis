@@ -58,10 +58,9 @@ weight = 6 # chapter number
 
 ### Inheritance and Polymorphism
 
-- The last two fundamental pillars of OOP
+- The last two [fundamental pillars of OOP](https://hyperskill.org/knowledge-map/1212)
 - Inheritance: subclasses inherit methods and attributes
 - Polymorphism: all subclasses can be used interchangably, regardless of implementation details
-
 
 ---
 
@@ -72,6 +71,7 @@ weight = 6 # chapter number
   - A parent class and 2-3 child classes
   - Create parent class method to be *overloaded* in the children
   - Implement different versions of method in child classes
+  - Use `super()` at least once
   - Demonstrate calling the method in children object instances to show different outcomes
   - Must have a meaning!
 
