@@ -62,13 +62,6 @@ weight = 6 # chapter number
 - Inheritance: subclasses inherit methods and attributes
 - Polymorphism: all subclasses can be used interchangably, regardless of implementation details
 
----
-
-### Class activity: inherit!
-
-- Follow instructions by forking it.
-
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
@@ -82,3 +75,10 @@ weight = 6 # chapter number
   - Demonstrate calling the method in children object instances to show different outcomes
   - Must have a meaning!
 
+---
+
+### Class activity: inherit!
+
+Work individually, fork it and follow instructions:
+
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
