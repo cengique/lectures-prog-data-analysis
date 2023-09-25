@@ -26,6 +26,7 @@ weight = 6 # chapter number
 
 ### OOP in Python
 
+Modules on [HyperSkill](https://hyperskill.org/knowledge-map/482)
 - Constructors
 - Class attributes
 - Instance attributes
