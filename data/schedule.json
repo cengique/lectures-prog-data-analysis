@@ -61,10 +61,10 @@
    "handson": "", "module": 1, 
    "assignment": "read PDA Ch 8,10; project - stage 4", "days": 12},  
   {"special": "THANKSGIVING BREAK",
-   "assignment": "", "days": 7},
+   "assignment": "", "days": 9},
   {"name": "Project presentation and review for final exam",
    "setup": "",
    "topic": "",
    "handson": "", "module": 1, 
-   "assignment": "submit video explaining project code and results", "days": 9}
+   "assignment": "submit video explaining project code and results", "days": 7}
 ]
