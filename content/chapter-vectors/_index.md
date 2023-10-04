@@ -16,6 +16,40 @@ weight = 10 # chapter number
 
 <section>
 
+### Jupyter notebooks in Python
+
+<img src="/lectures-prog-data-analysis/images/jupyter-notebook.png" style="max-width: auto; height: 600px; margin: 1em;"/>
+
+---
+
+### How to use Jupyter?
+
+- [Jupyter](https://jupyter.org/) is included in the [Anaconda](https://www.anaconda.com/) distribution
+  - Start Anaconda from menu or run `anaconda-navigator` on command line
+  - Install the Jupyter Notebook application in Anaconda
+  - If it's already installed, click on Launch to start it
+  - You can also install and use JupyterLab, which is like R Studio/Matlab, etc.
+- You can also run notebooks online, such as on [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) and on [DeepNote](https://deepnote.com/)
+- Some examples: 
+  - [Live intro notebook](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb)
+
+---
+
+### Block execution
+
+Follow sections on the official [Notebook Examples](https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html) tutorial:
+
+- Structure of notebook documents
+- Kernels, cell types: markdown vs code
+- Navigation, running code
+- Order of execution
+
+</section>
+
+---
+
+<section>
+
 ### Python's Numpy module
 
 From *Python for Data Analysis, 2nd Ed*, chapter 4:
@@ -86,7 +120,7 @@ Solve ONE of these problems (thanks math people!):
 1. [Lexicographic permutations](https://projecteuler.net/problem=24)
 
 Make sure to:
-- Use numpy arrays and arithmetic operations
+- Use numpy arrays and arithmetic operations in page below
 
 ---
 
