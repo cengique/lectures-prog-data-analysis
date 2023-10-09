@@ -44,6 +44,16 @@ Follow sections on the official [Notebook Examples](https://jupyter-notebook.rea
 - Navigation, running code
 - Order of execution
 
+---
+
+### Practice! Open a Jupyter notebook and follow along
+
+Do ONE of the following:
+
+- Open [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
+- Open [DeepNote](https://deepnote.com/)
+- Or download [Anaconda](https://www.anaconda.com/) and run Jupyter Notebook or JupyterLab
+
 </section>
 
 ---
