@@ -84,3 +84,27 @@ matplotlib](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_pl
 
 {{% /section %}}
 
+---
+
+{{% section %}}
+
+### Data aggregation
+
+- See Python for Data Analysis, Chapter 10
+
+---
+
+#### Groupby
+
+- mechanics
+- aggregation
+- split-apply-combine
+
+---
+
+#### Pivot tables and cross-tabulation
+
+- `pivot_table`
+- `crosstab`
+
+{{% /section %}}
