@@ -80,7 +80,8 @@ matplotlib](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_pl
 
 - `stack/` vs `unstack`
 - `reshape`
-- `pivot` vs `melt`
+- "long" vs "wide" format
+  - `pivot` vs `melt`
 
 {{% /section %}}
 
@@ -94,11 +95,11 @@ matplotlib](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_pl
 
 ---
 
-#### Groupby
+#### Groupby: split-apply-combine
 
-- mechanics
-- aggregation
-- split-apply-combine
+- selecting column(s) and index levels
+- aggregation functions
+- `apply()` arbitrary functions
 
 ---
 
