@@ -40,6 +40,7 @@ Do one or more of these based on your preferences!
 - Whitespace
 - Modules and import
 - Functions
+- Strings
 
 ---
 
@@ -53,7 +54,6 @@ Work in teams, click [here](https://replit.com/join/xbsnawvluq-cengique) to join
 
 ### Language basics
 
-- Strings
 - Exceptions
 - Lists
 - Tuples
