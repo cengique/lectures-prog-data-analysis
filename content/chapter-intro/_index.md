@@ -69,6 +69,7 @@ See [Schedule](../schedule).
 ### Syllabus and hands on work
 
 - Let's look through the syllabus 
+- _Message in a bottle_ from past students
 
 {{% fragment %}}
 Time to work on:

@@ -19,6 +19,17 @@ weight = 3 # chapter number
 
 ---
 
+### How to practice Python
+
+Do one or more of these based on your preferences!
+- Use online IDE on [REPL.it](https://replit.com/@replit/Python?v=1), we will for some class exercises
+- Download from [Pyton.org](https://www.python.org/downloads/)
+- Download IDE [PyCharm](https://www.jetbrains.com/pycharm/) ([student discount](https://www.jetbrains.com/community/education/#students/))
+- Download IDE [Visual Studio Code](https://code.visualstudio.com/) with Python plugin
+- Download [Jupyter](https://jupyter.org/) (we'll use it in second half of semester)
+
+---
+
 ### A crash course into Python
 
 (from Ch 2 of "Data Science from Scratch" by Joel Grus)
@@ -34,9 +45,9 @@ weight = 3 # chapter number
 
 ### Practice functions
 
-Click [here](https://replit.com/join/jowwazqffv-cengique) to join, or if too slow, fork it from below
+Work in teams, click [here](https://replit.com/join/xbsnawvluq-cengique) to join, or if too slow, fork it from below:
 
-<iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-fa23?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
