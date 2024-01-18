@@ -46,7 +46,8 @@ Do one or more of these based on your preferences!
 
 ### Practice functions
 
-Work in teams, click [here](https://replit.com/join/xbsnawvluq-cengique) to join, or if too slow, fork it from below:
+Everyone open [Repl.it](https://replit.com) accounts. Work in teams,
+one person should fork from below and then give "invite" link to others:
 
 <iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
