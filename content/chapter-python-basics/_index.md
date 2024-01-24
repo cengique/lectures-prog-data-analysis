@@ -55,7 +55,6 @@ one person should fork from below and then give "invite" link to others:
 
 ### Language basics
 
-- Exceptions
 - Lists
 - Tuples
 - Dictionaries (default, Counter)
@@ -66,7 +65,7 @@ one person should fork from below and then give "invite" link to others:
 
 Fork it this time, work in teams
 
-<iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-basics-sp23?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-dict-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
