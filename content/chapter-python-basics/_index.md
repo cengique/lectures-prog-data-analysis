@@ -1,7 +1,7 @@
 +++
 title = "Python basics refresher"
 outputs = ["Reveal"]
-weight = 3 # chapter number
+weight = 30 # chapter number
 +++
 
 {{< reveal-titlepage figure="/lectures-prog-data-analysis/images/DS_scratch_cover.png" >}}

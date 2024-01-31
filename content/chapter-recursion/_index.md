@@ -1,7 +1,7 @@
 +++
 title = "Recursion"
 outputs = ["Reveal"]
-weight = 5 # chapter number
+weight = 50 # chapter number
 +++
 
 <style>

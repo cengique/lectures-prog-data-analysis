@@ -1,7 +1,7 @@
 +++
 title = "Object Oriented Programming"
 outputs = ["Reveal"]
-weight = 6 # chapter number
+weight = 40 # chapter number
 +++
 
 {{< reveal-titlepage >}}
@@ -26,7 +26,7 @@ weight = 6 # chapter number
 
 ### OOP in Python
 
-Modules on [HyperSkill](https://hyperskill.org/knowledge-map/482)
+Module 3 from [Python Essentials 2](https://skillsforall.com/learningcollections/python?courseLang=en-US) (old resource: [HyperSkill](https://hyperskill.org/knowledge-map/482))
 - Constructors
 - Class attributes
 - Instance attributes

@@ -1,7 +1,7 @@
 +++
 title = "Data plotting, wrangling, and aggregation"
 outputs = ["Reveal"]
-weight = 12 # chapter number
+weight = 120 # chapter number
 +++
 
 {{< reveal-titlepage >}}

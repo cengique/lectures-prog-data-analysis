@@ -1,7 +1,7 @@
 +++
 title = "Data input/output and cleaning"
 outputs = ["Reveal"]
-weight = 11 # chapter number
+weight = 110 # chapter number
 +++
 
 {{< reveal-titlepage >}}

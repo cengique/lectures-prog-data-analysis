@@ -1,7 +1,7 @@
 +++
 title = "Data structures and performance"
 outputs = ["Reveal"]
-weight = 4 # chapter number
+weight = 60 # chapter number
 +++
 
 {{< reveal-titlepage >}}

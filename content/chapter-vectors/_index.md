@@ -1,7 +1,7 @@
 +++
 title = "Working with vector data"
 outputs = ["Reveal"]
-weight = 10 # chapter number
+weight = 100 # chapter number
 +++
 
 <style>

@@ -6,7 +6,7 @@ publishdate: 2019-11-23T15:26:15Z
 title: Instructor Materials
 description: Instructor Materials. Email authors for hidden materials like quizzes and their keys.
 
-weight: 100
+weight: 500
 ---
 
 Select a chapter from the menu.
