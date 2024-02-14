@@ -112,12 +112,13 @@ $$f(n)=n\times{}(n-1)\times\cdots\times{}2\times{}1$$</p>
 </span>
 </section><section>
 <h3 id="classic-example-factorial">Classic example: factorial</h3>
-<p>For demo purposes only, actual activity on trees.</p>
+<p>For demo purposes only, not today&rsquo;s class activity.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </section><section>
 <h3 id="trees">Trees</h3>
-<p>A binary tree:</p>
-<div style="width: 200px; height: 200px; margin-left: auto; margin-right: auto">
+<p>A <a href="https://en.wikipedia.org/wiki/Binary_tree" target="_blank" rel="noreferrer noopener">binary tree</a>
+:</p>
+<div style="width: 150px; height: 150px; margin-left: auto; margin-right: auto">
 
 
 
@@ -144,12 +145,20 @@ $$f(n)=n\times{}(n-1)\times\cdots\times{}2\times{}1$$</p>
   
 </div>
 </div>
-<p>Always true in sorted binary trees:
+<p>Always true in <a href="https://en.wikipedia.org/wiki/Binary_search_tree" target="_blank" rel="noreferrer noopener">sorted binary tree (or binary search tree - BST)</a>
+:
 $a&lt;b&lt;c$</p>
 <p>Not a linear data structure, <code>b</code> is root node, <code>b.left=a</code> and <code>b.right=c</code></p>
+<div style="width: 500px; margin-left: auto; margin-right: auto">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, info): 
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>info <span style="color:#f92672">=</span> info
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span> 
+</span></span></code></pre></div></div>
 </section><section>
 <h3 id="traversing-trees-without-recursion">Traversing trees without recursion</h3>
-<p>Write a non-recursive program to count all the nodes in tree:</p>
+<p>Can we write a non-recursive program to count all the nodes in tree?</p>
 
 
 
@@ -178,7 +187,7 @@ $a&lt;b&lt;c$</p>
     </svg>
   
 </div>
-<p>Start with <code>root</code> node object (<code>root.val=4</code>), and you can go <code>root.left</code> or <code>root.right</code> to get to the next node. If there is no node, it will be an empty object (<code>None</code>).</p>
+<p>Start with <code>root</code> node object (<code>root.info=4</code>), and you can go <code>root.left</code> or <code>root.right</code> to get to the next node. If there is no node, it will be an empty object (<code>None</code>).</p>
 
 
 <span class='fragment '
