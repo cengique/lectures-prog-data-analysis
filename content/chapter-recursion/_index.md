@@ -75,16 +75,16 @@ What is the **repeating part** versus the **termination condition**?
 
 ### Classic example: factorial
 
-For demo purposes only, actual activity on trees.
+For demo purposes only, not today's class activity.
 <iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
 ### Trees
 
-A binary tree:
+A [binary tree](https://en.wikipedia.org/wiki/Binary_tree):
 
-<div style="width: 200px; height: 200px; margin-left: auto; margin-right: auto">
+<div style="width: 150px; height: 150px; margin-left: auto; margin-right: auto">
 
 ```goat
     o b 
@@ -93,16 +93,28 @@ a o   o c
 ```
 </div>
 
-Always true in sorted binary trees:
+Always true in [sorted binary tree (or binary search tree - BST)](https://en.wikipedia.org/wiki/Binary_search_tree):
 $a<b<c$
 
 Not a linear data structure, `b` is root node, `b.left=a` and `b.right=c`
+
+<div style="width: 500px; margin-left: auto; margin-right: auto">
+
+```python
+class Node:
+    def __init__(self, info): 
+        self.info = info
+        self.left = None
+        self.right = None 
+```
+
+</div>
 
 ---
 
 ### Traversing trees without recursion
 
-Write a non-recursive program to count all the nodes in tree:
+Can we write a non-recursive program to count all the nodes in tree?
 
 
 ```goat
@@ -118,7 +130,7 @@ Write a non-recursive program to count all the nodes in tree:
       7
 ```
 
-Start with `root` node object (`root.val=4`), and you can go `root.left` or `root.right` to get to the next node. If there is no node, it will be an empty object (`None`).
+Start with `root` node object (`root.info=4`), and you can go `root.left` or `root.right` to get to the next node. If there is no node, it will be an empty object (`None`).
 
 {{% fragment %}}
 Does it work for any tree?
