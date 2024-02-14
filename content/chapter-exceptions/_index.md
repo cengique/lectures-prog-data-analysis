@@ -79,8 +79,10 @@ finally:
 
 ### Exercise time
 
-Team up and implement ONE of these by using exceptions:
+Individually or in teams, implement ONE of these by using exceptions:
 
 1. `defaultdict` functionality by using the regular `dict`
 1. Implement input validation (only numbers) with loops
 1. Create a file if not already exists 
+
+Attach runtime output screenshots showing valid and exception cases on submission site.
