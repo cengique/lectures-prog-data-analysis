@@ -37,7 +37,9 @@ weight = 100 # chapter number
 
 ### Block execution
 
-Follow sections on the official [Notebook Examples](https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html) tutorial:
+Follow sections on the official [Notebook
+Examples](https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/examples_index.html)
+tutorial:
 
 - Structure of notebook documents
 - Kernels, cell types: markdown vs code
@@ -50,9 +52,11 @@ Follow sections on the official [Notebook Examples](https://jupyter-notebook.rea
 
 Do ONE of the following:
 
-- Open [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
-- Open [DeepNote](https://deepnote.com/)
-- Or download [Anaconda](https://www.anaconda.com/) and run Jupyter Notebook or JupyterLab
+1. Open online notebook at [Google
+  Colab](https://colab.research.google.com/notebooks/intro.ipynb),
+  [DeepNote](https://deepnote.com/), or [Azure
+  Notebooks](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/)
+1. Or download [Anaconda](https://www.anaconda.com/) and run Jupyter Notebook or JupyterLab
 
 </section>
 
