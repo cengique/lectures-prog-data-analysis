@@ -66,20 +66,11 @@ Do ONE of the following:
 
 ### Python's Numpy module
 
-From *Python for Data Analysis, 2nd Ed*, chapter 4:
+From *Python for Data Analysis, 2nd Ed*, [chapter 4](https://wesmckinney.com/book/numpy-basics):
 - enables working with $n$-dimensional arrays
 - math functions without needing to loop over arrays
 - reading/writing to files
 - advanced math: linear algebra, random numbers, etc
-
----
-
-### Numpy overview
-
-- Creating and manipulating `ndarray` objects and doing math on them
-- Data types for efficient storage and use
-- Indexing and slicing; with boolean expressions and *fancy* indexing
-- Unary and binary math functions
 
 ---
 
@@ -118,11 +109,22 @@ arr3d[x, y, z]
 
 ---
 
+### Numpy overview
+
+- Creating and manipulating `ndarray` objects and doing math on them
+- Data types for efficient storage and use
+- Indexing and slicing; with boolean expressions and *fancy* indexing
+- Unary and binary math functions
+
+---
+
+
 ### Numpy practice
 
 Start by working in teams on the whiteboard and <br> then submit
-**individually** by
-forking [this](https://replit.com/@cengique/numpy-practice).
+**individually** by forking
+[this](https://replit.com/@cengique/numpy-practice) or create an
+online notebook.
 
 
 #### Option 1
@@ -404,7 +406,9 @@ ga_population = [757, 1065, 964]
 ### Hands on activity
 
 - Work in groups as before
-- Log into [Google Colab](https://colab.research.google.com/) with any Google account
+- Use an online notebook; such as [Google
+  Colab](https://colab.research.google.com/) - log in with any Google
+  account
 - Create a new Python notebook
 - Create a `Dataframe` object from any data
 - Extract a `Series` object from your DataFrame
@@ -413,6 +417,5 @@ ga_population = [757, 1065, 964]
 - Use slicing and fancy indexing to get subsets of your `DataFrame`
 - Apply one comparison operator to use boolean indexing on your DataFrame
 - Share your link on Piazza
-
 
 </section>
