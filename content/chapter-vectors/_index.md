@@ -28,10 +28,10 @@ weight = 100 # chapter number
   - Start Anaconda from menu or run `anaconda-navigator` on command line
   - Install the Jupyter Notebook application in Anaconda
   - If it's already installed, click on Launch to start it
-  - You can also install and use JupyterLab, which is like R Studio/Matlab, etc.
-- You can also run notebooks online, such as on [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) and on [DeepNote](https://deepnote.com/)
-- Some examples: 
-  - [Live intro notebook](https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb)
+  - JupyterLab provides an integrated environment, similar to R Studio or Matlab
+- Without installing, online notebooks are available at [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb), [DeepNote](https://deepnote.com/), and [Azure Notebooks](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/)
+- Try notebooks in your browser: 
+  - [Live intro notebook](https://jupyterlite.github.io/demo/lab/index.html)
 
 ---
 
