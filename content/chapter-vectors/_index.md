@@ -10,7 +10,7 @@ weight = 100 # chapter number
 }
 </style>
 
-{{< reveal-titlepage >}}
+{{< reveal-titlepage figure="/lectures-prog-data-analysis/images/PDA_cover.png" >}}
   
 ---
 
