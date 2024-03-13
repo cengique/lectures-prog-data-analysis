@@ -398,7 +398,7 @@ ga_population = [757, 1065, 964]
 
 - Series for 1-D data
 - DataFrame for 2-D data
-- Indexing
+- Indexing (brackets, `.loc`, and `.iloc`)
 - Filtering
 
 ---
