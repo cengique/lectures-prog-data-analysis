@@ -46,6 +46,23 @@ such as `baseURL`, `github_repository`, `github_doc_repository`,
 See the description of the `schedule-table` command below on how to
 update the schedule page.
 
+## Running a preview site locally
+
+After cloning the repository, you would need to initialize the theme
+submodules:
+
+```bash
+git submodule init
+git submodule update
+```
+
+Then you can download and run [Hugo](https://gohugo.io/) to serve the
+site locally:
+
+```bash
+hugo server
+```
+
 ## Reveal-Hugo customizations
 
 In the class presentations, the `author` and `course` front-matter
