@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
         submodules: 'true'
@@ -19,13 +19,17 @@ jobs:
     - name: create worktree
       run: git worktree add -B gh-pages public origin/gh-pages
 
-    - name: Hugo
-      uses: klakegg/actions-hugo@1.0.0
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
       with:
-        image: ubuntu
+        hugo-version: '0.136.5'
+        # extended: true
+
+    - name: Build
+      run: hugo --minify
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: gh-pages-sp21
         path: public/sp21
@@ -35,7 +39,7 @@ jobs:
       run: rm -rf public/sp21/.git
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: gh-pages-sp22
         path: public/sp22
