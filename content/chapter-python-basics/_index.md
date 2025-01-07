@@ -10,7 +10,8 @@ weight = 30 # chapter number
 
 ### The very basics
 
-(from Hyperskill Python Intro section) 
+{{% figure src="/lectures-prog-data-analysis/images/PDA_cover.png" class=float-left height=400
+    caption="Chapter 2.3" %}}
 
 - Python history: version 2 vs 3; now popular for AI & ML
 - Whitespace, quotations, language conventions, operators
@@ -19,10 +20,16 @@ weight = 30 # chapter number
 
 ---
 
+An *ephemeral* Python practice area (wait for it to load)
+
+<iframe src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&amp;toolbar=1&amp" width="800px" height="600px"></iframe>
+
+---
+
 ### How to practice Python
 
 Do one or more of these based on your preferences!
-- Use online IDE on [REPL.it](https://replit.com/@replit/Python?v=1), we will for some class exercises
+- Use online IDEs 
 - Download from [Pyton.org](https://www.python.org/downloads/)
 - Download IDE [PyCharm](https://www.jetbrains.com/pycharm/) ([student discount](https://www.jetbrains.com/community/education/#students/))
 - Download IDE [Visual Studio Code](https://code.visualstudio.com/) with Python plugin
@@ -32,7 +39,8 @@ Do one or more of these based on your preferences!
 
 ### A crash course into Python
 
-(from Ch 2 of "Data Science from Scratch" by Joel Grus)
+{{% figure src="/lectures-prog-data-analysis/images/DS_scratch_cover.png" class=float-left height=400
+    caption="See Chapter 2." %}}
 
 - Zen of Python
 - Installing 
