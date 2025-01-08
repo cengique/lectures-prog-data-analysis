@@ -7,10 +7,8 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reset.css">
-<link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/highlight-js/default.min.css">
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/highlight-js/default.min.css"><style>
   .reveal strong {
     color: blue;
   }
@@ -53,7 +51,7 @@
     
     
 </figure>
-<p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-structures/" title="Data structures and performance"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data structures and performance</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-io-cleaning/" title="Data input/output and cleaning">Next - Data input/output and cleaning <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+<p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-structures/" title="Data structures and performance"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data structures and performance</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-io-cleaning/" title="Data input/output and cleaning">Next - Data input/output and cleaning <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
 
 </section><section>
 <section>
@@ -128,26 +126,24 @@ Notebooks</a>
 </span></span><span style="display:flex;"><span>arr1d[x]
 </span></span></code></pre></div>
 
-<span class='fragment '
-  >
-  <p>2 dimensions: 2 brackets, 2 indices</p>
+<span class='fragment ' ><p>2 dimensions: 2 brackets, 2 indices</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>arr2d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
 </span></span><span style="display:flex;"><span>                  [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]])
 </span></span><span style="display:flex;"><span>arr2d[x, y]
-</span></span></code></pre></div>
-</span>
+</span></span></code></pre></div></span>
 
 
-<span class='fragment '
-  >
-  <p>3 dimensions: &hellip;</p>
+
+
+<span class='fragment ' ><p>3 dimensions: &hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>arr3d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[[ <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">2</span>,  <span style="color:#ae81ff">3</span>],
 </span></span><span style="display:flex;"><span>                   [ <span style="color:#ae81ff">4</span>,  <span style="color:#ae81ff">5</span>,  <span style="color:#ae81ff">6</span>]],
 </span></span><span style="display:flex;"><span>                  [[ <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">8</span>,  <span style="color:#ae81ff">9</span>],
 </span></span><span style="display:flex;"><span>                   [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]]])
 </span></span><span style="display:flex;"><span>arr3d[x, y, z]
-</span></span></code></pre></div>
-</span>
+</span></span></code></pre></div></span>
+
+
 </section><section>
 <h3 id="numpy-overview">Numpy overview</h3>
 <ul>
@@ -216,15 +212,14 @@ online notebook.</p>
 </ul>
 
 
-<span class='fragment '
-  >
-  <p>Example: sum of products to find total price</p>
+<span class='fragment ' ><p>Example: sum of products to find total price</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>quantity <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>])
 </span></span><span style="display:flex;"><span>prices <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">1.25</span>, <span style="color:#ae81ff">20</span>])
 </span></span><span style="display:flex;"><span>total <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>dot(prices, quantity)
 </span></span></code></pre></div><p>Result: <code>71.25</code></p>
-
 </span>
+
+
 </section><section>
 <h3 id="vector-math-outer-product">Vector math: outer product</h3>
 <p><a href="https://en.wikipedia.org/wiki/Outer_product" target="_blank" rel="noreferrer noopener">(definition)</a>
@@ -236,9 +231,7 @@ online notebook.</p>
 </ul>
 
 
-<span class='fragment '
-  >
-  <p>Example:</p>
+<span class='fragment ' ><p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>item_prices <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>full((<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>), <span style="color:#ae81ff">50</span>) <span style="color:#75715e"># all $50</span>
 </span></span><span style="display:flex;"><span>inflation_per_month <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1.1</span>, <span style="color:#ae81ff">1.3</span>, <span style="color:#ae81ff">1.3</span>, <span style="color:#ae81ff">1.4</span>]) <span style="color:#75715e"># monthly inflation</span>
 </span></span><span style="display:flex;"><span>new_prices_per_month <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>outer(inflation_per_month, item_prices)
@@ -247,8 +240,9 @@ online notebook.</p>
 </span></span><span style="display:flex;"><span>       [<span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>],
 </span></span><span style="display:flex;"><span>       [<span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>, <span style="color:#ae81ff">65.</span>],
 </span></span><span style="display:flex;"><span>       [<span style="color:#ae81ff">70.</span>, <span style="color:#ae81ff">70.</span>, <span style="color:#ae81ff">70.</span>, <span style="color:#ae81ff">70.</span>, <span style="color:#ae81ff">70.</span>]])
-</span></span></code></pre></div>
-</span>
+</span></span></code></pre></div></span>
+
+
 </section><section>
 <h3 id="basics-matrices">Basics: Matrices</h3>
 <p>$$ A=\left[ \begin{array}{ccc}
@@ -325,15 +319,14 @@ $$ A\times A^{-1} = I$$</li>
 </span></span><span style="display:flex;"><span>mean <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> len(vector)
 </span></span></code></pre></div>
 
-<span class='fragment '
-  >
-  <p>Use vector operations to do it shorter and more efficiently.
+<span class='fragment ' ><p>Use vector operations to do it shorter and more efficiently.
 $$ \mu = \sum_{i=1..N} x_i / N $$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 </span></span><span style="display:flex;"><span>vector <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
 </span></span><span style="display:flex;"><span>mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(vector) <span style="color:#f92672">/</span> len(vector)
-</span></span></code></pre></div>
-</span>
+</span></span></code></pre></div></span>
+
+
 </section><section>
 <h3 id="numpy-exercise-1">Numpy exercise 1</h3>
 <p>Use vectorized numpy operations to calculate standard deviation
@@ -426,23 +419,20 @@ account</li>
       
 
     </div>
-<script type="text/javascript" src=/lectures-prog-data-analysis/reveal-hugo/object-assign.js></script>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp24/reveal-hugo/object-assign.js></script>
 
-<a href="/lectures-prog-data-analysis/reveal-js/css/print/" id="print-location" style="display: none;"></a>
-<script type="text/javascript">
-  var printLocationElement = document.getElementById('print-location');
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
-  document.getElementsByTagName('head')[0].appendChild(link);
-</script>
 
-<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
-<script type="application/json" id="reveal-hugo-page-params">null</script>
+<script src="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.js"></script>
 
-<script src="/lectures-prog-data-analysis/reveal-js/js/reveal.js"></script>
 
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/notes/notes.js"></script>
+  
 <script type="text/javascript">
   
   
@@ -458,31 +448,88 @@ account</li>
     }
     return map;
   }
-  
+
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
-  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
-  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  var revealHugoSiteParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280};
+  var revealHugoPageParams = {};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
   
   var options = Object.assign({},
     camelize(revealHugoDefaults),
     camelize(revealHugoSiteParams),
-    camelize(revealHugoPageParams));
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
   Reveal.initialize(options);
 </script>
 
 
+
+
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/marked.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/markdown.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/highlight/highlight.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/zoom-js/zoom.js"></script>
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/notes/notes.js"></script>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
 
 
 
@@ -501,7 +548,7 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/">Home</a>
 
     
   </body>

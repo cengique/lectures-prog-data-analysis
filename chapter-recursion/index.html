@@ -7,10 +7,8 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reset.css">
-<link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/highlight-js/default.min.css">
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/highlight-js/default.min.css"><style>
   .reveal strong {
     color: blue;
   }
@@ -46,7 +44,7 @@ div.goat > svg {
 <h3 id="re-introduction-to-software-engineering">Recursion</h3>
 
 <h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 3160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
-<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-exceptions/" title="Errors and Exceptions"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Errors and Exceptions</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-structures/" title="Data structures and performance">Next - Data structures and performance <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-exceptions/" title="Errors and Exceptions"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Errors and Exceptions</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-structures/" title="Data structures and performance">Next - Data structures and performance <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
 
 </section><section>
 <p><a href="http://smbc-comics.com/comic/recursion" target="_blank" rel="noreferrer noopener"><img src="https://www.smbc-comics.com/comics/1562409923-20190706.png" alt=""><br>
@@ -72,28 +70,28 @@ div.goat > svg {
 <p>Limitations?</p>
 
 
-<span class='fragment '
-  >
-  <ul>
+<span class='fragment ' ><ul>
 <li>Less efficient</li>
 <li>Can exhaust program stack</li>
 </ul>
-
 </span>
+
+
 </section><section>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Qk0zUZW-U_M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<pre><code>&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&quot;&gt;
+  &lt;iframe allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen=&quot;allowfullscreen&quot; loading=&quot;eager&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; src=&quot;https://www.youtube.com/embed/Qk0zUZW-U_M?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&quot; title=&quot;YouTube video&quot;
+  &gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
 </section><section>
 <h3 id="designing-a-recursive-algorithm">Designing a recursive algorithm</h3>
 <ol>
 <li>Do you have a nesting doll situation? Identify the part in your problem that repeats and when that happens.</li>
 <li>
 
-<span class='fragment '
-  >
-  Identify when the recursion ends. What is the condition that stops it?
-</span></li>
+<span class='fragment ' >Identify when the recursion ends. What is the condition that stops it?</span>
+
+</li>
 </ol>
 </section><section>
 <h3 id="example-factorial">Example: Factorial</h3>
@@ -102,14 +100,13 @@ $$f(n)=n\times{}(n-1)\times\cdots\times{}2\times{}1$$</p>
 <p>What is the <strong>repeating part</strong> versus the <strong>termination condition</strong>?</p>
 
 
-<span class='fragment '
-  >
-  <ol>
+<span class='fragment ' ><ol>
 <li>Repeating pattern: each time multiply with one less number $$f(n)=n\times f(n-1)$$</li>
 <li>Termination condition: we stop at 1 $$f(1)=1$$</li>
 </ol>
-
 </span>
+
+
 </section><section>
 <h3 id="classic-example-factorial">Classic example: factorial</h3>
 <p>For demo purposes only, not today&rsquo;s class activity.</p>
@@ -190,11 +187,10 @@ $a&lt;b&lt;c$</p>
 <p>Start with <code>root</code> node object (<code>root.info=4</code>), and you can go <code>root.left</code> or <code>root.right</code> to get to the next node. If there is no node, it will be an empty object (<code>None</code>).</p>
 
 
-<span class='fragment '
-  >
-  <p>Does it work for any tree?</p>
-
+<span class='fragment ' ><p>Does it work for any tree?</p>
 </span>
+
+
 </section><section>
 <h3 id="with-recursion">With recursion</h3>
 
@@ -235,11 +231,10 @@ $a&lt;b&lt;c$</p>
 </span></span><span style="display:flex;"><span>print(node_count(root, <span style="color:#ae81ff">1</span>))
 </span></span></code></pre></div>
 
-<span class='fragment '
-  >
-  <p>Does it work for any tree?</p>
-
+<span class='fragment ' ><p>Does it work for any tree?</p>
 </span>
+
+
 </section><section>
 <h3 id="class-activity-solve-one-of-these-problems">Class activity: Solve ONE of these problems</h3>
 <ol>
@@ -271,23 +266,20 @@ $a&lt;b&lt;c$</p>
       
 
     </div>
-<script type="text/javascript" src=/lectures-prog-data-analysis/reveal-hugo/object-assign.js></script>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp24/reveal-hugo/object-assign.js></script>
 
-<a href="/lectures-prog-data-analysis/reveal-js/css/print/" id="print-location" style="display: none;"></a>
-<script type="text/javascript">
-  var printLocationElement = document.getElementById('print-location');
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
-  document.getElementsByTagName('head')[0].appendChild(link);
-</script>
 
-<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
-<script type="application/json" id="reveal-hugo-page-params">null</script>
+<script src="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.js"></script>
 
-<script src="/lectures-prog-data-analysis/reveal-js/js/reveal.js"></script>
 
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/notes/notes.js"></script>
+  
 <script type="text/javascript">
   
   
@@ -303,31 +295,88 @@ $a&lt;b&lt;c$</p>
     }
     return map;
   }
-  
+
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
-  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
-  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  var revealHugoSiteParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280};
+  var revealHugoPageParams = {};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
   
   var options = Object.assign({},
     camelize(revealHugoDefaults),
     camelize(revealHugoSiteParams),
-    camelize(revealHugoPageParams));
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
   Reveal.initialize(options);
 </script>
 
 
+
+
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/marked.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/markdown.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/highlight/highlight.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/zoom-js/zoom.js"></script>
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/notes/notes.js"></script>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
 
 
 
@@ -346,7 +395,7 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/">Home</a>
 
     
   </body>

@@ -7,10 +7,8 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reset.css">
-<link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/highlight-js/default.min.css">
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/highlight-js/default.min.css"><style>
   .reveal strong {
     color: blue;
   }
@@ -41,7 +39,7 @@
     <section><h3 id="re-introduction-to-software-engineering">Data plotting, wrangling, and aggregation</h3>
 
 <h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 3160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
-<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/chapter-data-io-cleaning/" title="Data input/output and cleaning"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data input/output and cleaning</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/instructor/" title="Instructor Materials">Next - Instructor Materials <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-io-cleaning/" title="Data input/output and cleaning"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data input/output and cleaning</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/instructor/" title="Instructor Materials">Next - Instructor Materials <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
 
 </section><section>
 <section>
@@ -51,16 +49,15 @@
 </ul>
 
 
-<span class='fragment '
-  >
-  <p>Main library is <code>matplotlib</code>:</p>
+<span class='fragment ' ><p>Main library is <code>matplotlib</code>:</p>
 <ul>
 <li>Controls how figures are laid out and decorated (axes, labels, colors, line styles, etc)</li>
 <li>Can be used directly</li>
 <li>Pandas uses it indirectly, but allows using <code>matplotlib</code> commands</li>
 </ul>
-
 </span>
+
+
 </section><section>
 <h3 id="anatomy-of-a-plot-in-matplotlib">Anatomy of a plot in matplotlib</h3>
 <img style="width: 50%;" src="/lectures-prog-data-analysis/images/plot-simple.png" />
@@ -157,23 +154,20 @@ matplotlib</a>
       
 
     </div>
-<script type="text/javascript" src=/lectures-prog-data-analysis/reveal-hugo/object-assign.js></script>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp24/reveal-hugo/object-assign.js></script>
 
-<a href="/lectures-prog-data-analysis/reveal-js/css/print/" id="print-location" style="display: none;"></a>
-<script type="text/javascript">
-  var printLocationElement = document.getElementById('print-location');
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
-  document.getElementsByTagName('head')[0].appendChild(link);
-</script>
 
-<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
-<script type="application/json" id="reveal-hugo-page-params">null</script>
+<script src="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.js"></script>
 
-<script src="/lectures-prog-data-analysis/reveal-js/js/reveal.js"></script>
 
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/notes/notes.js"></script>
+  
 <script type="text/javascript">
   
   
@@ -189,31 +183,88 @@ matplotlib</a>
     }
     return map;
   }
-  
+
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
-  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
-  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  var revealHugoSiteParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280};
+  var revealHugoPageParams = {};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
   
   var options = Object.assign({},
     camelize(revealHugoDefaults),
     camelize(revealHugoSiteParams),
-    camelize(revealHugoPageParams));
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
   Reveal.initialize(options);
 </script>
 
 
+
+
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/marked.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/markdown.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/highlight/highlight.js"></script>
-  
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/zoom-js/zoom.js"></script>
+
   
   
-  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/notes/notes.js"></script>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
 
 
 
@@ -232,7 +283,7 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
-<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/">Home</a>
 
     
   </body>

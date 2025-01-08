@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Lectures for the Python Programming for Data Analysis course</title>
-    <link>https://cengique.github.io/lectures-prog-data-analysis/</link>
+    <link>https://cengique.github.io/lectures-prog-data-analysis/sp24/</link>
     <description>Recent content in Home on Lectures for the Python Programming for Data Analysis course</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://cengique.github.io/lectures-prog-data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Oct 2019 15:26:15 +0000</lastBuildDate>
+    <atom:link href="https://cengique.github.io/lectures-prog-data-analysis/sp24/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About this Site</title>
-      <link>https://cengique.github.io/lectures-prog-data-analysis/about/</link>
-      <pubDate>Thu, 19 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>https://cengique.github.io/lectures-prog-data-analysis/about/</guid>
-      <description>This site contains a collection of lectures, assignments, and instructor materials for teaching software engineering or development, at an intermediate level. It is assumed that students already know basic software engineering terms and skills.
-Materials are used for the ITEC 3870 Software Development II course taught at Georgia Gwinnett College . They were developed by Cengiz Gunay and Anca Doloc-Mihu , supported by an Affordable Learning Georgia grant in 2019-2020.</description>
+      <link>https://cengique.github.io/lectures-prog-data-analysis/sp24/about/</link>
+      <pubDate>Fri, 23 Nov 2018 15:26:15 +0000</pubDate>
+      <guid>https://cengique.github.io/lectures-prog-data-analysis/sp24/about/</guid>
+      <description>&lt;p&gt;This site contains a collection of lectures, assignments, and instructor materials for teaching software engineering or development, at an &lt;em&gt;intermediate&lt;/em&gt; level. It is assumed that students already know basic software engineering terms and skills.&lt;/p&gt;&#xA;&lt;p&gt;Materials are used for the &lt;a href=&#34;https://soft-eng-practicum.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;ITEC 3870 Software Development II course&lt;/a&gt;&#xA; taught at &lt;a href=&#34;https://ggc.edu&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Georgia Gwinnett College&lt;/a&gt;&#xA;. They were developed by &lt;a href=&#34;https://www.ggc.edu/about-ggc/directory/cengiz-gunay&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Cengiz Gunay&lt;/a&gt;&#xA; and &lt;a href=&#34;https://www.ggc.edu/about-ggc/directory/anca-doloc-mihu&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Anca Doloc-Mihu&lt;/a&gt;&#xA;, supported by an &lt;a href=&#34;https://www.affordablelearninggeorgia.org/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Affordable Learning Georgia&lt;/a&gt;&#xA; grant in 2019-2020.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
