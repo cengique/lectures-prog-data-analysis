@@ -102,6 +102,12 @@ isHTML = true
         weight = 3
         
     [[menu.main]]
+        name = "Spring 2024"
+        url = "/sp24/"
+        weight = 998
+        parent = "archives"
+
+    [[menu.main]]
         name = "Spring 2022"
         url = "/sp22/"
         weight = 999
