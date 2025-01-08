@@ -54,8 +54,8 @@ Do one or more of these based on your preferences!
 
 ### Practice functions
 
-Everyone open [Repl.it](https://replit.com) accounts. Work in teams,
-one person should fork from below and then give "invite" link to others:
+Copy the code below into your own Python IDE. Work in teams,
+one person can host the code and others can contribute:
 
 <iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
