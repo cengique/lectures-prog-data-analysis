@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Data input/output and cleaning</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Data input/output and cleaning</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-vectors/" title="Working with vector data"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Working with vector data</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-data-wrangle-aggregate/" title="Data wrangling and aggregation">Next - Data wrangling and aggregation <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h3 id="data-formats">Data formats</h3>
+<ul>
+<li>See Python for Data Analysis, Chapter 6 and 7</li>
+</ul>
+<p>Some topics:</p>
+<ul>
+<li>Loading and saving in different data formats</li>
+<li>Common options for loading</li>
+<li>Handling exceptions in formatting</li>
+<li>Selecting index columns</li>
+<li>Reading from URLs</li>
+<li>Reading from databases</li>
+<li>Binary formats (e.g., HDF5)</li>
+</ul>
+</section><section>
+<h3 id="data-cleaning">Data cleaning</h3>
+<ul>
+<li>Missing data with N/A, NaN, and NULL values</li>
+<li>Filtering missing data out</li>
+<li>Filling in missing data values</li>
+<li>Eliminating duplicates</li>
+<li>Replacing values</li>
+<li>Adding new calculated columns</li>
+<li>Cosmetics (axis labels, etc)</li>
+<li>Discretization</li>
+<li>Outliers</li>
+<li>Random sampling and shuffling</li>
+<li>String manipulation and regular expressions</li>
+</ul>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>

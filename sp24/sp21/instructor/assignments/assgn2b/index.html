@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Assgn 2b - Lectures for the Python Programming for Data Analysis course</title>
+<meta name="description" content="Assgn 2b">
+<meta name="generator" content="Hugo 0.80.0" />
+<link href="https://cengique.github.io/lectures-prog-data-analysis//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn2b/">
+<link rel="stylesheet" href="https://cengique.github.io/lectures-prog-data-analysis/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://cengique.github.io/lectures-prog-data-analysis/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cengique.github.io/lectures-prog-data-analysis/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Assgn 2b" />
+<meta property="og:description" content="Assgn 2b" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn2b/" />
+<meta property="og:image" content="https://cengique.github.io/lectures-prog-data-analysis/images/og-image.png"/>
+<meta property="og:updated_time" content="2020-12-20T15:26:15+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://cengique.github.io/lectures-prog-data-analysis/images/og-image.png"/>
+
+<meta name="twitter:title" content="Assgn 2b"/>
+<meta name="twitter:description" content="Assgn 2b"/>
+<meta itemprop="name" content="Assgn 2b">
+<meta itemprop="description" content="Assgn 2b">
+</head>
+<body><div class="container"><header>
+<h1>Lectures for the Python Programming for Data Analysis course</h1>
+
+ <span class="version">Version 0.1.1</span>
+<a href="https://github.com/cengique/lectures-prog-data-analysis" class="github"><i class="fab fa-github"></i></a>
+<p class="description">Lectures and other resources</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/lectures-prog-data-analysis/">Home</a></li>
+<li><a href="/lectures-prog-data-analysis/about">About</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Assgn 2b</h1><h2 id="assgn-2b-individual-git-branching--merging">Assgn 2b (individual): Git branching &amp; merging</h2>
+<p><strong>Instructor Instructions</strong>:</p>
+<ul>
+<li>For this assignment students submit directly on Github repo. Instructor needs to have this repo available for the students and to replace our repo link at Step 4 of the previous exercise (Assgn 2a).</li>
+<li>Suggested time: 7 days</li>
+</ul>
+<p><strong>Posting for Students</strong>:</p>
+<p><strong>Practice assignment for Git+Bash</strong></p>
+<h1 id="git-practice-2-checkout-and-branch">Git Practice #2: Checkout and branch</h1>
+<p><strong>Note:</strong> Always prefer the <a href="https://git-scm.com/doc" target="_blank" rel="noreferrer noopener">official Git documentation</a>
+
+ and its <a href="https://git-scm.com/docs" target="_blank" rel="noreferrer noopener">reference manual</a>
+
+ to learn about the git commands rather than following random, outdated, and misleading tutorials from the web. If you don&rsquo;t remember syntax of a specific git command, try the <code>--help</code> option (e.g., <code>git commit --help</code>). Two exceptions I will recommend are <a href="http://rogerdudler.github.io/git-guide/" target="_blank" rel="noreferrer noopener">the simple git guide</a>
+
+ and <a href="http://learngitbranching.js.org/" target="_blank" rel="noreferrer noopener">Learn Git Branching</a>
+
+ - a testing environment for you to play around branches.</p>
+<h2 id="part-i-parallel-universes">Part I: Parallel universes</h2>
+<p>This exercise will make changes in one file in two parallel branches.</p>
+<ol>
+<li>Go back to your clone of <a href="https://github.com/cengique/bash_basics" target="_blank" rel="noreferrer noopener"><code>bash_basics</code></a>
+
+ on your computer.</li>
+<li>Pick <em>any</em> one of the numbered Bash scripts. Run it using <code>sh &quot;name of script&quot;</code> in your Git Bash to see what it does, and then do the exercise described in the comment section at its end by adding new commands to the file. You can look inside the <code>basics.sh</code> file to get some hints, or use the <a href="http://conqueringthecommandline.com/" target="_blank" rel="noreferrer noopener">Conquering the Command Line book</a>
+
+.</li>
+<li>Add and commit your edited file, and push back to your own Github fork like last time (<em>Note</em>: If you&rsquo;re committing to a new branch <code>name</code>, make sure to <code>git push --set-upstream origin &quot;name&quot;</code>, like we did in the previous assignment).</li>
+<li>Now, we will look into the history to see a suitable place to travel back in time before our last commit. Use the <code>git log</code> command (or the commit lists in the UIs) to find the ID# of your <em>first</em> commit from last assignment. Press &ldquo;q&rdquo; to quit from the git log command.</li>
+<li>The actual time travel is achieved by using the <code>git checkout &quot;ID#&quot;</code>command, using the &ldquo;ID#&rdquo; from the previous step,  which will transform your code back to that commit. Do <code>git log</code> again to confirm that it shows on the top of the list. The point of this is to go back to that time, but we will not do anything with the file you created last time.</li>
+<li>To create the parallel universe, create a new branch <code>git branch &quot;name&quot;</code> and then switch to that branch with <code>git checkout &quot;name&quot;</code> (OR you can do the two in one step with <code>git checkout -b &quot;name&quot;</code>). Notice the dual use for the <code>git checkout</code> command.</li>
+<li>Re-do steps 2-3, which will be happening on the new branch, that is in the parallel universe. Make sure you pick and edit the <em>same</em> file and <em>around the same lines</em> in it, but this time do it slightly differently. This will result in having changes to the same file in two parallel branches of the repository.</li>
+<li>Now you should have two branches: <code>master</code>, and the new one you created. Look on Github under Insights-&gt;Network to study your branches and the different commits in each (alternatively, view them locally using the <code>git log --graph --all</code> command). Take a screenshot of your &ldquo;two-branches&rdquo; graph and add this file into your repository. Don&rsquo;t forget to add/commit/push.</li>
+<li>Congratulations, now you can move onto part II.</li>
+</ol>
+<h2 id="part-ii-un-conflict-resolution">Part II: U.N. conflict resolution</h2>
+<p>We will now reconcile the two separate parallel universes into one.</p>
+<ol>
+<li>On your local copy, make sure you&rsquo;re on the master branch (use <code>git status</code> to check and <code>git checkout &quot;branch name&quot;</code> to switch between branches). Then, run <code>git merge &quot;branch_name&quot;</code> to <em>merge</em> the changes from your new branch into the master branch. You will get a conflict, OMG!</li>
+<li>Use <code>git status</code> to get a recommendation from git. When in trouble, always ask for <code>status</code>.</li>
+<li>Do not proceed to commit without resolving the conflict! Open the file you edited and observe how git changed it. It should have added marks &laquo;&lt; === &raquo;&gt; to indicate parts changed in the two branches.</li>
+<li>Pick the parts you like to keep, and delete the rest and the marks added by git. <em>Make sure your script still works</em>.</li>
+<li><em>Add</em> and <em>commit</em> to mark the conflict resolved. Consult <code>git status</code> to confirm. Push to set it in stone.</li>
+<li>Look on Github under Graph-&gt;Network again to see how your branches were merged together. There should be an arrow that merges them into a single branch. Take a screenshot of your &ldquo;after-merging&rdquo; graph and add this file into your repository also. Don&rsquo;t forget to add/commit/push.</li>
+<li>Create a Pull Request against my repository to submit, like in the previous assignment. If you already have an outstanding pull request, your commits will just show up in there. So you don&rsquo;t need to create a new one.</li>
+</ol>
+<div class="edit-meta">
+Last updated on 20 Dec 2020
+
+
+<br>
+Published on 23 Nov 2019
+<br><a href="https://github.com/cengique/lectures-prog-data-analysis/edit/master/content/instructor/assignments/assgn2b/_index.md" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-software-protection/licensing/" title="Licensing Software"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Licensing Software</a>
+
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a></li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/schedule/">Schedule</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/workshops/">Workshops</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/workshops/git/">Git Workshops</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/workshops/git/beginner/">Git Beginner</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/workshops/git/intermediate/">Git Intermediate</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/workshops/angular/">Angular Workshops</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/">Student Materials</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-intro/">Re-introduction to Software Engineering</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-intro/chapter-tech/">Technology Overview</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-agiledevelopment/">Agile Development</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-agiledevelopment/chapter-principles/">Agile Principles</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-agiledevelopment/chapter-scrum/">Scrum</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-agiledevelopment/chapter-kanban/">Kanban</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/">Requirements in Agile</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/chapter-userstories/">User Stories</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/chapter-teamwork/">Teamwork</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-version-control/">Version Control</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-version-control/github-social-computing/">Github Social Computing</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-jira/">Project Management with JIRA</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-project-design/">Project Design and Management</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-project-design/requirements-phase/">Requirements Phase</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-project-design/client-checkpoint-phase/">Client Checkpoint Phase</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-project-design/last-stretch-phase/">The Last Stretch Phase</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-software-protection/">Software Protection</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-software-protection/intellectual-property/">Intellectual Property</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-software-protection/licensing/">Licensing Software</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/">Instructor Materials</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/schedule/">Schedule</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/syllabus/">Syllabus</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/gradebook/">Gradebook</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/exams/">Exams</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/exams/midterm/">Midterm</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/exams/final/">Final</a>
+  
+</li>
+</ul>
+  
+</li>
+
+<li class="parent"><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/">Assignments</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn1a/">Assgn 1a</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn1b/">Assgn 1b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn1c/">Assgn 1c</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn2a/">Assgn 2a</a>
+  
+</li>
+
+<li class="parent active"><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn2b/">Assgn 2b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn3a/">Assgn 3a</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn3b/">Assgn 3b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn4a/">Assgn 4a</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn4b/">Assgn 4b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn5a/">Assgn 5a</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn5b/">Assgn 5b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn6a/">Assgn 6a</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn6b/">Assgn 6b</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/assgn7/">Assgn 7</a>
+  
+</li>
+
+<li class=""><a href="https://cengique.github.io/lectures-prog-data-analysis/instructor/assignments/presentations/">Presentations</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

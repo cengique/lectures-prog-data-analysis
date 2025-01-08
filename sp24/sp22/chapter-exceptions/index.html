@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Errors and Exceptions</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Errors and Exceptions</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-data-structures/" title="Data structures and performance"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data structures and performance</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-recursion/" title="Recursion">Next - Recursion <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h3 id="what-are-exceptions">What are exceptions?</h3>
+<ul>
+<li>A way to break out of the linear execution of a program</li>
+<li>Usually for an <em>exceptional</em> situation (e.g., an error)</li>
+<li>Otherwise, it may cause your program to crash</li>
+<li>Why not instead use if statements to catch errors?</li>
+</ul>
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>Cleaner logic and execution, does not disrupt logic</li>
+<li>Exception may arise from multiple places</li>
+</ul>
+
+</span>
+</section><section>
+<h3 id="examples-with-if-statements-vs-exceptions">Examples with if statements vs exceptions</h3>
+<p>If statement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape>value <span style="color:#f92672">=</span> count_inputs(<span style="color:#f92672">...</span>)
+<span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+  print(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
+  exit <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+<span style="color:#75715e"># now do stuff with value</span>
+<span style="color:#f92672">...</span>
+</code></pre></div>
+
+<span class='fragment '
+  >
+  <p>Exception:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#66d9ef">try</span>:
+  value <span style="color:#f92672">=</span> count_inputs(<span style="color:#f92672">...</span>)
+  <span style="color:#75715e"># now do stuff with value</span>
+  <span style="color:#f92672">...</span>
+<span style="color:#66d9ef">except</span>:
+  print(<span style="color:#e6db74">&#34;Error in counting inputs!&#34;</span>)
+  <span style="color:#66d9ef">raise</span>
+</code></pre></div>
+</span>
+</section><section>
+<h3 id="exceptions-in-python">Exceptions in Python</h3>
+<ul>
+<li>All exceptions should be subclasses of <code>BaseException</code></li>
+<li>You can have multiple <code>except</code> clauses to catch specific exceptions:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#f92672">import</span> sys
+
+<span style="color:#66d9ef">try</span>:
+    f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;myfile.txt&#39;</span>)
+    s <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>readline()
+    i <span style="color:#f92672">=</span> int(s<span style="color:#f92672">.</span>strip())
+<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">OSError</span> <span style="color:#66d9ef">as</span> err:
+    print(<span style="color:#e6db74">&#34;OS error: </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(err))
+<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+    print(<span style="color:#e6db74">&#34;Could not convert data to an integer.&#34;</span>)
+<span style="color:#66d9ef">except</span>:
+    print(<span style="color:#e6db74">&#34;Unexpected error:&#34;</span>, sys<span style="color:#f92672">.</span>exc_info()[<span style="color:#ae81ff">0</span>])
+    <span style="color:#66d9ef">raise</span>
+</code></pre></div></section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>

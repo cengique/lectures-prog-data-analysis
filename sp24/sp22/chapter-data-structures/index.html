@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Data structures and performance</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Data structures and performance</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-python-basics/" title="Python basics refresher"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Python basics refresher</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-exceptions/" title="Errors and Exceptions">Next - Errors and Exceptions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h3 id="time-complexity-big-o-notation">Time complexity, big-O notation</h3>
+<ul>
+<li>General idea: time it takes for an algorithm to run.</li>
+<li>Complexity: the number of steps involved in a process or pieces that make up a system ?</li>
+</ul>
+
+
+<span class='fragment '
+  >
+  <blockquote>
+<p>Complexity makes a difference in everyday use:</p>
+<p><strong>Fast and high quality</strong> services vs <br> those that <strong>lag, crash, and are unreliable</strong></p>
+</blockquote>
+
+</span>
+</section><section>
+<h3 id="big-o-is-calculated-based-on-input-size">Big-O is calculated based on input size</h3>
+<ul>
+<li>In data analytics, we will often work with large amounts of data</li>
+<li>Performance of algorithms matter more with large data</li>
+</ul>
+
+
+<span class='fragment '
+  >
+  <blockquote>
+<p>Does this algorithm scale up when it is given a large input?</p>
+</blockquote>
+<ul>
+<li>Therefore, $O()$ notation indicates <em>growth</em> of time with an input, <em>n</em></li>
+</ul>
+
+</span>
+</section><section>
+<h3 id="definitions-big-o-notation">Definitions: Big-O notation</h3>
+<ul>
+<li>$O(1)$: constant time, independent of input size, $n$ <br>(e.g. getting an item from an array with an index)</li>
+<li>$O(\log(n))$: less than linear, exponent of $n$&rsquo;s growth <br>(e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)</li>
+<li>$O(\sqrt{n})$: more than log, less than $n$ (e.g., process one row of matrix data)</li>
+<li>$O(n)$: linear time with size (e.g. summation of every element in list)</li>
+<li>$O(n^k)$: polynomial time ($k$: constant) (e.g., nested loops over whole input)</li>
+<li>$O(2^n)$: exponential time (worst case; e.g., finding best route between two points)</li>
+</ul>
+
+
+
+<aside class="notes"><p>TODO: add graph</p>
+</aside>
+</section><section>
+<h3 id="constant-time-the-holy-grail">Constant time: The holy grail</h3>
+<p>Why does indexing an array take constant time, $O(1)$?</p>
+
+
+<span class='fragment '
+  >
+  <ul>
+<li>In homogeneous arrays, each item takes the same memory space!</li>
+<li>You can multiply the index by item size to find offset of item:
+$$ \mathsf{Item~at~index~} i = \mathsf{array~starting~address} + i * \mathsf{size~of~one~item}$$</li>
+</ul>
+
+</span>
+
+
+<span class='fragment '
+  >
+  <blockquote>
+<p>Hint: In Python, <code>list</code> can contain heterogeneous items, but each item is
+an object reference that take up equal space.</p>
+</blockquote>
+
+</span>
+</section><section>
+<h3 id="popular-algorithms">Popular algorithms</h3>
+<ul>
+<li>Index lookup: $O(1)$</li>
+<li>Search in array: $O(n)$</li>
+<li>Hash lookup: $O(1)$ (in Python: dict and sets)</li>
+</ul>
+</section><section>
+<h3 id="about-sets">About sets</h3>
+<p>Pros:</p>
+<ul>
+<li>faster lookup times</li>
+<li>ensures uniqueness of items</li>
+<li>awesome methods for determining what elements two sets do and do not share</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>uses more memory</li>
+<li>slower to build and append to than a list</li>
+</ul>
+</section><section>
+<h3 id="big-o-can-also-apply-memory-size">Big-O can also apply memory size</h3>
+<ul>
+<li>Same idea: $O(1)$, $O(n)$, etc</li>
+<li>Hashing usually requires additional space</li>
+<li>Do not use complex data structures unnecessarily!</li>
+</ul>
+</section><section>
+<h3 id="whats-hashing">What&rsquo;s hashing?</h3>
+<ul>
+<li>hash is a math function that can calculate a number out anything</li>
+<li>the number would be unique (or close to) for each input
+<pre tabindex="0"><code>hash(&quot;hello&quot;) -&gt; 46487
+</code></pre></li>
+<li>hash number can be used (with some tricks) as an <strong>index</strong></li>
+<li>then you can use the index instead of searching with $O(1)$</li>
+</ul>
+<h4 id="other-uses">Other uses:</h4>
+<ul>
+<li>Comparing complex objects</li>
+<li>Sorting (only for values)</li>
+<li>Checksumming internet download packages</li>
+</ul>
+</section><section>
+<h3 id="exercise-time">Exercise time!</h3>
+<p>Compare speed of two operations:</p>
+<ol>
+<li>Searching an item in list versus set</li>
+<li>Appending an item in list versus set</li>
+</ol>
+
+
+<span class='fragment '
+  >
+  <h4 id="to-find-speed">To find speed:</h4>
+<ol>
+<li>Initialize a long list, then create a set from it</li>
+<li>Start a timer</li>
+<li>Loop a large number of times (e.g. 100,000)</li>
+<li>Put only one operation inside the loop to measure (e.g., <code>&quot;hello&quot; in my_list</code>)</li>
+<li>Stop the timer and find elapsed time</li>
+<li>Report time per operation by dividing with repeat multiplier you selected above</li>
+</ol>
+<p>OR use <a href="https://github.com/shitchell/defbench" target="_blank" rel="noreferrer noopener">defbench</a>
+ that GGC graduate Shaun Mitchell made!</p>
+
+</span>
+</section><section>
+<h3 id="example-program-to-measure-performance">Example program to measure performance</h3>
+<p>Copy-paste locally because cloud runs are not consistent:</p>
+<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Data input/output and cleaning</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/highlight-js/default.min.css"><style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Data input/output and cleaning</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 3160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-vectors/" title="Working with vector data"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Working with vector data</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-wrangle-aggregate/" title="Data plotting, wrangling, and aggregation">Next - Data plotting, wrangling, and aggregation <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h3 id="data-formats">Data formats</h3>
+<ul>
+<li>See Python for Data Analysis, Chapter 6 and 7</li>
+</ul>
+<p>Some topics:</p>
+<ul>
+<li>Loading and saving in different data formats</li>
+<li>Common options for loading</li>
+<li>Handling exceptions in formatting</li>
+<li>Selecting index columns</li>
+<li>Reading from URLs</li>
+<li>Reading from databases</li>
+<li>Binary formats (e.g., HDF5)</li>
+</ul>
+</section><section>
+<h3 id="data-cleaning">Data cleaning</h3>
+<ul>
+<li>Missing data with N/A, NaN, and NULL values</li>
+<li>Filtering missing data out</li>
+<li>Filling in missing data values</li>
+<li>Eliminating duplicates</li>
+<li>Replacing values</li>
+<li>Adding new calculated columns</li>
+<li>Cosmetics (axis labels, etc)</li>
+<li>Discretization</li>
+<li>Outliers</li>
+<li>Random sampling and shuffling</li>
+<li>String manipulation and regular expressions</li>
+</ul>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp24/reveal-hugo/object-assign.js></script>
+
+
+<script src="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280};
+  var revealHugoPageParams = {};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/">Home</a>
+
+    
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Data plotting, wrangling, and aggregation</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp24/highlight-js/default.min.css"><style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Data plotting, wrangling, and aggregation</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 3160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/chapter-data-io-cleaning/" title="Data input/output and cleaning"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Data input/output and cleaning</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/instructor/" title="Instructor Materials">Next - Instructor Materials <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<section>
+<h3 id="data-plotting">Data plotting</h3>
+<ul>
+<li>See Python for Data Analysis, Chapter 9</li>
+</ul>
+
+
+<span class='fragment ' ><p>Main library is <code>matplotlib</code>:</p>
+<ul>
+<li>Controls how figures are laid out and decorated (axes, labels, colors, line styles, etc)</li>
+<li>Can be used directly</li>
+<li>Pandas uses it indirectly, but allows using <code>matplotlib</code> commands</li>
+</ul>
+</span>
+
+
+</section><section>
+<h3 id="anatomy-of-a-plot-in-matplotlib">Anatomy of a plot in matplotlib</h3>
+<img style="width: 50%;" src="/lectures-prog-data-analysis/images/plot-simple.png" />
+<ol>
+<li><strong>figure</strong>: The graphical area for one figure</li>
+<li><strong>axis</strong>: Labeled axis for XY, can be superimposed or tiled</li>
+<li><strong>plot</strong>: Individual shapes (lines, rectangles, etc) drawn on an axis</li>
+</ol>
+</section><section>
+<h3 id="types-of-plots">Types of Plots</h3>
+<ul>
+<li>line and scatter graphs</li>
+<li>bar graphs and distributions (histogram vs density)</li>
+<li>other statistics (boxplots)</li>
+<li>image plots (<a href="https://matplotlib.org/stable/tutorials/introductory/sample_plots.html#contouring-and-pseudocolor" target="_blank" rel="noreferrer noopener">matplotlib commands</a>
+)</li>
+<li>surface plots (<a href="https://matplotlib.org/stable/tutorials/introductory/sample_plots.html#three-dimensional-plotting" target="_blank" rel="noreferrer noopener">matplotlib commands</a>
+)</li>
+</ul>
+<p>(see <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html" target="_blank" rel="noreferrer noopener">plotting in pandas using
+matplotlib</a>
+)</p>
+</section>
+</section><section>
+
+
+<section data-shortcode-section>
+<h3 id="data-wrangling">Data wrangling</h3>
+<ul>
+<li>See Python for Data Analysis, Chapter 8</li>
+</ul>
+</section><section>
+<h4 id="hierarchical-indexing">Hierarchical indexing:</h4>
+<ul>
+<li>partial indexing</li>
+<li><code>unstack()</code> method converts to <code>DataFrame</code></li>
+<li><code>stack()</code> is the reverse</li>
+<li><code>swaplevel()</code> for reordering hierarchical indices</li>
+<li><code>sort_index()</code> for sorting by one index</li>
+<li>Summary statistics with vector operators, such as <code>sum(level=, axis=)</code></li>
+</ul>
+</section><section>
+<h4 id="combining-and-merging">Combining and merging</h4>
+<ul>
+<li><code>merge()</code> by using keys (indices) like the SQL <em>join</em> operator
+<ul>
+<li>inner, left, right, and outer joins possible</li>
+</ul>
+</li>
+<li><code>concat()</code> for stacking objects</li>
+</ul>
+</section><section>
+<h4 id="reshape-and-pivot">Reshape and pivot</h4>
+<ul>
+<li><code>stack/</code> vs <code>unstack</code></li>
+<li><code>reshape</code></li>
+<li>&ldquo;long&rdquo; vs &ldquo;wide&rdquo; format
+<ul>
+<li><code>pivot</code> vs <code>melt</code></li>
+</ul>
+</li>
+</ul>
+
+</section>
+</section><section>
+
+
+<section data-shortcode-section>
+<h3 id="data-aggregation">Data aggregation</h3>
+<ul>
+<li>See Python for Data Analysis, Chapter 10</li>
+</ul>
+</section><section>
+<h4 id="groupby-split-apply-combine">Groupby: split-apply-combine</h4>
+<ul>
+<li>selecting column(s) and index levels</li>
+<li>aggregation functions</li>
+<li><code>apply()</code> arbitrary functions</li>
+</ul>
+</section><section>
+<h4 id="pivot-tables-and-cross-tabulation">Pivot tables and cross-tabulation</h4>
+<ul>
+<li><code>pivot_table</code></li>
+<li><code>crosstab</code></li>
+</ul>
+
+</section>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp24/reveal-hugo/object-assign.js></script>
+
+
+<script src="/lectures-prog-data-analysis/sp24/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp24/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280};
+  var revealHugoPageParams = {};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp24/">Home</a>
+
+    
+  </body>
+</html>

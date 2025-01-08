@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Introduction</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp22/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Introduction</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/schedule/" title="Schedule"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Schedule</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp22/chapter-python-basics/" title="Python basics refresher">Next - Python basics refresher <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+<h2 id="welcome">Welcome</h2>
+</section><section>
+<h3 id="meet-your-instructor">Meet your instructor</h3>
+<p>Instructor: <a href="http://www.ggc.edu/about-ggc/directory/cengiz-gunay" target="_blank" rel="noreferrer noopener">Dr. Cengiz Gunay</a>
+</p>
+<p><a href="https://soft-eng-practicum.github.io/" target="_blank" rel="noreferrer noopener">Soft-Eng-Practicum Github Organization</a>
+</p>
+<p>Email: <a href="mailto:cgunay@ggc.edu">cgunay@ggc.edu</a>
+</p>
+<p>Office: Virtual and W-2117 (by <a href="https://cgunay.youcanbook.me/" target="_blank" rel="noreferrer noopener">appointment</a>
+)</p>
+<p>Phone: 678-951-9621 (also GroupMe)</p>
+</section><section>
+<h3 id="about-the-instructor-dr-cengiz-gunay">About the instructor: Dr Cengiz Gunay</h3>
+<ul>
+<li>Went to computer science grad school on artificial intelligence neural networks</li>
+<li>Then, worked as <a href="http://www.biology.emory.edu/research/Prinz/Cengiz/" target="_blank" rel="noreferrer noopener">post-doctoral fellow</a>
+ at Emory Univ. on simulating models of biological neurons and large-scale biological data mining (e.g., SQL, neural nets, genetic algos)</li>
+<li>Started teaching as visiting Faculty teaching at Emory Univ., Math &amp; CS Dept.</li>
+<li>At GGC, became IT faculty with Soft Dev focus and helped start a Data Science and Analytics major</li>
+</ul>
+</section><section>
+<h3 id="your-turn">Your turn!</h3>
+<ul>
+<li>Login/register on discussion and respond to the “Introductions” topic; <strong>create an inline resume</strong></li>
+</ul>
+
+
+<span class='fragment '
+  >
+  <p>Also quickly introduce yourself now in class!</p>
+<ul>
+<li>Name</li>
+<li>Major/Year</li>
+<li>What do you aim to achieve by taking this course</li>
+<li>Something fun about yourself</li>
+</ul>
+
+</span>
+</section><section>
+<h3 id="semester-plan">Semester plan</h3>
+<p>See <a href="../schedule">Schedule</a>
+.</p>
+</section><section>
+<h3 id="syllabus-and-hands-on-work">Syllabus and hands on work</h3>
+<ul>
+<li>Let&rsquo;s look through the syllabus</li>
+</ul>
+
+
+<span class='fragment '
+  >
+  <p>Time to work on:</p>
+<ol>
+<li>Skills Survey on D2L</li>
+<li>Register for Discord and Piazza</li>
+<li>Respond to introductions post on Piazza</li>
+</ol>
+
+</span>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp22/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp22/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp22/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp22/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp22">Home</a>
+
+    
+  </body>
+</html>

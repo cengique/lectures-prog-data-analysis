@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>User Stories</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">User Stories</h3>
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p>
+<figure >
+<p><img src="/softdev2-resources/images/kanban/kanbanflow6.jpg" height="300px"  /></p>
+</figure>
+<p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/" title="Requirements in Agile"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Requirements in Agile</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/student/chapter-requirements/chapter-teamwork/" title="Teamwork">Next - Teamwork <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+</section><section>
+<h2 id="user-stories-in-agile">User Stories in Agile</h2>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * The Agile process is driven by customer descriptions of what is required (user scenarios) </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * <b>Agile Planning begins with</b> the creation of <b>user stories</b> </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * User Stories are the central focus for developers </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * User Stories are derived from user/client meeting and <b>describe how the product will be used in very specific ways</b></p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * They are derived from user scenarios and <b>tell WHO can do WHAT and WHY</b> </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Analogous to functional requirements </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Act as guidelines on how to plan for testing the product </p> 
+</span>
+</section><section>
+<h3 id="user-stories-in-agile-1">User Stories in Agile</h3>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Agile team assesses each story and assigns a <b>cost</b></p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * <b>Stories are grouped</b> for a deliverable increment </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * <b>Complexity of a user story is estimated in Story Points</b>. Story points estimate the relative complexity of satisfying the requirement. </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Each user story should imply an acceptance test </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Coding: Recommends the construction of a <b>unit test</b> for a story before coding starts </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * A commitment is made on a <b>delivery date</b> for all the stories of the deliverable increment </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * User stories should be recorded in virtual or physical <b>cards</b> placed on the team's working board </p> 
+</span>
+</section><section>
+<h3 id="examples-of-user-story">Examples of User Story</h3>
+<table>
+<thead>
+<tr>
+<th><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryex1.png" width="300"/> 
+</figure>
+</th>
+<th style="text-align:center"><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryex2.png" width="300"/> 
+</figure>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryex3.png" width="300"/> 
+</figure>
+</td>
+<td style="text-align:center"><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryex4.png" width="300"/> 
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Examples taken from <a href="http://www.westborosystems.com/2010/02/user-story-examples/">http://www.westborosystems.com/2010/02/user-story-examples/</a></p>
+</section><section>
+<h3 id="user-story-might-get-history-during-the-development">User Story might get history during the development</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Initial</th>
+<th style="text-align:center">Final</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryinitial.png" width="300"/> 
+</figure>
+</td>
+<td style="text-align:center"><figure>
+    <img src="/softdev2-resources/images/requirements/userstory/userstoryfinal.png" width="300"/> 
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h3 id="how-to-classify-each-story">How to classify each story</h3>
+<ul>
+<li>
+<p>Team must decide upon the criteria on which to classify each story.</p>
+</li>
+<li>
+<p>Then, team must select a way to record the story using these criteria</p>
+</li>
+</ul>
+
+
+<span class='fragment '
+  >
+   <p align='left'> Example: <b>I.N.V.E.S.T.</b><br> 
+    <b>I</b> – independent, not requiring other features<br>
+    <b>N</b> – negotiable, can be excluded, revised, etc<br>
+    <b>V</b> – valuable, clearly contributing to product usefulness<br>
+    <b>E</b> – estimable, reasonable development estimates can be made from the story<br>
+    <b>S</b> – small, stories that are too big tend to be vague and miss some points<br>
+    <b>T</b> – testable, stories need to have a means of verifying functionality
+</p> 
+
+</span>
+</section><section>
+<h3 id="developer-points">Developer points</h3>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * They are created from the user stories </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Should be discrete, codable, testable elements </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Usually implemented by one programmer, but can be pair-programming </p> 
+</span>
+
+
+<span class='fragment '
+  >
+   <p align='left'> * Can be used to collect ‘metrics’: how many points per week can a developer complete? </p> 
+</span>
+</section><section>
+<h3 id="daily-scrum">Daily Scrum</h3>
+<div style="width: 50%">
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/kKIc1NFO-AU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</div>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/">Home</a>
+
+    
+  </body>
+</html>

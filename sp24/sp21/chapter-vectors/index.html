@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Working with vector data</title>
+<meta name="description" content="Lectures and other resources">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/lectures-prog-data-analysis/sp21/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/lectures-prog-data-analysis/sp21/reveal-js/css/reveal.css"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp21/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/lectures-prog-data-analysis/sp21/highlight-js/default.min.css">
+    <style>
+  .reveal strong {
+    color: blue;
+  }
+  .home-link {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;          
+  }
+  .reveal section.side-by-side figure {
+    position: absolute;
+  }
+  .reveal section.side-by-side figure:first-of-type {
+    left: 5%;
+  }
+  .reveal section.side-by-side figure:nth-of-type(2) {
+    right: 5%;
+  }
+</style>
+
+
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h3 id="re-introduction-to-software-engineering">Working with vector data</h3>
+
+<h4 id="itec-3870-software-development-ii-br-anca-doloc-mihu-and-cengiz-günay">ITEC 4400/2160 Python Programming for Data Analysis, <br>Cengiz Günay</h4>
+<p>(License: <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</p><p><a class="nav nav-prev" href="https://cengique.github.io/lectures-prog-data-analysis/sp21/chapter-object-oriented/" title="Object Oriented Programming"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Object Oriented Programming</a>, <span></span><a class="nav nav-next" href="https://cengique.github.io/lectures-prog-data-analysis/sp21/chapter-data-io-cleaning/" title="Data input/output and cleaning">Next - Data input/output and cleaning <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+
+</section><section>
+
+
+<section data-shortcode-section>
+<h3 id="pythons-numpy-module">Python&rsquo;s Numpy module</h3>
+<p>From <em>Python for Data Analysis, 2nd Ed</em>, chapter 4:</p>
+<ul>
+<li>enables working with $n$-dimensional arrays</li>
+<li>math functions without needing to loop over arrays</li>
+<li>reading/writing to files</li>
+<li>advanced math: linear algebra, random numbers, etc</li>
+</ul>
+</section><section>
+<h3 id="numpy-overview">Numpy overview</h3>
+<ul>
+<li>Creating and manipulating <code>ndarray</code> objects and doing math on them</li>
+<li>Data types for efficient storage and use</li>
+<li>Indexing and slicing; with boolean expressions and <em>fancy</em> indexing</li>
+<li>Unary and binary math functions</li>
+</ul>
+
+</section>
+</section><section>
+
+
+<section data-shortcode-section>
+<h3 id="linear-algebra-basics">Linear algebra basics:</h3>
+<h3 id="vectors-and-matrices">Vectors and matrices</h3>
+</section><section>
+<h3 id="basics-vectors">Basics: Vectors</h3>
+<p>Vectors: $\vec{x} = [ 1, 2, 3 ]$</p>
+<ul>
+<li>Why? Most data comes in vectors</li>
+</ul>
+<p>Can do bulk operations using math magic:</p>
+<ul>
+<li>Adding or subtracting a scalar: $$ \vec{x} + 1 = [ 2, 3, 4 ] $$</li>
+<li>Multiplying or dividing by a scalar: $$ \vec{x} \times 2 = [ 2, 4, 6 ] $$</li>
+<li>Adding two vectors (of same size): $$ \vec{x} + \vec{x} = [ 2, 4, 6 ] $$</li>
+</ul>
+</section><section>
+<h3 id="vector-math">Vector math</h3>
+<p>inner/<a href="http://mathworld.wolfram.com/DotProduct.html" target="_blank" rel="noreferrer noopener">dot product</a>
+: $$ \vec{x} \cdot \vec{y} = \sum x_i y_i $$</p>
+<ul>
+<li>Calculates &ldquo;length of projection&rdquo;</li>
+<li>Multiply corresponding elements and sum to result in scalar</li>
+<li>Useful in calculating weighted sums, scaling data elements, etc.</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Outer_product" target="_blank" rel="noreferrer noopener">outer product</a>
+: $$ \vec{x} \times \vec{y} = [x_i y_j]_{ij} $$</p>
+<ul>
+<li>element-by-element multiplication, results in $ n \times m $ size matrix</li>
+<li>useful when duplicating rows or columns, or scaling them</li>
+</ul>
+</section><section>
+<h3 id="basics-matrices">Basics: Matrices</h3>
+<p>$$ A=\left[ \begin{array}{ccc}
+a_{11} &amp; \cdots &amp; a_{1n} \newline
+\vdots &amp; \ddots &amp; \vdots \newline
+a_{m1} &amp; \cdots &amp; a_{mn} \newline
+\end{array} \right] $$</p>
+<p>Uses:</p>
+<ul>
+<li>Aggregation of many vectors</li>
+<li>Bases for transformation spaces</li>
+<li>Image data and manipulation</li>
+</ul>
+</section><section>
+<h4 id="matrix-multiplication">Matrix multiplication</h4>
+<p>Must have matching inner dimensions, results in a matrix:
+$$ A_{m\times n} \times B_{n\times o} = C_{m\times o} $$</p>
+<p>Each element of output matrix is the result of one <em>inner product</em>:
+$$ c_{ij} = \sum_k a_{ik} b_{kj} $$</p>
+<p>Rows of $A$ matched to columns of $B$ to create single elements of $C$:
+$$ \left[ \begin{array}{c}
+\bbox[5px,yellow,border:2px solid red]{\begin{array}{ccc}
+a_{11} &amp; \cdots &amp; a_{1n}
+\end{array}} \newline
+\begin{array}{ccc}
+\vdots &amp; \ddots &amp; \vdots \newline
+a_{m1} &amp; \cdots &amp; a_{mn} \newline
+\end{array}
+\end{array} \right] \times
+\left[ \begin{array}{cc}
+\bbox[5px,yellow,border:2px solid red]{\begin{array}{c}
+b_{11} \newline
+\vdots \newline
+b_{n1}
+\end{array}} &amp;
+\begin{array}{cc}
+\cdots &amp; b_{1o} \newline
+\ddots &amp; \vdots \newline
+\cdots &amp; b_{no} \newline
+\end{array}
+\end{array} \right] =
+\left[ \begin{array}{ccc}
+\bbox[5px,yellow,border:2px solid red]{c_{11}} &amp; \cdots &amp; c_{1o} \newline
+\vdots &amp; \ddots &amp; \vdots \newline
+c_{m1} &amp; \cdots &amp; c_{mo} \newline
+\end{array} \right]
+$$</p>
+<p>Useful transforming rows of data, image operations, 3D rotations, machine learning, etc.</p>
+
+</section>
+</section><section>
+
+
+<section data-shortcode-section>
+<h3 id="numpy-conventional-looping-versus-vector-operations">NumPy: conventional looping versus vector operations</h3>
+<p>Loop through your data and calculate mean and standard deviation (or regression, min, max, etc.).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape>vector <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> vector:
+    sum <span style="color:#f92672">+=</span> element
+mean <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> len(vector)
+</code></pre></div><p>Use vector operations to do it shorter and more efficiently.
+$$ \mu = \sum_{i=1..N} x_i / N $$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="nohighlight" data-noescape><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+vector <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(vector) <span style="color:#f92672">/</span> len(vector)
+</code></pre></div></section><section>
+<h3 id="numpy-exercise">Numpy exercise</h3>
+<p>Calculate standard deviation
+$$ \sigma = \sqrt{ \sum_{i=1..N} ( x_i - \mu )^2 / ( N - 1 ) } $$
+where $N$ is the number of elements in $ \vec{x} $ and $ \mu $ is its mean.</p>
+<p>Submit <a href="https://replit.com/join/iblvfxte-cengique" target="_blank" rel="noreferrer noopener">here</a>
+</p>
+</section><section>
+<h3 id="make-a-colab-notebook-with-your-solution">Make a Colab notebook with your solution</h3>
+<ul>
+<li>Work in groups as before</li>
+<li>Log into <a href="colab.research.google.com/">Google Colab</a>
+ with any Google account</li>
+<li>Create a new Python notebook</li>
+<li>Write some text and code blocks to explain your standard deviation code</li>
+<li>Compare your result to the output of <code>np.std(vector, ddof=1)</code> in your notebook</li>
+<li>Share your link</li>
+</ul>
+
+</section>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/lectures-prog-data-analysis/sp21/reveal-hugo/object-assign.js></script>
+
+<a href="/lectures-prog-data-analysis/sp21/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","height":720,"history":true,"slide_number":true,"width":1280}</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/lectures-prog-data-analysis/sp21/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp21/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp21/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp21/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp21/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/lectures-prog-data-analysis/sp21/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<a class="home-link" href="https://cengique.github.io/lectures-prog-data-analysis/sp21">Home</a>
+
+    
+  </body>
+</html>
