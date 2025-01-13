@@ -71,7 +71,7 @@ one person can host the code and others can contribute:
 
 ### Practice basics
 
-Fork it this time, work in teams
+Work in teams on any IDE.
 
 <iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-dict-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -91,6 +91,6 @@ Fork it this time, work in teams
 
 ### Practice Misc Python Stuff
 
-Fork it, work in teams
+Work in teams on any IDE.
 
 <iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-misc-features-sp23?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
