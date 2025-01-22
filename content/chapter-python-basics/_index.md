@@ -29,7 +29,7 @@ An *ephemeral* Python practice area (wait for it to load)
 ### How to practice Python
 
 Do one or more of these based on your preferences!
-- Use online IDEs 
+- Use online IDEs ([Brython Editor](https://brython.info/tests/editor.html?lang=en) - no ads, can get share link)
 - Download from [Pyton.org](https://www.python.org/downloads/)
 - Download IDE [PyCharm](https://www.jetbrains.com/pycharm/) ([student discount](https://www.jetbrains.com/community/education/#students/))
 - Download IDE [Visual Studio Code](https://code.visualstudio.com/) with Python plugin
