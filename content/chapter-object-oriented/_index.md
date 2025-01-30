@@ -31,7 +31,7 @@ Module 3 from [Python Essentials 2](https://skillsforall.com/learningcollections
 - Class attributes
 - Instance attributes
 - Calling class methods
-- Magic methods
+- [Magic methods](https://realpython.com/python-magic-methods/)
 
 ---
 
@@ -49,11 +49,36 @@ Module 3 from [Python Essentials 2](https://skillsforall.com/learningcollections
 
 ---
 
-### Class activity: now make it on Repl.it
+### Class activity: now make it individually
 
-- No teamwork; create a file with your name and put your class in your own fork, by changing example below (not just strings!):
+No teamwork; change example below (not just the strings!):
+- create a new class, add one new method
+- have default parameters in constructor to set instance attributes
+- make use of class attribute, show usage examples
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-sp22?lite=true#gunay.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```python
+class Gunay:
+  # class attributes
+  classname = "python"
+  school = "ggc"
+  
+  # constructor with instance attributes
+  def __init__(self, firstname, lastname, pet, sport, vacation):
+    self.firstname = firstname
+    self.lastname = lastname
+    self.pet = pet
+    self.sport = sport
+    self.vacation = vacation
+
+  # additional method
+  def greeting(self):
+    print("Hello, I am " + self.firstname + " " + 
+          self.lastname + " and I like " + self.sport +
+          " while I am vacationing at " + self.vacation)
+    print("I'm in the " + self.classname + " course at " + self.school + " like everyone else.")
+```
+
+<!--iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-sp22?lite=true#gunay.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
 
 ---
 

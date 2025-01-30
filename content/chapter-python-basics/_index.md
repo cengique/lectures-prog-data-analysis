@@ -114,7 +114,7 @@ In addition, make sure your program includes the following:
 - Sorting
 - List comprehensions
 - Zip and argument unpacking
-- Type annotations
+- Type annotations (just the basics)
 
 ---
 
