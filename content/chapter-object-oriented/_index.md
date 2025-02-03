@@ -90,6 +90,16 @@ class Gunay:
 
 ---
 
+- Inheritance
+- The `super()` method
+- Overriding methods
+- Decorators
+- Abstract classes
+- Multiple inheritance
+- Polymorphism
+
+---
+
 ### Class activity: polymorphism
 
 - Teams of 2, pick a marker
@@ -106,5 +116,28 @@ class Gunay:
 ### Class activity: inherit!
 
 Work individually, fork it and follow instructions:
+- Create a subclass of the `PythonClass` below
+- Use the `super()` method in your constructor
+- Add any additional attributes into your class about yourself
+- Modify the `__str__` method to compose a message about yourself
+- Finish by creating an instance of your class
+- Call the `__str__` method with your instance
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```python
+class PythonClass:
+  school = "GGC"
+  degree = "IT"
+  classname = "ITEC 3160"
+  members = []
+
+  def __init__(self, fname, lname):
+    self.fname = fname
+    self.lname = lname
+    self.member = "student"
+    PythonClass.members.append(self)
+
+  def __str__(self):
+    return self.fname + " " + self.lname + " (" + self.member + ")"
+```
+
+<!--iframe height="500px" width="100%" src="https://repl.it/@cengique/objectoriented-inheritance-sp22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
