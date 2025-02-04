@@ -54,8 +54,8 @@ Do one or more of these based on your preferences!
 
 ### Practice functions
 
-Copy the code below into your own Python IDE. Work in teams,
-one person can host the code and others can contribute:
+Write Python code online or in your own IDE. Work in teams,
+one person can submit the code:
 
 Instructions:
 - List everyone's names at the top in a comment.

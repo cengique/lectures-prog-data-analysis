@@ -115,7 +115,7 @@ class Gunay:
 
 ### Class activity: inherit!
 
-Work individually, fork it and follow instructions:
+Work individually, follow instructions:
 - Create a subclass of the `PythonClass` below
 - Use the `super()` method in your constructor
 - Add any additional attributes into your class about yourself
