@@ -54,20 +54,18 @@ Do one or more of these based on your preferences!
 
 ### Practice functions
 
-Write Python code online or in your own IDE. Work in teams,
-one person can submit the code:
-
-Instructions:
-- List everyone's names at the top in a comment.
-- Add a new function that prints out a salutation message
-- Then create a list and a for loop that prints out each element.
-- Add some logic with an if-statement to behave differently for some elements of the list.
+Work in teams, but only one person should submit. Write Python code
+online or in your own IDE to:
+- List everyone's names at the top in a comment
+- Add a function that prints out a salutation message
+- Create a list and a for loop that prints out each element
+- Add an if-statement that behaves differently for some elements of the list
 
 Add two more functions around a theme of your choice and make sure to use:
-- docstrings: show usage
-- f-strings: print or return
-- lambda functions: show a use example
-- default function parameters: show usage for provided vs missing parameters
+- **docstrings**: show usage
+- **f-strings**: print or return
+- **lambda functions**: show a use example
+- **default function parameters**: show usage for provided vs missing parameters
 
 Make it interesting!
 
@@ -95,8 +93,7 @@ Work in teams on any IDE, create a program with a theme of your choice that uses
 In addition, make sure your program includes the following:
 - A function that returns multiple values using a tuple
 - Use list unpacking to assign variables from tuple
-- A list
-- Access list elements by using slicing
+- Access a list's elements by using slicing
 - A loop that deletes from a dictionary
 - Finish by printing out the dictionary
 
