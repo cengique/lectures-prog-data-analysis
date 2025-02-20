@@ -48,7 +48,7 @@ Limitations?
 
 ---
 
-{{% youtube Qk0zUZW-U_M %}}
+{{< youtube Qk0zUZW-U_M >}}
 
 ---
 
@@ -76,7 +76,26 @@ What is the **repeating part** versus the **termination condition**?
 ### Classic example: factorial
 
 For demo purposes only, not today's class activity.
-<iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<!-- code on REPL:
+def factorial(n):
+  if n <= 1:
+    return 1
+  else:
+    return  n * factorial(n - 1)
+-->
+
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&code=def%20factorial(n):%0A%20%20if%20n%20%3C=%201:%0A%20%20%20%20return%201%0A%20%20else:%0A%20%20%20%20return%20%20n%20*%20factorial(n%20-%201)%0A%20%20%20%20"
+  width="100%"
+  height="400"
+></iframe>
+
+```python
+num = int(input("Enter a number to factorialize:"))
+print("Factorio of", num, "is", factorial(num))
+```
+
+<!--iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
 
 ---
 
