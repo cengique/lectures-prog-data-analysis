@@ -61,11 +61,24 @@ TODO: add graph
 
 ---
 
-### Fork & practice!
+### Practice!
 
-Share REPL to work together with teammates. Submit team fork link once on Piazza.
+- **Select one** complexity option from below
+- Write an **example program** with your teammates
+- Each team must work on a **different option**
+- First come first serve
+- One person submits team work
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Options:
+- O(1) 
+- O(log(n)) 
+- O(sqrt(n)) 
+- O(n) 
+- O(n^2) 
+- O(n^3) 
+- O(2^n) 
+
+<!--iframe height="500px" width="100%" src="https://repl.it/@cengique/Python-big-o?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
 
 ---
 
@@ -77,7 +90,13 @@ Can you solve word capitalizations using binary numbers?
 Take advantage of binary representation of computers!
 
 [Bitwise operators in Python](https://wiki.python.org/moin/BitwiseOperators):
+- `&` AND
+- `|` OR
+- `>>`, `<<` shifting bits to right or left, resp
+- `~` complement (negate)
+- `^` exclusive-OR (XOR)
 
+Examples:
 ```python
 x & 4  # will be non-zero only if x has 3rd bit on
 x | 15 # will turn on lower 4 bits
@@ -104,7 +123,7 @@ Why does indexing an array take constant time, $O(1)$?
 {{% fragment %}}
 - In homogeneous arrays, each item takes the same memory space!
 - You can multiply the index by item size to find offset of item:
-$$ \mathsf{Item~at~index~} i = \mathsf{array~starting~address} + i * \mathsf{size~of~one~item}$$
+$$ \mathsf{Item~{}at~{}index~{}} i = \mathsf{array~{}starting~{}address} + i * \mathsf{size~{}of~{}one~{}item} $$
 {{% /fragment %}}
 
 {{% fragment %}}
@@ -172,10 +191,50 @@ OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun
 
 ---
 
+{{% section %}}
+
 ### Example program to measure performance
 
-Copy-paste from [Repl](https://repl.it/@cengique/PerfMeasure-sp22#main.py) to local computer because cloud runs are not consistent (no team, individual submission):
+Use **local computer** because cloud run times vary (individual submission only)
 
-<iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+**Instructions**:
+- Copy the code below to a file on your computer and [download Python](https://python.org) to run it
+- Change the operation to compare as described on slides
+- Run the code locally and note the timing of the two different operations
+- In your submission, include your resulting times with an explanation
+
+
+<!--iframe height="500px" width="100%" src="https://repl.it/@cengique/PerfMeasure-sp22?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
+
+---
+
+**Examples on how to create a long list:**
+- `[ "test" + str(x) for x in range (10) ]`
+- paste a document as a string and then use `.split(" ")` to find words as a list
+
+**Hints:**
+- Use (`"text" in list`) operator to search in list and set
+- No need to write full if statements - instead just execute the condition 
+- Increase `max_repeat` to millions to see a difference
+- Seach for items that are towards the end of the list for worst case
+
+```python
+import time
+
+start = time.time()
+repeat = 0
+max_repeat = 1000
+while repeat < max_repeat:
+    #################
+    # do something you want to measure here
+    a = 200**2
+    #################
+    repeat += 1
+print("It took", "{:.10}".format((time.time() - start)), "seconds total")
+print("It took", "{:.10}".format((time.time() - start) / max_repeat), "seconds per operation")
+```
 
 {{% reveal-prevnext-links %}}
+
+{{% /section %}}
+
