@@ -57,6 +57,8 @@ Do ONE of the following:
   [DeepNote](https://deepnote.com/), or [Azure
   Notebooks](https://visualstudio.microsoft.com/vs/features/notebooks-at-microsoft/)
 1. Or download [Anaconda](https://www.anaconda.com/) and run Jupyter Notebook or JupyterLab
+1. Use [Visual Studio Code](https://code.visualstudio.com/) with its regular [Python extension](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+1. Use [JupyterLite](https://jupyterlite.github.io/demo/lab/index.html) (doesn't save across browsers or computers - not a cloud service!)
 
 </section>
 
@@ -69,6 +71,7 @@ Do ONE of the following:
 From *Python for Data Analysis, 2nd Ed*, [chapter 4](https://wesmckinney.com/book/numpy-basics):
 - enables working with $n$-dimensional arrays
 - math functions without needing to loop over arrays
+- 10-100x faster than using regular Python
 - reading/writing to files
 - advanced math: linear algebra, random numbers, etc
 
