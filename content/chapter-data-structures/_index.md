@@ -164,9 +164,11 @@ Cons:
 
 ---
 
+{{% section %}}
+
 ### Exercise time! Choose one:
 
-Compare speed of: 
+Start by selecting what to compare: 
 
 1. the programs you wrote in last exercise; compare different input sizes
 1. list vs set operations:
@@ -175,6 +177,8 @@ Compare speed of:
 1. finding common elements between two lists by:
     1. writing an $O(n^2)$ algorithm AND
     1. using set operations (hint: `intersection`)
+    
+Continue below to complete exercise!
 
 ---
 
@@ -190,8 +194,6 @@ Compare speed of:
 OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun Mitchell made!
 
 ---
-
-{{% section %}}
 
 ### Example program to measure performance
 
