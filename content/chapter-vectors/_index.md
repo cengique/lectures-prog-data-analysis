@@ -408,7 +408,7 @@ ga_population = [757, 1065, 964]
 
 ### Hands on activity
 
-- Work in groups as before
+- Work in groups, but submit **individually**
 - Use an online notebook; such as [Google
   Colab](https://colab.research.google.com/) - log in with any Google
   account
