@@ -166,7 +166,8 @@ Cons:
 
 {{% section %}}
 
-### Exercise time! Choose one:
+### Exercise time! 
+### Step 1: Choose one option:
 
 Start by selecting what to compare: 
 
@@ -182,7 +183,7 @@ Continue below to complete exercise!
 
 ---
 
-### To find speed:
+### Step 2: Measure speed:
 
 1. Initialize a long list, then create a set from it
 1. Start a timer
@@ -195,7 +196,7 @@ OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun
 
 ---
 
-### Example program to measure performance
+### Step 3: Compare performance
 
 Use **local computer** because cloud run times vary (individual submission only)
 
