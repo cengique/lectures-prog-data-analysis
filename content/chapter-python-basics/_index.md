@@ -85,17 +85,20 @@ Make it interesting!
 
 ### Practice basics in-class exercise
 
-Work in teams on any IDE, create a program with a theme of your choice that uses:
-- input from a user in a loop
-- a dictionary to store a list of items and their associated values
--  check if items exist in the dictionary and
+Work in teams on any IDE. Create a program with a theme of your choice
+that uses all of the elements from both of the following lists:
 
-In addition, make sure your program includes the following:
+**Dictionaries**: 
+- Take input from a user in a loop
+- Add to a dictionary items and their associated values
+- Then check if items exist in the dictionary
+- Delete items from dictionary based on conditions
+- Print out the dictionary
+
+**Also include** the following elements:
 - A function that returns multiple values using a tuple
 - Use list unpacking to assign variables from tuple
 - Access a list's elements by using slicing
-- A loop that deletes from a dictionary
-- Finish by printing out the dictionary
 
 <!--iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-dict-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
 
