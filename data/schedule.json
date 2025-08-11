@@ -9,8 +9,6 @@
    "topic": "Go through DSS chapter 2 with Python basics important for data analysis",
    "handson": "Practice functions", "module": 1, 
    "assignment": "Read DSS chapter 2. Modules 3-4 on Cisco Python Essentials 1", "days": 7},
-  {"special": "MLK Day",
-   "assignment": "", "days": 2},
   {"name": "Advanced data structures",
    "setup": "Check activities",
    "topic": "Collections, Dictionary, Set, Tuple, Slicing",
@@ -41,8 +39,6 @@
    "topic": "Jupyter notebooks. Using vectors, arrays, and matrices in Numpy instead of looping. Linear algebra concepts.",
    "handson": "Download and install Anaconda, run Jupyter Notebooks/Lab", "module": 1, 
    "assignment": "Follow lesson; read PDA Ch 4", "days": 7},
-  {"special": "SPRING BREAK",
-   "assignment": "", "days": 7},
   {"name": "Table data in Pandas",
    "setup": "",
    "topic": "Series and Dataframe objects",
@@ -72,5 +68,7 @@
    "setup": "",
    "topic": "",
    "handson": "", "module": 1, 
-   "assignment": "submit video explaining project code and results", "days": 7}
+   "assignment": "submit video explaining project code and results", "days": 7},
+  {"special": "THANKSGIVING BREAK",
+   "assignment": "", "days": 7}
 ]
