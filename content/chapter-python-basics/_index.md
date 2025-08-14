@@ -18,6 +18,20 @@ weight = 30 # chapter number
 - Control statements: blocks, if-elif-else, while
 - Modules and import
 
+{{% fragment %}}
+
+#### A Quick Practice!
+
+This is a good place to practice what we reviewed so far. Think of a theme and use [Brython](https://brython.info/tests/editor.html?lang=en) to write your program with:
+
+- At least three variables and do some artithmetic
+- One list, one function, and one if statement with elif and else
+- One for and one while loop, and use continue and break
+- Print a lot of things
+- Click on the "Share" button to post on forum
+
+{{% /fragment %}}
+
 ---
 
 An *ephemeral* Python practice area (wait for it to load)
