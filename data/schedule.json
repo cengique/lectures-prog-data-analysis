@@ -70,5 +70,7 @@
    "handson": "", "module": 1, 
    "assignment": "submit video explaining project code and results", "days": 7},
   {"special": "THANKSGIVING BREAK",
-   "assignment": "", "days": 7}
+   "assignment": "", "days": 14},
+  {"special": "Final exam (11am-1:30pm)",
+   "assignment": "", "days": 1}
 ]
