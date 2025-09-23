@@ -26,6 +26,13 @@ div.goat > svg {
 - Similar to a loop
 - But not linear, instead it could be exponential
 
+```python
+def recursive(x):
+    print(x)
+    if x < 10:
+        recursive(x + 1)
+```
+
 
 ---
 
