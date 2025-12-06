@@ -70,18 +70,18 @@ Do one or more of these based on your preferences!
 
 Work in teams, but only one person should submit. Write Python code
 online or in your own IDE to:
-- List everyone's names at the top in a comment
-- Add a function that prints out a salutation message
-- Create a list and a for loop that prints out each element
-- Add an if-statement that behaves differently for some elements of the list
+- Print out a salutation message with a function that has **default
+  function parameters**. Show its usage for parameters that are
+  provided vs. missing.
+- Add a **docstring** to your function that lists your teammates'
+  names. Demonstrate how your docstring is displayed with the `help()`
+  function.
+- Create a list and a for loop that prints out each element using
+  **f-strings**.
+- Add an if-statement that behaves differently for some elements of
+  the list by applying two or more **lambda functions**.
 
-Add two more functions around a theme of your choice and make sure to use:
-- **docstrings**: show usage
-- **f-strings**: print or return
-- **lambda functions**: show a use example
-- **default function parameters**: show usage for provided vs missing parameters
-
-Make it interesting!
+Have a theme of your choice and make it interesting!
 
 <!--iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-functions-sp24?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
 
