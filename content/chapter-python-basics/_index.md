@@ -70,15 +70,15 @@ Do one or more of these based on your preferences!
 
 Work in teams, but only one person should submit. Write Python code
 online or in your own IDE to:
+- List your teammates' names in a **comment** at the top.
 - Print out a salutation message with a function that has **default
   function parameters**. Show its usage for parameters that are
   provided vs. missing.
-- Add a **docstring** to your function that lists your teammates'
-  names. Demonstrate how your docstring is displayed with the `help()`
-  function.
-- Create a list and a for loop that prints out each element using
+- Add a **docstring** to your function. Demonstrate how your docstring
+  is displayed with the `help()` function.
+- Create a **list** and a **for loop** that prints out each element using
   **f-strings**.
-- Add an if-statement that behaves differently for some elements of
+- Add an **if-statement** that behaves differently for some elements of
   the list by applying two or more **lambda functions**.
 
 Have a theme of your choice and make it interesting!
