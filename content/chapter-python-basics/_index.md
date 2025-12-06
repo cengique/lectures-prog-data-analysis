@@ -135,14 +135,14 @@ that uses all of the elements from both of the following lists:
 ### Practice Misc Python Stuff
 
 Work in teams on any IDE. Create a program that includes:
-- A set: add elements and check for membership
-- An if-elif-else statement
-- A loop with use of break and continue
-- Use truthiness of data structures in a conditional statement (other than simple binary operators), could be for loop logic
-- sort a data structure and print them out
-- create a list using the list comprehension syntax, you can use the data from the set
-- use zip somewhere
-- specify type annotations in at least one place
+- A **set**: add elements and check for membership
+- An **if-elif-else** statement
+- A **loop** with use of **break** and **continue**
+- Use **truthiness** of data structures in a conditional statement (other than simple binary operators); could be for loop logic
+- **sort** a data structure and print them out
+- create a list using the **list comprehension** syntax; you can use the data from the set
+- use **zip** somewhere
+- specify **type annotations** in at least one place
 - make sure it's sufficiently distinct from others' submissions and that your program has a theme
 
 <!--iframe height="500px" width="100%" src="https://replit.com/@cengique/Python-misc-features-sp23?lite=true#main.py" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
