@@ -34,7 +34,7 @@ isHTML = true
     # Settings special to the textbook
     author = "Cengiz Günay"
     course = "ITEC 3160 Programming for Data Analysis"
-    start_date = "2025/08/12"
+    start_date = "2026/01/12"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
