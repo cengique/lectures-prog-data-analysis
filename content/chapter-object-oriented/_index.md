@@ -51,8 +51,8 @@ Module 3 from [Python Essentials 2](https://skillsforall.com/learningcollections
 
 ### Class activity: now make it individually
 
-No teamwork; change example below (not just the strings!):
-- create a new class, add one new method
+- create a new class with constructor and one method 
+- follow example below or what you developed on whiteboard
 - have default parameters in constructor to set instance attributes
 - make use of class attribute, show usage examples
 
