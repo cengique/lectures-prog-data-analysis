@@ -1,0 +1,2 @@
+for i in test_*; do x=`echo $i | sed -e s/_autograder.zip//`;./make_autograder.sh $x; done
+

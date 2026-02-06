@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+
+# can we remove all irrelevant files here (from github)?
+
+submission_files="/autograder/submission/*.py"
+
+if ls $submission_files 1> /dev/null 2>&1; then
+	cp $submission_files /autograder/source/
+fi
+
+# cp /autograder/submission/*.py /autograder/source/
+
+cd /autograder/source
+
+python3 run_tests.py
