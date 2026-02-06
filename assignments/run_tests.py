@@ -23,7 +23,7 @@ def remove_score_post_processor(data):
 		return 
 
 if __name__ == '__main__':
-    suite = unittest.defaultTestLoader.discover('tests')
+    suite = unittest.defaultTestLoader.discover('autograder')
     with open('/autograder/results/results.json', 'w') as f:
         JSONTestRunner(
             visibility='visible', 

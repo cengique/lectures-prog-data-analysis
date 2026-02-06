@@ -1,0 +1,17 @@
+# Python stuff
+__pycache__
+
+# Linux backup files
+*~
+
+# Tmp folders
+tmp
+
+# zip autograder packages
+*.zip
+
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
