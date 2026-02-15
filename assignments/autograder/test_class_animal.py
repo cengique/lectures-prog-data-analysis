@@ -13,15 +13,36 @@ class TestClassAnimal(shell.TestShell):
 
 	@weight(3)
 	@number("1")
-	def test_abs(self):
+	def test_abstract(self):
 		"""Test Animal"""
 		try:
 			from animal import Animal as stud_Animal
 			a = stud_Animal("Abstract")
 			self.fail("Animal class must be abstract and not instantiable.")
 		except TypeError:
+			# Doesn't work because __repr__ is always inherited
+			#if not hasattr(stud_Animal, "__repr__"):
+			#	self.fail("Class Animal does not have a __repr__ method.")
 			pass
+		except ImportError:
+			self.fail("Can't find class Animal.")
 
+	@weight(3)
+	@number("1")
+	def test_dog(self):
+		"""Test Dog"""
+		try:
+			from animal import Dog as stud_Dog
+			a = stud_Dog("Scooter", "corgi")
+			self.assertEqualShellOutput(a.name, "Scooter", msg="Name mismatch!")
+			self.assertEqualShellOutput(a.breed, "corgi", msg="Breed mismatch!")
+			self.assertEqualShellOutput(a.__repr__(), Dog("Scooter", "corgi").__repr__(),
+                                                    msg="__repr__ output mismatch.")
+		except TypeError:
+			self.fail("Can't instantiate Dog(\"Scooter\", \"corgi\").")
+		except ImportError:
+			self.fail("Can't find class Dog.")
+                    
 #SOLUTION BELOW (note students do not need if main statement)
 from abc import ABC, abstractmethod
 
