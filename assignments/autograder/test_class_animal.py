@@ -60,6 +60,9 @@ class TestClassAnimal(shell.TestShell):
 		"""Test all animals"""
 		try:
 			from animal import Dog as stud_Dog
+			from animal import Animal as stud_Animal
+			stud_Animal.all_animals = {}
+			Animal.all_animals = {}
 			a1 = stud_Dog("Scooter", "corgi")
 			a2 = stud_Dog("X", "y")
 			b1 = Dog("Scooter", "corgi")
@@ -90,10 +93,12 @@ class TestClassAnimal(shell.TestShell):
 			from animal import Animal as stud_Animal
 			from animal import Cat as stud_Cat
 			from animal import Dog as stud_Dog
-			a1 = stud_Cat("Yellow", "Black")
-			a2 = stud_Dog("Scooter", "corgi")
-			b1 = Cat("Yellow", "Black")
-			b2 = Dog("Scooter", "corgi")
+			stud_Animal.all_animals = {}
+			Animal.all_animals = {}
+			a1 = stud_Cat("Mike", "White")
+			a2 = stud_Dog("Boxer", "Doberman")
+			b1 = Cat("Mike", "White")
+			b2 = Dog("Boxer", "Doberman")
 			self.assertEqualShellOutput(stud_Animal.listAnimals(), Animal.listAnimals(),
                                                     msg="listAnimals() output mismatch.")
 		except:

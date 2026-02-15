@@ -31,14 +31,14 @@ class TestShell(unittest.TestCase):
 	def get_eval_output(self, eval_str, locals):
 		"""Executes and collects print outputs"""
 		with io.StringIO() as buf, contextlib.redirect_stdout(buf):
-			exec(eval_str, locals=locals) # Use exec() for statements like print()
+			exec(eval_str, None, locals) # Use exec() for statements like print()
 			output = buf.getvalue()
 			return output
 
 	#NOTE: There are no newlines in stud, sol so better parsing comparison is VERY difficult.
 	def assertEqualShellOutput(self, stud, sol, msg=None):
 		emsg = ("Output Mismatch\n"
-			"Correct Output: %s"
+			"Correct Output: %s\n\n"
 			"   Your Output: %s\n\n" % (sol, stud))
 		if msg != None:
 			emsg += msg
