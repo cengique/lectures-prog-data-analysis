@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get install -y python3 python3-pip python3-dev
+add-apt-repository ppa:deadsnakes/ppa
+apt update
 
-pip3 install -r /autograder/source/requirements.txt
+apt-get install -y python3.13 python3.13-dev python3.13-venv
+
+python3.13 -m ensurepip --upgrade --default-pip
+python3.13 -m pip install setuptools
+python3.13 -m pip install -r /autograder/source/requirements.txt
