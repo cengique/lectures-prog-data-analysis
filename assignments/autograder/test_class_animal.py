@@ -99,6 +99,23 @@ class TestClassAnimal(shell.TestShell):
 		except:
 			raise
 
+	@weight(3)
+	@number("7")
+	def test_kennel(self):
+		"""Test kennel"""
+		try:
+			from animal import Kennel as stud_Kennel
+			from animal import Cat as stud_Cat
+			from animal import Dog as stud_Dog
+			a1 = stud_Cat("Yellow", "Black")
+			a2 = stud_Kennel()
+			for i in range(5): a2.add(a1)
+			stud = self.get_eval_output("a2.add(a1)", locals())
+			self.assertEqualShellOutput(stud, "Error: Kennel has 5 cats already!",
+                                                    msg="Kennel() output mismatch.")
+		except:
+			raise
+
 #SOLUTION BELOW (note students do not need if main statement)
 from abc import ABC, abstractmethod
 

@@ -1,5 +1,7 @@
 import unittest
 import os
+import io
+import contextlib
 from gradescope_utils.autograder_utils.decorators import weight, number
 from gradescope_utils.autograder_utils.files import check_submitted_files
 
@@ -25,6 +27,13 @@ class TestShell(unittest.TestCase):
 		with open("stuff.txt", "w") as f: f.write(input_str)
 		os.system("python3 %s > output.txt" % py_file)
 		with open("output.txt") as f: return f.read()
+
+	def get_eval_output(self, eval_str, locals):
+		"""Executes and collects print outputs"""
+		with io.StringIO() as buf, contextlib.redirect_stdout(buf):
+			exec(eval_str, locals=locals) # Use exec() for statements like print()
+			output = buf.getvalue()
+			return output
 
 	#NOTE: There are no newlines in stud, sol so better parsing comparison is VERY difficult.
 	def assertEqualShellOutput(self, stud, sol, msg=None):
