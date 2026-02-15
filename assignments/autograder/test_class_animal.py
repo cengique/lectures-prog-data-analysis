@@ -28,7 +28,7 @@ class TestClassAnimal(shell.TestShell):
 			self.fail("Can't find class Animal.")
 
 	@weight(3)
-	@number("1")
+	@number("2")
 	def test_dog(self):
 		"""Test Dog"""
 		try:
@@ -42,7 +42,7 @@ class TestClassAnimal(shell.TestShell):
 			self.fail("Can't find class Dog.")
 
 	@weight(2)
-	@number("1")
+	@number("3")
 	def test_repr(self):
 		"""Test repr"""
 		try:
@@ -51,6 +51,51 @@ class TestClassAnimal(shell.TestShell):
 			b = Dog("Scooter", "corgi")
 			self.assertEqualShellOutput(a.__repr__(), b.__repr__(),
                                                     msg="__repr__ output mismatch.")
+		except:
+			raise
+
+	@weight(3)
+	@number("4")
+	def test_all_animals(self):
+		"""Test all animals"""
+		try:
+			from animal import Dog as stud_Dog
+			a1 = stud_Dog("Scooter", "corgi")
+			a2 = stud_Dog("X", "y")
+			b1 = Dog("Scooter", "corgi")
+			b2 = Dog("X", "y")
+			self.assertEqualShellOutput(str(a1.all_animals), str(b1.all_animals),
+                                                    msg="all_animals dictionary mismatch.")
+		except:
+			raise
+
+	@weight(3)
+	@number("5")
+	def test_cat(self):
+		"""Test cat"""
+		try:
+			from animal import Cat as stud_Cat
+			a = stud_Cat("Yellow", "Black")
+			b = Cat("Yellow", "Black")
+			self.assertEqualShellOutput(a.__repr__(), b.__repr__(),
+                                                    msg="Cat __repr__ output mismatch.")
+		except:
+			raise
+
+	@weight(3)
+	@number("6")
+	def test_list(self):
+		"""Test list"""
+		try:
+			from animal import Animal as stud_Animal
+			from animal import Cat as stud_Cat
+			from animal import Dog as stud_Dog
+			a1 = stud_Cat("Yellow", "Black")
+			a2 = stud_Dog("Scooter", "corgi")
+			b1 = Cat("Yellow", "Black")
+			b2 = Dog("Scooter", "corgi")
+			self.assertEqualShellOutput(stud_Animal.listAnimals(), Animal.listAnimals(),
+                                                    msg="listAnimals() output mismatch.")
 		except:
 			raise
 
