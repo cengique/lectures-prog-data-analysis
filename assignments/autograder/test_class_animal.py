@@ -36,13 +36,24 @@ class TestClassAnimal(shell.TestShell):
 			a = stud_Dog("Scooter", "corgi")
 			self.assertEqualShellOutput(a.name, "Scooter", msg="Name mismatch!")
 			self.assertEqualShellOutput(a.breed, "corgi", msg="Breed mismatch!")
-			self.assertEqualShellOutput(a.__repr__(), Dog("Scooter", "corgi").__repr__(),
-                                                    msg="__repr__ output mismatch.")
 		except TypeError:
 			self.fail("Can't instantiate Dog(\"Scooter\", \"corgi\").")
 		except ImportError:
 			self.fail("Can't find class Dog.")
-                    
+
+	@weight(2)
+	@number("1")
+	def test_repr(self):
+		"""Test repr"""
+		try:
+			from animal import Dog as stud_Dog
+			a = stud_Dog("Scooter", "corgi")
+			b = Dog("Scooter", "corgi")
+			self.assertEqualShellOutput(a.__repr__(), b.__repr__(),
+                                                    msg="__repr__ output mismatch.")
+		except:
+			raise
+
 #SOLUTION BELOW (note students do not need if main statement)
 from abc import ABC, abstractmethod
 
