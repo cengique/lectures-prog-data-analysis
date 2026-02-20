@@ -1,6 +1,7 @@
 import unittest
 import os
 import io
+import sys
 import contextlib
 from gradescope_utils.autograder_utils.decorators import weight, number
 from gradescope_utils.autograder_utils.files import check_submitted_files
@@ -28,13 +29,24 @@ class TestShell(unittest.TestCase):
 		os.system("python3 %s > output.txt" % py_file)
 		with open("output.txt") as f: return f.read()
 
-	def get_eval_output(self, eval_str, locals):
-		"""Executes and collects print outputs"""
-		with io.StringIO() as buf, contextlib.redirect_stdout(buf):
-			exec(eval_str, None, locals) # Use exec() for statements like print()
-			output = buf.getvalue()
-			return output
+	def get_eval_output(self, eval_str, locals, input_str=None):
+		"""Executes, provides stdin, and collects print outputs"""
+		stdin_save = None
+		try:
+			if input_str:
+				# Save the original stdin to restore later
+				stdin_save = sys.stdin
+				sys.stdin = io.StringIO(input_str)
 
+			with io.StringIO() as buf, contextlib.redirect_stdout(buf):
+				exec(eval_str, None, locals) # Use exec() for statements like print()
+				output = buf.getvalue()
+				return output
+		finally:
+			if input_str:
+				# Restore the original stdin
+				sys.stdin = stdin_save
+    
 	#NOTE: There are no newlines in stud, sol so better parsing comparison is VERY difficult.
 	def assertEqualShellOutput(self, stud, sol, msg=None):
 		emsg = ("Output Mismatch\n"
