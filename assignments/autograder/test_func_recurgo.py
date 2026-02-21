@@ -15,7 +15,7 @@ class TestFuncRecurgo(shell.TestShell):
 		self.py_asg_file = 'recurgo.py'
 		super().setUp()
 
-	def run(self, same_input):
+	def rungo(self, same_input):
 		"""Test given input"""
 		try:
 			from recurgo import go as stud_go
@@ -28,30 +28,30 @@ class TestFuncRecurgo(shell.TestShell):
 		except:
 			raise
 
-	@weight(3)
+	@weight(5)
 	@number("1")
 	def test_0step(self):
 		"""Test 0 inputs"""
-		self.run("done\n")
+		self.rungo("done\n")
 		
-	@weight(3)
+	@weight(5)
 	@number("2")
 	def test_1step(self):
 		"""Test 1 inputs"""
-		self.run("1\ndone\n")
+		self.rungo("1\ndone\n")
 
-	@weight(3)
+	@weight(5)
 	@number("3")
 	def test_2step(self):
 		"""Test 2 inputs"""
-		self.run("3\n2\ndone\n")
+		self.rungo("3\n2\ndone\n")
 		
-	@weight(3)
+	@weight(5)
 	@number("4")
 	def test_nstep(self):
 		"""Test 10 inputs"""
 		inputs = "\n".join([ str(randint(1, 3)) for i in range(10) ]) + "done\n"		
-		self.run(inputs)
+		self.rungo(inputs)
 
 #SOLUTION BELOW 
 def go():

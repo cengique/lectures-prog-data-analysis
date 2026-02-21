@@ -26,6 +26,8 @@ class TestClassAnimal(shell.TestShell):
 			pass
 		except ImportError:
 			self.fail("Can't find class Animal.")
+		except:
+			raise
 
 	@weight(3)
 	@number("2")
@@ -33,6 +35,8 @@ class TestClassAnimal(shell.TestShell):
 		"""Test Dog"""
 		try:
 			from animal import Dog as stud_Dog
+			from animal import Animal as stud_Animal
+			stud_Animal.all_animals = {}
 			a = stud_Dog("Scooter", "corgi")
 			self.assertEqualShellOutput(a.name, "Scooter", msg="Name mismatch!")
 			self.assertEqualShellOutput(a.breed, "corgi", msg="Breed mismatch!")
@@ -40,6 +44,8 @@ class TestClassAnimal(shell.TestShell):
 			self.fail("Can't instantiate Dog(\"Scooter\", \"corgi\").")
 		except ImportError:
 			self.fail("Can't find class Dog.")
+		except:
+			raise
 
 	@weight(2)
 	@number("3")
@@ -47,6 +53,8 @@ class TestClassAnimal(shell.TestShell):
 		"""Test repr"""
 		try:
 			from animal import Dog as stud_Dog
+			from animal import Animal as stud_Animal
+			stud_Animal.all_animals = {}
 			a = stud_Dog("Scooter", "corgi")
 			b = Dog("Scooter", "corgi")
 			self.assertEqualShellOutput(a.__repr__(), b.__repr__(),
@@ -78,6 +86,8 @@ class TestClassAnimal(shell.TestShell):
 		"""Test cat"""
 		try:
 			from animal import Cat as stud_Cat
+			from animal import Animal as stud_Animal
+			stud_Animal.all_animals = {}
 			a = stud_Cat("Yellow", "Black")
 			b = Cat("Yellow", "Black")
 			self.assertEqualShellOutput(a.__repr__(), b.__repr__(),
@@ -99,7 +109,7 @@ class TestClassAnimal(shell.TestShell):
 			a2 = stud_Dog("Boxer", "Doberman")
 			b1 = Cat("Mike", "White")
 			b2 = Dog("Boxer", "Doberman")
-			self.assertEqualShellOutput(stud_Animal.listAnimals(), Animal.listAnimals(),
+			self.assertEqualShellOutput(str(stud_Animal.listAnimals()), Animal.listAnimals(),
                                                     msg="listAnimals() output mismatch.")
 		except:
 			raise
@@ -112,6 +122,8 @@ class TestClassAnimal(shell.TestShell):
 			from animal import Kennel as stud_Kennel
 			from animal import Cat as stud_Cat
 			from animal import Dog as stud_Dog
+			from animal import Animal as stud_Animal
+			stud_Animal.all_animals = {}			
 			a1 = stud_Cat("Yellow", "Black")
 			a2 = stud_Kennel()
 			for i in range(5): a2.add(a1)
