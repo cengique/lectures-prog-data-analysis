@@ -6,7 +6,55 @@ from gradescope_utils.autograder_utils.files import check_submitted_files
 from random import randint, shuffle
 
 class TestClassAnimal(shell.TestShell):
+	"""
+Note: Students found this too hard. Simplify the dictionary part.
 
+Assg 4: Object oriented programming practice (due midnight Tue Feb 17)
+
+Do all of the following in a Python file named "**animal.py**" and submit your code file via the Gradescope link on D2L. Only submit the classes and **no test code**:
+
+1.  Create a base class “Animal” with a constructor that takes a name. Make the Animal class abstract with an abstract method “`__repr__`”.
+2.  Create a subclass “Dog” with a constructor that takes a name and breed. Constructor must call the parent constructor to set the name.
+3.  Override the “`__repr__`” method in the Dog class to return the string “Dog(name, breed)”, where it inserts the object’s name and breed.
+4.  Go back to the constructor for Animals, and add a list of all the animals in a class attribute “`all\_animals`” that is a dictionary of object names mapped to objects. Use the `__repr__` method you created to get a unique name to be inserted as the key. If a new object with same name is requested, add an if statement to make sure the name is modified to be unique.
+5.  Make a Cat subclass similar to Dog, but change the `__repr__` to say “Cat(name, breed)”.
+6.  In the Animal class, create a `listAnimals()` as a _static_ method that loops through all the keys in the all\_animals dictionary and enumerates the animals in the string that it returns.
+7.  Make a Kennel class that has a add() method to add animals. Make sure that it can’t take more than 5 cats and 10 dogs.
+
+**Examples:**
+
+This should return an error:
+
+```
+
+>> a = Animal()
+```
+
+This should list all animals:
+
+```
+
+>> a = Dog("Scooter", "Corgi")
+>> b = Cat("Meow", "Siamese")
+>> print(Animal.listAnimals())
+All animals: Dog(Scooter, Corgi), Cat(Meow, Siamese)
+```
+
+Can’t add more than 5 cats to kennel:
+
+```
+
+>> c = Kennel()
+>> a.add(b)
+>> a.add(b)
+>> a.add(b)
+>> a.add(a) # adding a dog to the mix, but doesn't count to the cat limit
+>> a.add(b)
+>> a.add(b)
+Error: Kennel has 5 cats already!
+```
+	"""
+	
 	def setUp(self):
 		self.py_asg_file = 'animal.py'
 		super().setUp()
