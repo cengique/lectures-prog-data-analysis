@@ -24,6 +24,10 @@ baseName = "index"
 mediaType = "text/html"
 isHTML = true
 
+[security]
+#allowContent = [ '.*' ] # allow HTML ['! ^text/html$']
+
+
 [params]
 
     # Source Code repository section
@@ -32,12 +36,10 @@ isHTML = true
     version = "0.1.1"
 
     # Settings special to the textbook
-    author = "Cengiz Günay"
     course = "ITEC 3160 Programming for Data Analysis"
     start_date = "2026/01/12"
 
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
+    # Documentation repository
     github_doc_repository = "https://github.com/cengique/lectures-prog-data-analysis"
 
     # Analytic section
@@ -82,6 +84,10 @@ isHTML = true
     algolia_indexName = ""
     algolia_appId = ""
     algolia_apiKey = "" # Search-Only API Key
+
+    [params.author]
+      name = "Cengiz Günay"
+
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
