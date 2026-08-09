@@ -32,6 +32,7 @@ weight = 60 # chapter number
 - Therefore, $O()$ notation indicates _growth_ of time with an input, _n_
 {{% /fragment %}}
 
+
 ---
 
 ### Definitions: Big-O notation
@@ -40,8 +41,12 @@ weight = 60 # chapter number
 - $O(\log(n))$: less than linear, exponent of $n$'s growth <br>(e.g., binary tree search; $log_2(4)=2$, $log_2(16)=4$)
 - $O(\sqrt{n})$: more than log, less than $n$ (e.g., process one row of matrix data)
 - $O(n)$: linear time with size (e.g. summation of every element in list)
+- $O(n\log(n))$: faster than $O(n^2)$. 
 - $O(n^k)$: polynomial time ($k$: constant) (e.g., nested loops over whole input)
-- $O(2^n)$: exponential time (worst case; e.g., finding best route between two points)
+- $O(2^n)$: exponential time (one of the worst; e.g., finding best route between two points)
+- $O(n!)$: factorial time
+
+[Read more here...](https://adrianmejia.com/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
 {{% note %}}
 TODO: add graph
@@ -192,7 +197,7 @@ Continue below to complete exercise!
 1. Stop the timer and find elapsed time
 1. Report time per operation by dividing with repeat multiplier you selected above
 
-OR use [defbench](https://github.com/shitchell/defbench) that GGC graduate Shaun Mitchell made!
+OR use tool such as [timeit](https://docs.python.org/3/library/timeit.html) or [defbench](https://github.com/shitchell/defbench) (made by GGC graduate Shaun Mitchell!)
 
 ---
 

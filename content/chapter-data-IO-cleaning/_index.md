@@ -4,15 +4,15 @@ outputs = ["Reveal"]
 weight = 110 # chapter number
 +++
 
-{{< reveal-titlepage >}}
+{{< reveal-titlepage figure="/lectures-prog-data-analysis/images/PDA_cover.png" >}}
 
 ---
 
 ### Data formats 
 
-- See Python for Data Analysis, Chapter 6 and 7
+See Python for Data Analysis, Chapter 6
 
-Some topics:
+Topics:
 - Loading and saving in different data formats
 - Common options for loading
 - Handling exceptions in formatting
@@ -24,7 +24,7 @@ Some topics:
 ---
 
 ### Data cleaning
-
+Chapter 7
 - Missing data with N/A, NaN, and NULL values
 - Filtering missing data out
 - Filling in missing data values

@@ -66,6 +66,8 @@ Limitations?
 
 ---
 
+<section>
+
 ### Example: Factorial
 
 $$f(n)=n!$$
@@ -80,7 +82,7 @@ What is the **repeating part** versus the **termination condition**?
 
 ---
 
-### Classic example: factorial
+### Run the classic version of factorial
 
 For demo purposes only, not today's class activity.
 <!-- code on REPL:
@@ -103,6 +105,20 @@ print("Factorio of", num, "is", factorial(num))
 ```
 
 <!--iframe height="400px" width="100%" src="https://repl.it/@cengique/Recursion-factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe-->
+
+---
+
+### Class activity: Implement a variation of factorial
+
+Choose ONE:
+1. Factorial that multiples numbers from 2 onwards.
+1. Factorial of even numbers.
+
+Advanced:
+1. Factorial of prime numbers.
+1. Fibonacci sequence.
+
+</section>
 
 ---
 

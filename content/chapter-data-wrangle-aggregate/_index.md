@@ -4,7 +4,7 @@ outputs = ["Reveal"]
 weight = 120 # chapter number
 +++
 
-{{< reveal-titlepage >}}
+{{< reveal-titlepage figure="/lectures-prog-data-analysis/images/PDA_cover.png" >}}
 
 ---
 <section>
