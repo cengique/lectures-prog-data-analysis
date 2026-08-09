@@ -92,20 +92,22 @@ matplotlib](https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_pl
 ### Data aggregation
 
 - See Python for Data Analysis, Chapter 10
+- Section 10.2 lists common aggreagate functions
 
 ---
 
-#### Groupby: split-apply-combine
+#### Section 10.3 Groupby: split-apply-combine
 
+- another way of doing `groupby`
 - selecting column(s) and index levels
 - aggregation functions
 - `apply()` arbitrary functions
 
 ---
 
-#### Pivot tables and cross-tabulation
+#### Section 10.5: Pivot tables and cross-tabulation
 
-- `pivot_table`
-- `crosstab`
+- `pivot_table`: Equivalent to `pivot` before, but good examples.
+- `crosstab`: Special case of pivot that shows counts.
 
 {{% /section %}}
