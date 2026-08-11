@@ -1,0 +1,2 @@
+{{ $sc := printf "{{%% slide content=\"authors.%s.slides\" %%}}" .Site.Params.instructor }}
+{{ .Page.RenderString $sc }}

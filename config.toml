@@ -37,7 +37,8 @@ isHTML = true
 
     # Settings special to the textbook
     course = "ITEC 3160 Programming for Data Analysis"
-    start_date = "2026/01/12"
+    start_date = "2026/08/11"
+    instructor = "doloc-mihu" # select an instructor from data/authors.toml
 
     # Documentation repository
     github_doc_repository = "https://github.com/cengique/lectures-prog-data-analysis"
@@ -87,7 +88,6 @@ isHTML = true
 
     [params.author]
       name = "Cengiz Günay"
-
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
